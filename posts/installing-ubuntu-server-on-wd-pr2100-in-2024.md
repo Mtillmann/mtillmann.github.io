@@ -146,5 +146,8 @@ Also make sure that the indentation of the `wifis`-line is the same as the `ethe
 
 7. run `sudo netplan apply -debug` to apply the changes
 8. now run `ip address` and look for an entry with your stick's logical name, e.g. `wlan0` or `wlx801f02cd1234`. It should include `state up` and `inet` with an IP address. 
+9. power down your PR2100, remove the network cable and boot it up again
+
+You should now be able to ssh into your PR2100 via wifi.
 
 <Comment />
