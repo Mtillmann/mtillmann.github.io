@@ -54,7 +54,7 @@ Otherwise:
 ## First Boot
 
 1. shut down VM, remove stick and insert into your PR2100
-2. wait for ~2-5 minutes for the PR2100 to boot 
+2. wait for ~2-5 minutes for the PR2100 to boot. The main LED should have a solid blue light when booting is complete, although you can try and connect to it before that.
 3. acquire PR2100's IP address on your network, use your routers network view or use a scanning tool
 4. ssh into the PR2100 using the credentials you set during the ubuntu server install
 
