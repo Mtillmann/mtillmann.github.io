@@ -37,7 +37,7 @@ follow this guide: https://github.com/aamkye/ubuntu_on_WD_PRx100 only to the net
 
 > The installer will not exit, instead there'll be a message like "subiquity/late/run" in the log and no more new lines. Either hit the "reboot now" text-button or just close the VM window and reboot it without the CD-ROM, as described in the original guide.
 
-## networking setup
+## Networking Setup
 
 **If you can get copy and paste to work on your instance, do that and paste the configuration and mac addresses to the file.** 
 
