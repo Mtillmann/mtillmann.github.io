@@ -1,4 +1,16 @@
-# Installing Ubuntu Server 22.04 on the WD PR2100 in late 2023
+---
+layout: doc
+date: 2023-12-10
+title: Installing Ubuntu Server 22.04 on the WD PR2100 in late 2023
+tags:
+  - western-digital
+  - pr2100
+  - nas
+  - digital-freedom 
+  - right-to-repair
+  - linux
+  - ubuntu
+---
 
 > Disclaimer: do this at your own risk, I'm not responsible for any damage to your device. Also, I'm not a linux expert, I just followed the guide and figured out how to get the hardware control working. Please do not do this with a machine that has important data on it.
 
