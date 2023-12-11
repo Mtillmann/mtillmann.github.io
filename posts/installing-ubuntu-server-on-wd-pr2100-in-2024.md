@@ -115,7 +115,28 @@ This will restart the service 90 seconds after boot, which means an additional 9
 
 To avoid having to reboot immediately after inserting the line above, you can run `sudo systemctl restart wdhwd.service` manually.
 
-## Bonus: Installing Wifi Stick
+## Bonus: Controlling Idle Fan Speed
+
+> Do this only if you know what you're doing, I'm not responsible for any damage to your device.
+
+Even though [this file](https://github.com/michaelroland/wdnas-hwdaemon/blob/master/tools/wdhwd.conf) suggests that it is possible to control the fan speed via config, the file on your device will be missing the fan speed values and the actual scripts apparently never read the values from the file.
+
+To set a lower idle fan speed, do the following:
+
+1. ssh into your PR2100
+2. run `sudo nano /usr/local/lib/wdhwd/wdhwlib/fancontroller.py`
+3. hit `ctrl+w`, enter `FAN_DEFAULT = 30`, hit `enter`
+4. change the value to something lower, e.g. `FAN_DEFAULT = 20` but don't go lower than `FAN_MIN`
+5. hit `ctrl+o` `enter` `ctrl+x` to save your file and exit the editor
+6. run `sudo systemctl restart wdhwd.service`
+
+I've set mine to 20% since the fan is less audible than at 30% but still keeps the unit cool enough. My N3710 cores idle at around 40-45°C.
+
+By looking at `fancontroller.py` I found out that the script assumes the _normal_ temperature of the unit to be below 69°C. When I forced the temps to go over the 69°C the fan quickly spins up and cools (or attempts to cool) the unit down to 69°C again.
+
+It's not quite a fan curve tool but it's better than nothing.
+
+## Bonus II: Installing Wifi Stick
 
 > DO THIS WHILE YOUR MACHINE IS STILL CONNECTED TO THE NETWORK VIA CABLE
 
