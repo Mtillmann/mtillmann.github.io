@@ -21,8 +21,7 @@ tags:
 
 You'll need:
 
-- a WD PR2100 including powerbrick
-- a fast usb storage device >= 16gb
+- a fast, reliable usb storage device >= 16gb, f.x. a small cheap M.2 64GB SSD in a usb enclosure
 - network cable connected to your PR2100
 - a linux machine or ([intel?](https://github.com/aamkye/ubuntu_on_WD_PRx100#macos-native-m1-not-supported)-)mac 
 - basic familiarity with linux and the terminal
