@@ -22,27 +22,27 @@ tags:
 You'll need:
 
 - a WD PR2100 including powerbrick
-- a fast usb storage device > 16gb
+- a fast usb storage device >= 16gb
 - network cable connected to your PR2100
-- linux or mac ([intel?](https://github.com/aamkye/ubuntu_on_WD_PRx100#macos-native-m1-not-supported)) machine
+- a linux machine or ([intel?](https://github.com/aamkye/ubuntu_on_WD_PRx100#macos-native-m1-not-supported)-)mac 
 - basic familiarity with linux and the terminal
-- noise cancelling headphones
+- optional: noise cancelling headphones
 
 ## Basic setup
 
 follow this guide: https://github.com/aamkye/ubuntu_on_WD_PRx100 only to the network configuration part, ignore "_Extras (meant to be run on NAS directly)_", see below
 
-> Make sure to install OpenSSH Server when prompted by Ubuntu Installer
+> Hint: Make sure to install OpenSSH Server when prompted by Ubuntu Installer
 
-> Depending on your installation media the installation may take 10 to 30 minutes
+> Hint: Depending on how slow your storage device is, the installation may take 10 to 30 minutes
 
-> The installer will not exit, instead there'll be a message like "subiquity/late/run" in the log and no more new lines. Either hit the "reboot now" text-button or just close the VM window and reboot it without the CD-ROM, as described in the original guide.
+> Hint: The installer will not exit, instead there'll be a message like "subiquity/late/run" in the log and no more new lines. Either hit the "reboot now" text-button or just close the VM window and reboot it without the CD-ROM, as described in the original guide.
 
 ## Networking Setup
 
 **If you can get copy and paste to work on your instance, do that and paste the configuration and mac addresses to the file.** 
 
-Otherwise:
+I couldn't get copy and paste to work, so I did this:
 
 1. run `wget https://raw.githubusercontent.com/aamkye/ubuntu_on_WD_PRx100/master/readme.md`
 2. run `nano readme.md`
@@ -55,7 +55,7 @@ Otherwise:
 
 1. shut down VM, remove stick and insert into your PR2100
 2. wait for ~2-5 minutes for the PR2100 to boot. The main LED should have a solid blue light when booting is complete, although you can try and connect to it before that.
-3. acquire PR2100's IP address on your network, use your routers network view or use a scanning tool
+3. acquire your PR2100's IP address on your network: use your routers network view or use a scanning app
 4. ssh into the PR2100 using the credentials you set during the ubuntu server install
 
 ## Hardware Control
@@ -63,7 +63,6 @@ Otherwise:
 Since the instructions in the original tutorial are outdated, here's how to get the hardware control working
 
 ### Install `hddtemp` ([via](https://askubuntu.com/a/1403901/1724194))
-
 
 ```shell
 sudo apt update
@@ -90,7 +89,7 @@ cd /opt/wdnas-hwtools
 ```
 then hit `crtl+d` to exit root shell
 
-Now, within a few seconds the fan should spin down!
+Now, within a few seconds the fan should spin down to 30% of its max speed.
 
 ## Surviving Reboots
 
@@ -99,21 +98,21 @@ Now, within a few seconds the fan should spin down!
 ### Soft Reboots
 
 Soft reboots will always fail because the actual fan speed is not detected and the
-the unit is shut down because it thinks it's overheating. There is no way to fix this.
+the unit is shut down because it thinks the fan is broken. There is no way to fix this.
 
 > **Solution:** Don't soft reboot, always shut down and then power on again
 
 ### Power Cycles/Regular Boots
 
-`wdhwd.service` will fail to initialize on boot but there is a workaround:
+`wdhwd.service` will fail to initialize on boot, so the fan will spin at full speed until the service is restarted.
+To fix this, do the following:
 
 1. ssh into your PR2100
 2. run `sudo crontab -e`
 3. add the following line to the end of the file: `@reboot sleep 90 && systemctl restart wdhwd.service`
+4. run `sudo systemctl restart wdhwd.service` immediately to avoid having to reboot
 
-This will restart the service 90 seconds after boot, which means an additional 90 seconds of full blast after every boot.
-
-To avoid having to reboot immediately after inserting the line above, you can run `sudo systemctl restart wdhwd.service` manually.
+This will restart the service 90 seconds after boot.
 
 ## Bonus: Controlling Idle Fan Speed
 
@@ -130,11 +129,15 @@ To set a lower idle fan speed, do the following:
 5. hit `ctrl+o` `enter` `ctrl+x` to save your file and exit the editor
 6. run `sudo systemctl restart wdhwd.service`
 
-I've set mine to 20% since the fan is less audible than at 30% but still keeps the unit cool enough. My N3710 cores idle at around 40-45°C.
+I've set mine to 15% and it's working fine.
 
 By looking at `fancontroller.py` I found out that the script assumes the _normal_ temperature of the unit to be below 69°C. When I forced the temps to go over the 69°C the fan quickly spins up and cools (or attempts to cool) the unit down to 69°C again.
 
-It's not quite a fan curve tool but it's better than nothing.
+It's not quite a fan curve tool but you can basically can create by custom curves by modifying the script to your liking.
+
+> After modifying the script, you'll have to restart the service for your changes to kick in: `sudo systemctl restart wdhwd.service`
+
+> Be aware that the unit will turn off when the fan speed hits 0 or the temperature goes above 90°C
 
 ## Bonus II: Installing Wifi Stick
 
