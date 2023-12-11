@@ -12,6 +12,8 @@ tags:
   - ubuntu
 ---
 
+<Title/>
+
 > Disclaimer: do this at your own risk, I'm not responsible for any damage to your device. Also, I'm not a linux expert, I just followed the guide and figured out how to get the hardware control working. Please do not do this with a machine that has important data on it.
 
 ## Prerequisite
