@@ -119,7 +119,7 @@ To avoid having to reboot immediately after inserting the line above, you can ru
 
 > Do this only if you know what you're doing, I'm not responsible for any damage to your device.
 
-Even though [this file](https://github.com/michaelroland/wdnas-hwdaemon/blob/master/tools/wdhwd.conf) suggests that it is possible to control the fan speed via config, the file on your device will be missing the fan speed values and the actual scripts apparently never read the values from the file.
+Even though [this file](https://github.com/michaelroland/wdnas-hwdaemon/blob/master/tools/wdhwd.conf) suggests that it is possible to control the fan speed via config, the `fan_speed_*`-values will be absent from the file on your device and the actual scripts apparently never read the values from the file.
 
 To set a lower idle fan speed, do the following:
 
