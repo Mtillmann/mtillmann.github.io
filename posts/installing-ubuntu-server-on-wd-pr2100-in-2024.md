@@ -115,7 +115,9 @@ This will restart the service 90 seconds after boot, which means an additional 9
 
 To avoid having to reboot immediately after inserting the line above, you can run `sudo systemctl restart wdhwd.service` manually.
 
-# Bonus: Installing Wifi Stick
+## Bonus: Installing Wifi Stick
+
+> DO THIS WHILE YOUR MACHINE IS STILL CONNECTED TO THE NETWORK VIA CABLE
 
 To enable your PR2100 to connect to wifi, you'll need a wifi stick that works with linux.
 Once you have one, follow these steps:
