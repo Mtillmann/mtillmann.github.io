@@ -113,3 +113,5 @@ the unit is shut down because it thinks it's overheating. There is no way to fix
 This will restart the service 90 seconds after boot, which means an additional 90 seconds of full blast after every boot.
 
 To avoid having to reboot immediately after inserting the line above, you can run `sudo systemctl restart wdhwd.service` manually.
+
+<Comment />
