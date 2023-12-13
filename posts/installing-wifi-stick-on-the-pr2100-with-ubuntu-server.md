@@ -23,7 +23,7 @@ Once you have one, follow these steps:
 1. ssh into your PR2100
 2. run `sudo apt install wpasupplicant`<Cp/>
 3. plug in your wifi stick
-4. run `lshw -C network`<Cp/> and look for an `*-network`-entry with the description `Wireless interface`
+4. run `lshw -C network`<Cp/> and look for a `*-network`-entry with the description `Wireless interface`
 5. copy the `logical name` of the entry, e.g. `wlan0` or something more cryptic like `wlx801f02cd1234`
 6. run `sudo nano /etc/netplan/01-network-config.yaml`<Cp/> and add the following lines:
 ```yaml
