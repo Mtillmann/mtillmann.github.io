@@ -173,4 +173,59 @@ Also make sure that the indentation of the `wifis`-line is the same as the `ethe
 
 You should now be able to ssh into your PR2100 via wifi.
 
+## Bonus III: HDD Spindown
+
+If you're using your PR2100 as a backup device or data grave, you may want to spin down the HDDs when they're not in use to save energy and reduce noise.
+
+> Spinning down the HDDs (after a reasonable delay) might increase their lifespan but also increases the time it takes to access data on them. If you're using your PR2100 as a NAS, you may not want to do this.
+
+There are several suggestions on how to do this and you may try any of them:
+
+- [hdparm.conf](https://manpages.debian.org/unstable/hdparm/hdparm.conf.5.en.html) with [restarting the service](https://forums.raspberrypi.com/viewtopic.php?t=265901#:~:text=/usr/lib/pm%2Dutils/power.d/95hdparm%2Dapm%20resume), [ubuntu specific hacks](https://stackoverflow.com/a/67856385/8797350) and [workarounds](https://stackoverflow.com/a/76649844/8797350): didn't work for me at all
+- [hd-idle](https://github.com/adelolmo/hd-idle): didn't try this one
+
+
+1. ssh into your PR2100
+2. _for each drive_
+   1. find out the [short serial](https://wiki.archlinux.org/title/Udev#Identifying_a_disk_by_its_serial) by running `udevadm info /dev/sdX | grep SHORT`, replace `sdX` with the device id of your drive, e.g. `sda`
+   2. run `sudo nano /etc/udev/rules.d/69-hdparm.rules` and enter the following line
+    ```
+    ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]", ENV{ID_SERIAL_SHORT}=="SERIAL_FROM_ABOVE", RUN+="/usr/sbin/hdparm -B 127 -S 241 /dev/sdX"
+    ```
+    replace `SERIAL_FROM_ABOVE` with the short serial you acquired in step 2.1 and `sdX` with the device id of your drive, e.g. `sda`
+3. reboot your PR2100 (hard)
+4. run `sudo systemctl status udev.service` and look for any errors related to your drives
+5. install smartmontools by running `sudo apt install smartmontools` ([reason](https://wiki.archlinux.org/title/hdparm#Querying_the_status_of_the_disk_without_waking_it_up))
+6. wait for the drives to spin down, then run `sudo smartctl -i -n standby /dev/sda`. The output should look like this:
+  ```
+    smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-91-generic] (local build)
+    Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+    Device is in STANDBY mode, exit(2)
+  ```
+
+> Hint: the `-B` parameter must be set below 128, because [values above 127 apparently disable spindown](https://wiki.archlinux.org/title/hdparm#Power_management_configuration:~:text=Values%20from%201%20to%20127%20permit%20spin%2Ddown%2C%20whereas%20values%20from%20128%20to%20254%20do%20not.)
+
+### Spindown Time Notation
+
+[From the documentation](https://wiki.archlinux.org/title/hdparm#:~:text=The%20value%20of%200%20disables%20spindown%2C%20the%20values%20from%201%20to%20240%20specify%20multiples%20of%205%20seconds%20and%20values%20from%20241%20to%20251%20specify%20multiples%20of%2030%20minutes.):
+
+>  The value of 0 disables spindown, the values from 1 to 240 specify multiples of 5 seconds and values from 241 to 251 specify multiples of 30 minutes.
+
+Here's a table with some examples:
+
+| Value | Time |
+|-------|------|
+| 0     | disabled |
+| 1     | 5 seconds |
+| 2     | 10 seconds |
+| 120   | 10 minutes |
+| 240   | 20 minutes |
+| 241   | 30 minutes |
+| 242   | 60 minutes |
+| 243   | 90 minutes |
+| 244   | 120 minutes |
+| 250   | 240 minutes |
+
+
 <Comment />
