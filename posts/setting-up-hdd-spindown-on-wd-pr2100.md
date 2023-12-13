@@ -94,6 +94,7 @@ if os.geteuid() != 0:
   print("this script needs to be run as root")
   sys.exit(1)
 
+# list of disks to check, e.g. ["/dev/sda", "/dev/sdb"]
 disks = ["/dev/sda"]
 active_disk_count = 0
 
