@@ -43,12 +43,12 @@ follow this guide: https://github.com/aamkye/ubuntu_on_WD_PRx100 only to the net
 
 I couldn't get copy and paste to work, so I did this:
 
-1. run `wget https://raw.githubusercontent.com/aamkye/ubuntu_on_WD_PRx100/master/readme.md`
+1. run `wget https://raw.githubusercontent.com/aamkye/ubuntu_on_WD_PRx100/master/readme.md`<Cp/>
 2. run `nano readme.md`
 3. keep pressing `ctrl+k` to remove lines before and after the netplan config, navigate using arrow keys
 4. insert your mac addresses
 5. hit `ctrl+o` `enter` `ctrl+x` to save your file and exit the editor
-6. run `sudo readme.me /etc/netplan/01-network-config.yaml`
+6. run `sudo readme.me /etc/netplan/01-network-config.yaml`<Cp/>
 
 ## First Boot
 
@@ -109,9 +109,9 @@ the unit is shut down because it thinks the fan is broken. There is no way to fi
 To fix this, do the following:
 
 1. ssh into your PR2100
-2. run `sudo crontab -e`
-3. add the following line to the end of the file: `@reboot sleep 90 && systemctl restart wdhwd.service`
-4. run `sudo systemctl restart wdhwd.service` immediately to avoid having to reboot
+2. run `sudo crontab -e`<Cp/>
+3. add the following line to the end of the file: `@reboot sleep 90 && systemctl restart wdhwd.service`<Cp/>
+4. run `sudo systemctl restart wdhwd.service`<Cp/> immediately to avoid having to reboot
 
 This will restart the service 90 seconds after boot.
 

@@ -26,18 +26,18 @@ I found that two approaches may work, although I finally went with the second on
 1. ssh into your PR2100
 2. _for each drive_
    1. find out the [short serial](https://wiki.archlinux.org/title/Udev#Identifying_a_disk_by_its_serial) by running `udevadm info /dev/sdX | grep SHORT`<Cp/>, replace `sdX` with the device id of your drive, e.g. `sda`
-   2. run `sudo nano /etc/udev/rules.d/69-hdparm.rules` and enter the following line
+   2. run `sudo nano /etc/udev/rules.d/69-hdparm.rules`<Cp/> and enter the following line
     ```
     ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]", ENV{ID_SERIAL_SHORT}=="SERIAL_FROM_ABOVE", RUN+="/usr/sbin/hdparm -B 127 -S 241 /dev/sdX"
     ```
     replace `SERIAL_FROM_ABOVE` with the short serial you acquired in step 2.1 and `sdX` with the device id of your drive, e.g. `sda`
 3. reboot your PR2100 (hard)
-4. run `sudo systemctl status udev.service` and look for any errors related to your drives
+4. run `sudo systemctl status udev.service`<Cp/> and look for any errors related to your drives
 
 ## Approach 2: Persistent configuration using cron
 
 1. ssh into your PR2100
-2. run `sudo crontab -e`
+2. run `sudo crontab -e`<Cp/>
 3. _for each drive_
    1. enter a new line at the bottom of the file
     ```
@@ -50,7 +50,7 @@ The `-B` parameter must be set below 128, because [values above 127 apparently d
 
 ## Check if it works
 
-1. install smartmontools by running `sudo apt install smartmontools` ([reason](https://wiki.archlinux.org/title/hdparm#Querying_the_status_of_the_disk_without_waking_it_up))
+1. install smartmontools by running `sudo apt install smartmontools`<Cp/> ([reason](https://wiki.archlinux.org/title/hdparm#Querying_the_status_of_the_disk_without_waking_it_up))
 2. wait for the drives to spin down, then run `sudo smartctl -i -n standby /dev/sda`. The output should look like this:
   ```
     smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-91-generic] (local build)
@@ -84,7 +84,7 @@ Here's a table with some examples:
 
 If you want to see if your drives are spinning or not, you can use the LED on the front of the device to show the state of the drives.
 
-run `sudo nano /usr/local/sbin/hdd-led.py` and paste the following code:
+run `sudo nano /usr/local/sbin/hdd-led.py`<Cp/> and paste the following code:
 
 ```python
 import os
@@ -124,7 +124,7 @@ else:
 os.system(led_cmd)
 ```
 
-Next, run `sudo crontab -e` and add the following line at the bottom of the file:
+Next, run `sudo crontab -e`<Cp/> and add the following line at the bottom of the file:
 
 ```
 * * * * * python3 /usr/local/sbin/hdd-led.py

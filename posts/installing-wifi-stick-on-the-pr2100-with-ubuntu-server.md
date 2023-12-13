@@ -21,11 +21,11 @@ To enable your PR2100 to connect to wifi, you'll need a wifi stick that works wi
 Once you have one, follow these steps:
 
 1. ssh into your PR2100
-2. run `sudo apt install wpasupplicant`
+2. run `sudo apt install wpasupplicant`<Cp/>
 3. plug in your wifi stick
-4. run `lshw -C network` and look for an `*-network`-entry with the description `Wireless interface`
+4. run `lshw -C network`<Cp/> and look for an `*-network`-entry with the description `Wireless interface`
 5. copy the `logical name` of the entry, e.g. `wlan0` or something more cryptic like `wlx801f02cd1234`
-6. open `/etc/netplan/01-network-config.yaml` with `sudo nano /etc/netplan/01-network-config.yaml` and add the following lines:
+6. open `/etc/netplan/01-network-config.yaml` with `sudo nano /etc/netplan/01-network-config.yaml`<Cp/> and add the following lines:
 ```yaml
   wifis:
     YOUR_LOGICAL_NAME_HERE:
@@ -42,8 +42,8 @@ Also make sure that the indentation of the `wifis`-line is the same as the `ethe
 
 > If you're using a 5GHz wifi, make sure that your wifi stick supports it. If it doesn't, you'll have to use a 2.4GHz wifi.
 
-7. run `sudo netplan apply -debug` to apply the changes
-8. now run `ip address` and look for an entry with your stick's logical name, e.g. `wlan0` or `wlx801f02cd1234`. It should include `state up` and `inet` with an IP address. 
+7. run `sudo netplan apply -debug`<Cp/> to apply the changes
+8. now run `ip address`<Cp/> and look for an entry with your stick's logical name, e.g. `wlan0` or `wlx801f02cd1234`. It should include `state up` and `inet` with an IP address. 
 9. power down your PR2100, remove the network cable and boot it up again
 
 You should now be able to ssh into your PR2100 via wifi.
