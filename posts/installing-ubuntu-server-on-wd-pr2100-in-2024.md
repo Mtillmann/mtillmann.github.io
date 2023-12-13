@@ -179,10 +179,7 @@ If you're using your PR2100 as a backup device or data grave, you may want to sp
 
 > Spinning down the HDDs (after a reasonable delay) might increase their lifespan but also increases the time it takes to access data on them. If you're using your PR2100 as a NAS, you may not want to do this.
 
-There are several suggestions on how to do this and you may try any of them:
-
-- [hdparm.conf](https://manpages.debian.org/unstable/hdparm/hdparm.conf.5.en.html) with [restarting the service](https://forums.raspberrypi.com/viewtopic.php?t=265901#:~:text=/usr/lib/pm%2Dutils/power.d/95hdparm%2Dapm%20resume), [ubuntu specific hacks](https://stackoverflow.com/a/67856385/8797350) and [workarounds](https://stackoverflow.com/a/76649844/8797350): didn't work for me at all
-- [hd-idle](https://github.com/adelolmo/hd-idle): didn't try this one
+There are several suggestions on how to do this, but none of them except for [this one](https://wiki.archlinux.org/title/hdparm#Persistent_configuration_using_udev_rules) worked for me:
 
 
 1. ssh into your PR2100
