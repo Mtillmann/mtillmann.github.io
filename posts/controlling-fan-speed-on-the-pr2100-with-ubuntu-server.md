@@ -10,7 +10,7 @@ tags:
   - right-to-repair
   - linux
   - ubuntu
-  - wifi
+  - power-management
 ---
 
 <Title/>
