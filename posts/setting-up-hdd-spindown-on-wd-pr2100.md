@@ -80,7 +80,7 @@ Here's a table with some examples:
 | 244   | 120 minutes |
 | 250   | 240 minutes |
 
-## Bonus: Show drive state with power the LED
+## Bonus: Show Drive Power State using the PR2100's Power LED
 
 If you want to see if your drives are spinning or not, you can use the LED on the front of the device to show the state of the drives.
 
