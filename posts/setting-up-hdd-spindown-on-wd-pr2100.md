@@ -1,7 +1,7 @@
 ---
 layout: doc
 date: 2023-12-12
-title: Settting up HDD spindown using hdparm on a WD PR2100
+title: Setting up HDD spindown using hdparm on a WD PR2100
 tags:
   - western-digital
   - pr2100
@@ -80,7 +80,7 @@ Here's a table with some examples:
 | 244   | 120 minutes |
 | 250   | 240 minutes |
 
-### Bonus: Show drive state on the LED
+## Bonus: Show drive state with power the LED
 
 If you want to see if your drives are spinning or not, you can use the LED on the front of the device to show the state of the drives.
 
