@@ -41,7 +41,7 @@ I found that two approaches may work, although I finally went with the second on
 3. _for each drive_
    1. enter a new line at the bottom of the file
     ```
-@reboot sleep 30 && /usr/sbin/hdparm -B 127 -S 241 /dev/sdX
+    @reboot sleep 30 && /usr/sbin/hdparm -B 127 -S 241 /dev/sdX
     ```
     replace `sdX` with the device id of your drive, e.g. `sda`
 4. reboot your PR2100 (hard)
