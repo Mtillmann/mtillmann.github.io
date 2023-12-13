@@ -6,6 +6,7 @@ import Tags from './components/Tags.vue'
 import Page from './components/Page.vue'
 import Comment from './components/Comment.vue'
 import Title from './components/Title.vue'
+import Cp from './components/Cp.vue'
 
 import './custom.css'
 import './custom.js'
@@ -19,7 +20,8 @@ export default {
         app.component('Archives', Archives)
         app.component('Page', Page)
         app.component('Comment', Comment),
-        app.component('Title', Title)
+        app.component('Title', Title),
+        app.component('Cp', Cp)
         
     }
 }

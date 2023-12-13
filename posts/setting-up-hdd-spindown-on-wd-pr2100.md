@@ -25,7 +25,7 @@ I found that two approaches may work, although I finally went with the second on
 
 1. ssh into your PR2100
 2. _for each drive_
-   1. find out the [short serial](https://wiki.archlinux.org/title/Udev#Identifying_a_disk_by_its_serial) by running `udevadm info /dev/sdX | grep SHORT`, replace `sdX` with the device id of your drive, e.g. `sda`
+   1. find out the [short serial](https://wiki.archlinux.org/title/Udev#Identifying_a_disk_by_its_serial) by running `udevadm info /dev/sdX | grep SHORT`<Cp/>, replace `sdX` with the device id of your drive, e.g. `sda`
    2. run `sudo nano /etc/udev/rules.d/69-hdparm.rules` and enter the following line
     ```
     ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]", ENV{ID_SERIAL_SHORT}=="SERIAL_FROM_ABOVE", RUN+="/usr/sbin/hdparm -B 127 -S 241 /dev/sdX"
