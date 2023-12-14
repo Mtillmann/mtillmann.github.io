@@ -44,7 +44,7 @@ follow this guide: https://github.com/aamkye/ubuntu_on_WD_PRx100 only to the net
 I couldn't get copy and paste to work, so I did this:
 
 1. run `wget https://raw.githubusercontent.com/aamkye/ubuntu_on_WD_PRx100/master/readme.md`<C/>
-2. run `nano readme.md`
+2. run `nano readme.md`<C/>
 3. keep pressing `ctrl+k` to remove lines before and after the netplan config, navigate using arrow keys
 4. insert your mac addresses
 5. hit `ctrl+o` `enter` `ctrl+x` to save your file and exit the editor
