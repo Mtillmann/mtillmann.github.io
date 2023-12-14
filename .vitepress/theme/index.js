@@ -6,7 +6,8 @@ import Tags from './components/Tags.vue'
 import Page from './components/Page.vue'
 import Comment from './components/Comment.vue'
 import Title from './components/Title.vue'
-import Cp from './components/Cp.vue'
+
+import {default as CopyButton, defaultSettings} from 'vitepress-copy-helper'
 
 import './custom.css'
 import './custom.js'
@@ -21,7 +22,7 @@ export default {
         app.component('Page', Page)
         app.component('Comment', Comment),
         app.component('Title', Title),
-        app.component('Cp', Cp)
+        app.component('C', CopyButton)
         
     }
 }
