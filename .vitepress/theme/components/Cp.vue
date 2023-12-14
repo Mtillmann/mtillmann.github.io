@@ -107,6 +107,14 @@ async function copy() {
         color:var(--vp-c-text-1);
         opacity:0;
         animation: notify 1s ease-out;
+
+        border: 1px solid var(--vp-code-copy-code-border-color);
+        border-radius: 4px;
+        padding: 2px 4px;
+        font-size: small;
+        display: inline-block;
+        background-color: var(--vp-code-copy-code-bg);
+
     }
 }
 
