@@ -1,7 +1,7 @@
 ---
 layout: doc
 date: 2023-12-15
-title: A simple copy button helper for VitePress
+title: vitepress-copy-helper - A simple copy button helper for VitePress
 tags:
     - vitepress
     - vue
@@ -13,8 +13,13 @@ tags:
 
 <Title/>
 
+See [vitepress-copy-helper's readme](https://github.com/Mtillmann/vitepress-copy-helper) for installation and configuration instructions.
 
-## Positioning Buttons relative to `code`-blocks
+Below are some examples of how to use the component in your vitepress markdown files.
+
+## Examples
+
+### Positioning Buttons relative to `code`-blocks
 | markdown | html |
 | --- | --- | 
 | <nobr>`` `button at the end`<C/> ``</nobr> | <nobr>`button at the end`<C/></nobr> 
@@ -34,7 +39,7 @@ In the examples above, the natural order of the button is reversed by setting th
 > Default behaviour can be changed globally by setting the `position` default setting to `start` or `end`.
 
 
-## Selecting `code`-block targets
+### Selecting `code`-block targets
 
 | markdown | html |
 | --- | --- |
@@ -53,7 +58,7 @@ The button is attached to the _next_ code-sibling. The first button is rendered 
 
 > By default, a button wedged between two code-nodes is attached to the previous code-sibling. This can be changed globally by changing the `preferSibling` default setting to `next`.
 
-## Labels and Messages
+### Labels and Messages
 
 | markdown | html |
 | --- | --- |
@@ -72,7 +77,7 @@ As demonstrated in the last example, you can reference the copied content by usi
 
 > Both `label` and `message` props can be set globally by changing the `label` and `message` default settings. This is useful if you want to translate the button label and message.
 
-## Standalone Buttons
+### Standalone Buttons
 
 | markdown | html |
 | --- | --- |
@@ -83,6 +88,3 @@ As demonstrated in the last example, you can reference the copied content by usi
 Standalone buttons can be created by including the `content` prop. This is useful if you want to create a button that is not attached to a code block. 
 
 If you omit the `content` prop, the button will not be rendered. `position` and `target` props have no effect on standalone buttons.
-
-
-
