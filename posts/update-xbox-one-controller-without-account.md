@@ -15,14 +15,14 @@ tags:
 ## The issue
 
 When buying a new xbox one controller there's a chance that it will not work with your steam deck out of the box. To make it work, you'll need to update the controller's firmware.
-Of course, Microsoft wants you to use their store and xbox app to do so, but there's a way to do it without an account:
+Of course, Microsoft wants you to use their store and xbox app to do so, but there's a way to do it without any account:
 
 ## The solution
 
 Do these steps to update your controller:
 
 1. Open a regular(non-admin) powershell: press `windows`-key, type `powershell` and press `enter`  
-2. Type or paste `winget install 9NBLGGH30XJ3` and press `enter`*
+2. Type or paste `winget install 9NBLGGH30XJ3`<Cp/> and press `enter`*
 3. Plug in your controller to your PC via USB and wait for the driver to install
 4. Open the xbox accessories app: press `windows`-key, type `xbox accessories` and press `enter`
 5. Close the xbox popup several times and ignore the error message about not having an xbox account
