@@ -28,6 +28,6 @@
         "prettier": "^3.1.1",
         "typescript": "^5.3.3",
         "vitepress": "1.0.0-rc.31",
-        "vitepress-copy-helper": "^0.0.1"
+        "vitepress-copy-helper": "^0.0.2"
     }
 }

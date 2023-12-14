@@ -9,6 +9,7 @@ import Title from './components/Title.vue'
 
 import {default as CopyButton, defaultSettings} from 'vitepress-copy-helper'
 
+import 'vitepress-copy-helper/style.css'
 import './custom.css'
 import './custom.js'
 

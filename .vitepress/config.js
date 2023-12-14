@@ -12,7 +12,7 @@ export default defineConfig({
     title: 'Martin\'s Blog',
     base: '/',
     cacheDir: './node_modules/vitepress_cache',
-    description: 'vitepress,blog,blog-theme',
+    description: 'My personal blog about programming, technology, digital freedom and other stuff.',
     ignoreDeadLinks: true,
     themeConfig: {
         posts: await getPosts(pageSize),
@@ -31,7 +31,7 @@ export default defineConfig({
         search: {
             provider: 'local',
         },
-        //outline:[2,3],
+        outline:[2,3],
         outlineTitle: 'Outline',
         socialLinks: [
             {
