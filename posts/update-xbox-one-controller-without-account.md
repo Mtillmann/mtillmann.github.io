@@ -22,7 +22,7 @@ Of course, Microsoft wants you to use their store and xbox app to do so, but the
 Do these steps to update your controller:
 
 1. Open a regular(non-admin) powershell: press `windows`-key, type `powershell` and press `enter`  
-2. Type or paste `winget install 9NBLGGH30XJ3`<Cp/> and press `enter`*
+2. Type or paste `winget install 9NBLGGH30XJ3`<C/> and press `enter`*
 3. Plug in your controller to your PC via USB and wait for the driver to install
 4. Open the xbox accessories app: press `windows`-key, type `xbox accessories` and press `enter`
 5. Close the xbox popup several times and ignore the error message about not having an xbox account
