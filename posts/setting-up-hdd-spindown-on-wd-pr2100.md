@@ -51,7 +51,7 @@ The `-B` parameter must be set below 128, because [values above 127 apparently d
 ## Check if it works
 
 1. install smartmontools by running `sudo apt install smartmontools`<C/> ([reason](https://wiki.archlinux.org/title/hdparm#Querying_the_status_of_the_disk_without_waking_it_up))
-2. wait for the drives to spin down, then run `sudo smartctl -i -n standby /dev/sda`. The output should look like this:
+2. wait for the drives to spin down, then run `sudo smartctl -i -n standby /dev/sda`<C/>. The output should look like this:
   ```
     smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-91-generic] (local build)
     Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
