@@ -1,6 +1,6 @@
 ---
 layout: doc
-date: 2023-12-12
+date: 2023-12-16
 title: Indicating drive power state on the PR2100
 tags:
   - western-digital
@@ -10,14 +10,12 @@ tags:
   - right-to-repair
   - linux
   - ubuntu
-  - hdparm
 ---
 
 <Title/>
 
-If you want to see if your drives are spinning or not, you can use the LED on the front of the device to show the state of the drives.
 
-run `sudo nano /usr/local/sbin/hdd-led.py`<C/> and paste the following code:
+<<< @/public/resources/hdd-led.py
 
 ```python
 import os
