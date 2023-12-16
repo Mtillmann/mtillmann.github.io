@@ -19,22 +19,22 @@ If you're using your PR2100 as a backup device or data grave, you may want to sp
 
 > Spinning down the HDDs (after a reasonable delay) might increase their lifespan but also increases the time it takes to access data on them. If you're using your PR2100 as a NAS, you may not want to do this.
 
-I found that two approaches may work, although I finally went with the second one, because I couldn't get the [first one](https://wiki.archlinux.org/title/hdparm#Persistent_configuration_using_udev_rules) to perform reliably.
-
-## Approach 1: Persistent configuration using udev rules
+## Approach 1: udev rules
 
 1. ssh into your PR2100
 2. _for each drive_
    1. find out the [short serial](https://wiki.archlinux.org/title/Udev#Identifying_a_disk_by_its_serial) by running `udevadm info /dev/sdX | grep SHORT`<C/>, replace `sdX` with the device id of your drive, e.g. `sda`
    2. run `sudo nano /etc/udev/rules.d/69-hdparm.rules`<C/> and enter the following line
-    ```
+    ```conf
     ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]", ENV{ID_SERIAL_SHORT}=="SERIAL_FROM_ABOVE", RUN+="/usr/sbin/hdparm -B 127 -S 241 /dev/sdX"
     ```
     replace `SERIAL_FROM_ABOVE` with the short serial you acquired in step 2.1 and `sdX` with the device id of your drive, e.g. `sda`
 3. reboot your PR2100 (hard)
 4. run `sudo systemctl status udev.service`<C/> and look for any errors related to your drives
 
-## Approach 2: Persistent configuration using cron
+> Never worked for me
+
+## Approach 2: cron
 
 1. ssh into your PR2100
 2. run `sudo crontab -e`<C/>
@@ -48,6 +48,54 @@ I found that two approaches may work, although I finally went with the second on
 
 The `-B` parameter must be set below 128, because [values above 127 apparently disable spindown](https://wiki.archlinux.org/title/hdparm#Power_management_configuration:~:text=Values%20from%201%20to%20127%20permit%20spin%2Ddown%2C%20whereas%20values%20from%20128%20to%20254%20do%20not.).
 
+> Worked for me initially while testing with an old samsung drive, but not with my new WD Red drives
+
+## Approach 3: `hdparm.conf`
+
+See [this post](https://stackoverflow.com/questions/49841690/hdparm-conf-settings-dont-seem-to-run-at-boot) for a configuration example AND
+several hacks that may or not be required to make it work.
+
+> Never worked for me
+
+## Approach 4: `hd-idle`
+
+[just follow the instructions here](https://github.com/adelolmo/hd-idle). Very easy to set up and the most straightforward solution I've found so far.
+
+I'm using the following configuration in `/etc/default/hd-idle`:
+
+```conf
+START_HD_IDLE=true
+# documentation...
+HD_IDLE_OPTS="-i 0 -a sda -i 1800"
+```
+This disables spindown by default (my M.2 ssd wont need it) and set the spindown time to 30 minutes for my HDD "sda". 
+
+Append `-a sdX -i NN` for each additional drive you want to configure.
+
+### Inspecting hd-idle's log
+
+To see if your config is working as expected, replace the `HD_IDLE_OPTS` line with the following:
+
+```conf
+HD_IDLE_OPTS="-d -i 0 -a sda -i 60"
+```
+
+This will enable debug logging and set the spindown time to 60 seconds for easier inspection.
+
+Next, make sure your drive is awake by running a simple `touch /YOURMOUNTFOLDER/wakeup`<C/> and wait for it to spin down again.
+
+Now, run `watch -c "sudo SYSTEMD_COLORS=1 systemctl status hd-idle"`<C/> to see the log output of hd-idle.
+
+Keep watching it for a minute and keep an eye on the `reads`, `writes` and `idleDuration` values of your drive. The `reads` and `writes` values should not change and the `idleDuration` should increase every time the log is updated.
+
+When the `idleDuration` reaches 60 seconds, a line reading `sda spindown` should appear in the log. 
+
+Congratulations, your drive is now spinning down after 60 seconds of inactivity.
+
+Remove `-d` from `HD_IDLE_OPTS` and change the spindown time to some reasonable value, e.g. 1800 (30 minutes). Restart hd-idle by running `sudo service hd-idle restart`<C/> and you're done.
+
+> This is what I'm using now and I am very happy with it 👍
+
 ## Check if it works
 
 1. install smartmontools by running `sudo apt install smartmontools`<C/> ([reason](https://wiki.archlinux.org/title/hdparm#Querying_the_status_of_the_disk_without_waking_it_up))
@@ -59,7 +107,7 @@ The `-B` parameter must be set below 128, because [values above 127 apparently d
     Device is in STANDBY mode, exit(2)
   ```
 
-## Spindown Time Notation
+## `hdparm` Spindown Time Notation
 
 [From the documentation](https://wiki.archlinux.org/title/hdparm#:~:text=The%20value%20of%200%20disables%20spindown%2C%20the%20values%20from%201%20to%20240%20specify%20multiples%20of%205%20seconds%20and%20values%20from%20241%20to%20251%20specify%20multiples%20of%2030%20minutes.):
 
@@ -79,57 +127,5 @@ Here's a table with some examples:
 | 243   | 90 minutes |
 | 244   | 120 minutes |
 | 250   | 240 minutes |
-
-## Bonus: Show Drive Power State using the PR2100's Power LED
-
-If you want to see if your drives are spinning or not, you can use the LED on the front of the device to show the state of the drives.
-
-run `sudo nano /usr/local/sbin/hdd-led.py`<C/> and paste the following code:
-
-```python
-import os
-import sys
-
-if os.geteuid() != 0:
-  print("this script needs to be run as root")
-  sys.exit(1)
-
-# list of disks to check, e.g. ["/dev/sda", "/dev/sdb"]
-disks = ["/dev/sda"]
-active_disk_count = 0
-
-# if True, the green LED will blink when the disks are idle
-blink_on_idle = True
-
-for disk in disks:
-  cmd = f"smartctl -i -n standby {disk} | grep -i \"power mode is\""
-  stream = os.popen(cmd)
-  cmd_output = stream.read().strip().lower()
-  if "active" in cmd_output or "idle" in cmd_output:
-    active_disk_count += 1
-
-led_cmd = ''
-
-if blink_on_idle:
-    if active_disk_count > 0:
-        led_cmd = 'wdhwc led --power --steady --blue && wdhwc led --power --blink'
-    else:
-        led_cmd = 'wdhwc led --power --blink --green && wdhwc led --power --steady'
-else:
-    if active_disk_count > 0:
-        led_cmd = 'wdhwc led --power --steady --blue && wdhwc led --power --blink'
-    else:
-        led_cmd = 'wdhwc led --power --steady --green && wdhwc led --power --blink'
-
-os.system(led_cmd)
-```
-
-Next, run `sudo crontab -e`<C/> and add the following line at the bottom of the file:
-
-```
-* * * * * python3 /usr/local/sbin/hdd-led.py
-```
-
-Now, the LED will blink green when the drives are idle and solid blue when they're active.
 
 <Comment />
