@@ -2,7 +2,7 @@
     <div class="site-footer">
 
         <span xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-            <a property="dct:title" rel="cc:attributionURL" href="https://mtillmann.github.io">{{ title }}</a>
+            <a property="dct:title" rel="cc:attributionURL" href="https://mtillmann.blog">{{ title }}</a>
             by
             <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Mtillmann">Martin
                 Tillmann</a>

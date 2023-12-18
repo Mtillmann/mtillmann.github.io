@@ -6,7 +6,7 @@ import { log } from 'console';
 
 const pageSize = 10
 
-const URL = 'https://mtillmann.github.io';
+const URL = 'https://mtillmann.blog';
 
 export default defineConfig({
     title: 'Martin\'s Blog',
