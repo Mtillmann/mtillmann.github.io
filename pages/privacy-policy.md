@@ -2,7 +2,7 @@
 search: false
 title: Privacy Policy for Martin's Blog
 #lastUpdated: 4-09-2023
-date: 4-09-2023
+date: 2023-09-04
 ---
 
 <Title/>

@@ -25,7 +25,14 @@ export default defineConfig({
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Archives', link: '/pages/archives' },
-            { text: 'Tags', link: '/pages/tags' },
+            {
+                text: 'Projects',
+                items: [
+                  { text: 'isit.red', link: '/pages/is-it-red' },
+                  //{ text: 'Item B', link: '/item-2' },
+                  //{ text: 'Item C', link: '/item-3' }
+                ]
+              }
             // { text: 'About', link: '/pages/about' },
         ],
         search: {
