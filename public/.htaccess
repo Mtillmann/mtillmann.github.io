@@ -1,0 +1,4 @@
+Header set Content-Security-Policy "header-value"
+Header set X-XSS-Protection "header-value"
+Header set Strict-Transport-Security "header-value"
+Header set X-Frame-Options "header-value"
