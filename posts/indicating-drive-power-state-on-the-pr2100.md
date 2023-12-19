@@ -18,7 +18,7 @@ If you've managed to set up HDD spindown on your PR2100, you may want to indicat
 
 ## Installation
 
-Run `sudo wget -O /usr/local/sbin/hdd-led.py https://raw.githubusercontent.com/Mtillmann/mtillmann.github.io/master/public/resources/hdd-led.py`<C/> or copy the script from below and paste it into a file at `/usr/local/sbin/hdd-led.py`<C/>
+Run `sudo wget -O /usr/local/sbin/hdd-led.py https://raw.githubusercontent.com/Mtillmann/mtillmann.blog/master/public/resources/hdd-led.py`<C/> or copy the script from below and paste it into a file at `/usr/local/sbin/hdd-led.py`<C/>
 
 Run `sudo crontab -e`<C/> and add the following line at the bottom of the file:
 
