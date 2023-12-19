@@ -1,5 +1,5 @@
 # Based on: Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy vitepress to USERNAME.github.io page
+name: Deploy vitepress to febas cheapo host
 
 on:
   # Runs on pushes targeting the default branch
@@ -40,4 +40,4 @@ jobs:
           password: ${{ secrets.FTPPASS }}
           dangerous-clean-slate : true
           local-dir: ./_site/
-          server-dir: /htdocs/mtillmann.blog/
+          server-dir: .
