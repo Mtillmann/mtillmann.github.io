@@ -10,7 +10,11 @@
         </div>
         <p v-if="article.frontMatter.description" class="description" v-html="article.frontMatter.description"></p>
         <div class='post-info'>
+            <a v-for="item in article.frontMatter.tags" :href="withBase(`/pages/tags.html?tag=${item}`)"><span> {{ item }}</span></a>
+
+            <!--
              <span v-for="item in article.frontMatter.tags"><a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a></span>
+             -->
         </div>
     </div>
 
@@ -52,6 +56,8 @@ const props = defineProps({
 .post-info {
     font-size: 12px;
 }
+
+/*
 .post-info span {
     display: inline-block;
     padding: 0 8px;
@@ -61,6 +67,30 @@ const props = defineProps({
     border-radius: 2px;
     color: var(--vp-c-text-1);
 }
+*/
+
+.post-info a {
+    display: inline-block;
+    
+    margin-right: 10px;
+    margin-right: 10px;
+    
+    span{
+        padding: 1px 9px;
+        display: inline-block;
+        background-color: var(--vp-c-bg-alt);
+        transition: 0.4s;    
+        
+        border-radius: 2px;
+        color: var(--vp-c-text-1);
+    }
+
+    &:hover span{
+        color: var(--vp-c-brand-2);
+        
+    }
+}
+
 .description {
     font-size: 0.9375rem;
     display: -webkit-box;
