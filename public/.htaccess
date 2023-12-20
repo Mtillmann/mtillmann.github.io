@@ -1,4 +1,7 @@
-Header set Content-Security-Policy "header-value"
-Header set X-XSS-Protection "header-value"
-Header set Strict-Transport-Security "header-value"
-Header set X-Frame-Options "header-value"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-Content-Type-Options "nosniff"
+Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+# Header set Content-Security-Policy ...
+Header set Referrer-Policy "same-origin"
+# Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
