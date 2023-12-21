@@ -1,4 +1,4 @@
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme-without-fonts'
 
 import NewLayout from './components/NewLayout.vue'
 import Archives from './components/Archives.vue'
