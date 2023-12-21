@@ -18,11 +18,11 @@
         Powered by <a class="vitepress" target="_blank" href="//vitepress.vuejs.org/">VitePress</a>
         &mdash;
         Theme based on <a class="vitepress" target="_blank" href="//github.com/airene/vitepress-blog-pure">Airene's
-            vitepress-blog-pure</a>
+            vitepress-blog-pure</a>. <a :href="withBase('/pages/imprint.html')">Imprint</a>
     </div>
 </template>
 <script lang="ts" setup>
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 
 const { site, theme } = useData()
 const url = theme.value.website
