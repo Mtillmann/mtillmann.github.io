@@ -5,3 +5,13 @@ Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains
 # Header set Content-Security-Policy ...
 Header set Referrer-Policy "same-origin"
 # Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
+
+<IfModule mod_headers.c>
+# Caching
+<FilesMatch "\.(ico|jpg|jpeg|gif|png|pdf|mp3|mp4)$">
+Header set Cache-Control "public, max-age=31536000, no-transform"
+</FilesMatch>
+<FilesMatch "\.(html|js|css)$">
+Header set Cache-Control "public, max-age=604800, must-revalidate"
+</FilesMatch>
+</IfModule> 
