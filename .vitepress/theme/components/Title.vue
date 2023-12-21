@@ -1,11 +1,11 @@
 <template>
     <p style="margin-bottom: 0;">
         <small>
-            <span v-if="page.frontmatter.date">Posted on
-                <span>{{ new Date(page.frontmatter.date).toLocaleDateString() }}</span>
+            <span v-if="date">Posted on
+                <span>{{ date }}</span>
             </span>
-            <span v-if="page.frontmatter.lastUpdated"> (updated on
-                <span>{{ new Date(page.frontmatter.lastUpdated).toLocaleDateString() }}</span>)
+            <span v-if="updated"> (updated on
+                <span>{{ updated }}</span>)
             </span>
 
             <span v-if="page.frontmatter.tags?.length > 0">
@@ -28,8 +28,21 @@
     </h1>
 </template>
 <script setup>
-import { useSlots } from 'vue'
-import { useData, withBase } from 'vitepress'
+import { useSlots, ref, onBeforeMount } from 'vue';
+import { useData, withBase } from 'vitepress';
 const slots = useSlots();
 const { page } = useData();
+
+const date = ref(null);
+const updated = ref(null);
+
+onBeforeMount(() => {
+    if (page.value.frontmatter.date) {
+        date.value = new Date(page.value.frontmatter.date).toLocaleDateString();
+    }
+    if (page.value.frontmatter.lastUpdated) {
+        updated.value = new Date(page.value.frontmatter.lastUpdated).toLocaleDateString();
+    }
+});
+
 </script>
