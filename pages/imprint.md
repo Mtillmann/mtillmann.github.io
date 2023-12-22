@@ -9,8 +9,7 @@ date: 2020-01-01
 
 Responsible person according to §5 TMG:
 
-Martin Tillmann
-Severinstr. 2
-50678 Köln / Germany
-
-E-Mail: mtillmann(at)gmail.com
+> Μаrtⅰn ТᎥllｍаnn    
+> ՏеⅴerᎥnѕtr．２  
+> 50678 Köln / Germany  
+> E-Mail: mtillmann(at)gmail.com

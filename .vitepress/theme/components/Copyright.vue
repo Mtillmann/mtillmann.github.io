@@ -14,11 +14,8 @@
                 <img width="12" height="12" alt="cc icon" src="/cc-icons/cc.svg?ref=chooser-v1"><img width="12" height="12" alt="by icon"  src="/cc-icons/by.svg?ref=chooser-v1"><img
                     alt="nc icon"  src="/cc-icons/nc.svg?ref=chooser-v1"><img width="12" height="12" alt="sa icon" src="/cc-icons/sa.svg?ref=chooser-v1"></a>
         </span>
-        <br>
-        Powered by <a class="vitepress" target="_blank" href="//vitepress.vuejs.org/">VitePress</a>
-        &mdash;
-        Theme based on <a class="vitepress" target="_blank" href="//github.com/airene/vitepress-blog-pure">Airene's
-            vitepress-blog-pure</a> &mdash; <a :href="withBase('/pages/imprint.html')">Imprint</a>
+        
+         &mdash; <a :href="withBase('/pages/imprint.html')">Imprint</a>
     </div>
 </template>
 <script lang="ts" setup>
