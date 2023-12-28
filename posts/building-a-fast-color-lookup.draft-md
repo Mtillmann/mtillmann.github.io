@@ -1,0 +1,23 @@
+---
+layout: doc
+date: 2022-05-05
+title: Building a fast color lookup for isit.red
+tags:
+  - projects
+  - is-it-red
+  - colorblind
+  - assistive technology
+---
+
+<Title/>
+
+While working on [isit.red](https://isit.red) I went through a couple of iterations of the color lookup algorithm. This post is a writeup of the different approaches I tried and the final algorithm I ended up using.
+
+My first approach was to naively iterate through the list of colors, calculate the &Delta;E distance to the given color and keep track of the closest colors below a certain threshold. Next, that list of colors would be sorted by &Delta;E and the first N entries would be returned. This approach was very slow, especially on mobile devices. While it worked for the image analyzer, it was not fast enough for the video analyzer to work in realtime.
+
+To run the AR View, the algorithm needs to be able to process analyze one pixel in less than 4ms. Especially iOS devices had performance issues because the [OffscreenCanvas API](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) was not available on iOS at the time. 
+
+After some thought I 
+
+
+<Comment/>
