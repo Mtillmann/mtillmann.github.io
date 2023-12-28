@@ -47,7 +47,7 @@ Given the color R=168, G=255, B=82 (a bright green, thanks isit.red), the euclid
 | Spring frost | 135 | 255 | 42 | 51.856 | 3.386 |
 | Inchworm | 178 | 236 | 93 | 24.125 | 4.811 |
 
-"Inchworm" has the closest euclidean distance to the given color while ΔE is the largest of the group. This demonstrates how the euclidean distance is not a good measure for color similarity because colors that have a short euclidean distance can be perceived as very different.
+"Inchworm" has the shortest euclidean distance to the given color while having the largest ΔE value of the group. This demonstrates how the euclidean distance is not a good measure for color similarity because colors that have a short euclidean distance can be perceived as very different.
 
 ## Accuracy and Perception
 
