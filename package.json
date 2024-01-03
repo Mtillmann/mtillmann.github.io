@@ -13,21 +13,21 @@
     "license": "ISC",
     "type": "module",
     "devDependencies": {
-        "@types/node": "^20.10.4",
-        "@typescript-eslint/eslint-plugin": "^6.14.0",
-        "@typescript-eslint/parser": "^6.14.0",
-        "@typescript-eslint/types": "^6.14.0",
-        "@vue/compiler-sfc": "^3.3.11",
-        "eslint": "^8.55.0",
+        "@types/node": "^20.10.6",
+        "@typescript-eslint/eslint-plugin": "^6.16.0",
+        "@typescript-eslint/parser": "^6.16.0",
+        "@typescript-eslint/types": "^6.16.0",
+        "@vue/compiler-sfc": "^3.4.3",
+        "eslint": "^8.56.0",
         "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-prettier": "^5.0.1",
+        "eslint-plugin-prettier": "^5.1.2",
         "eslint-plugin-vue": "^9.19.2",
         "fs-extra": "^11.2.0",
         "globby": "^14.0.0",
         "gray-matter": "^4.0.3",
         "prettier": "^3.1.1",
         "typescript": "^5.3.3",
-        "vitepress": "1.0.0-rc.31",
-        "vitepress-copy-helper": "^0.0.2"
+        "vitepress": "1.0.0-rc.34",
+        "vitepress-copy-helper": "^0.0.3"
     }
 }
