@@ -22,7 +22,8 @@ export default defineConfig({
         const head = [
             ['meta', { name: 'twitter:card', content: 'summary' }],
             ['meta', { property: 'og:site_name', content: title }],
-            ['meta', { property: 'og:image', content: URL + '/resources/share-icon.png' }],
+            ['meta', { property: 'og:image', content: URL + '/resources/share-icon.jpg' }],
+            ['meta', { property: 'og:type', content: 'website' }],
         ];
 
         
