@@ -1,7 +1,8 @@
 ---
 layout: doc
 date: 2023-12-11
-title: Installing Ubuntu Server 22.04 on WD PR2100 in late 2023
+title: Installing Ubuntu Server 22.04 on WD PR2100 in 2024
+description: A tutorial on how to install Ubuntu Server 22.04 on a WD PR2100 in 2024 and how to get the hardware control working
 tags:
   - western-digital
   - pr2100

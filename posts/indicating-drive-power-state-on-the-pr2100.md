@@ -2,6 +2,7 @@
 layout: doc
 date: 2023-12-16
 title: Indicating drive power state on the PR2100's front LEDs
+description: A small script to indicate the power state of the drives on the PR2100's front LEDs - green for spun down, blue for spun up
 tags:
   - western-digital
   - pr2100

@@ -2,6 +2,7 @@
 layout: doc
 date: 2023-12-13
 title: Controlling fan speed on the PR2100 with Ubuntu Server
+description: Instructions on how to control the fan speed on the PR2100 with Ubuntu Server
 tags:
   - western-digital
   - pr2100

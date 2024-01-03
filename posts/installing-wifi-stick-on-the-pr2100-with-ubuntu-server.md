@@ -2,6 +2,7 @@
 layout: doc
 date: 2023-12-13
 title: Installing a wifi stick on the PR2100 with Ubuntu Server
+description: Enable wireless networking on the PR2100 that only comes with two gigabit ethernet ports
 tags:
   - western-digital
   - pr2100

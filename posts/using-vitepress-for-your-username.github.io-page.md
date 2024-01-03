@@ -2,6 +2,7 @@
 layout: doc
 date: 2023-11-03
 title: create a username.github.io page using vitepress
+description: A small tutorial on how to create a vitepress blog and deploy it to your username.github.io page
 tags:
   - vitepress
   - vue

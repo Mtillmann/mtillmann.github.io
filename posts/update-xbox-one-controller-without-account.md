@@ -2,6 +2,7 @@
 layout: doc
 date: 2023-08-20
 title: updating xbox one controller without microsoft and xbox account
+description: How to update your xbox one controller without a microsoft or xbox account using the xbox accessories app
 tags:
   - microsoft
   - steamdeck

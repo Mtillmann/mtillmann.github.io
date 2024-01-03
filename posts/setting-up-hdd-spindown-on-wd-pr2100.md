@@ -2,6 +2,7 @@
 layout: doc
 date: 2023-12-12
 title: Setting up HDD spindown using hdparm on a WD PR2100
+description: Spinning down disks in general and on the PR2100 in particular
 tags:
   - western-digital
   - pr2100

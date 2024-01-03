@@ -2,6 +2,7 @@
 layout: doc
 date: 2023-02-22
 title: how to install a game from iso on steam deck
+description: A small guide on how to install a game from an ISO-File on the Steam Deck
 tags:
   - linux
   - steamdeck

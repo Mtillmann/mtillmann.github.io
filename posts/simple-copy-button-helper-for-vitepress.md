@@ -2,6 +2,7 @@
 layout: doc
 date: 2023-12-15
 title: vitepress-copy-helper - A simple copy button helper for VitePress
+description: A simple copy button helper for VitePress that allows you to add copy buttons to single backtick code blocks
 tags:
     - vitepress
     - vue
