@@ -6,15 +6,15 @@ title: Is it red? My assistive app for colorblind people
 
 As a colorblind person, I often find myself wondering what color something is. Especially with online shops, it's hard to tell what color something actually is when the styles are named things like "light bone", "sail", or "sunset" (Spoiler: It's always pink). So when you're depending on something having an expressive color name, you're out of luck. I wanted to build a tool that would help me with that.
 
-My approach was so first compile a list of color names, grouped by shade and their rgb values. Then I grouped the colors further by brightness to split the shade groups into light and dark variants. You can find the list of 1.265 colors, 14 shades and 38 shade variants [here](https://isit.red/#/shades) or search the list [here](https://isit.red/#/search?q=red).
+My approach was so first compile a list of color names, grouped by shade and their rgb values. Then I grouped the colors further by brightness to split the shade groups into light and dark variants. Browse can find the [list of 1.265 colors, 14 shades and 38 shade variants](https://isit.red/#/shades) or [search the list](https://isit.red/#/search?q=red).
 
-The first iteration of my app would take a screenshot or image, downsample it to a given number of pixels and find the shade and approximate color name for each pixel. You can try the analyzer [here](https://isit.red/#/image-analyzer?image=https://upload.wikimedia.org/wikipedia/commons/5/54/RGV_color_wheel_1908.png).
+The first iteration of my app would take a screenshot or image, downsample it to a given number of pixels and find the shade and approximate color name for each pixel. [Try the AR View](https://isit.red/#/image-analyzer?image=https://upload.wikimedia.org/wikipedia/commons/5/54/RGV_color_wheel_1908.png).
 
-Next I wanted to try my hand at realtime video analysis. I went with two modes: a "color picker" mode that would show the color name and shade of the pixel under the cursor and a "grid view" mode that shows a grid of the shades from the video feed. You can try the video analyzer [here](https://isit.red/#/live).
+Next I wanted to try my hand at realtime video analysis. I went with two modes: a "color picker" mode that would show the color name and shade of the pixel under the cursor and a "grid view" mode that shows a grid of the shades from the video feed. [Try the video analyzer](https://isit.red/#/live).
 
-I also wanted to make the app useful for people who are not colorblind, so I added a color picker that would show the color name and shade of the pixel under the cursor. You can try the color picker [here](https://isit.red/#/color-picker).
+I also wanted to make the app useful for people who are not colorblind, so I added a [color picker](https://isit.red/#/color-picker) that would show the color name and shade of the pixel under the cursor.
 
-The next feature was a simple quiz that shows a random color, then derives the shade name from the color and asks the user to pick the correct shade from a list. You can try the quiz [here](https://isit.red/#/quiz). After completing a couple of rounds, the quiz will show you a list of the shades you get wrong the most and therefore seem to have the most trouble with (at least on the device you're currently using).
+The next feature was a [simple quiz](https://isit.red/#/quiz) that shows a random color, then derives the shade name from the color and asks the user to pick the correct shade from a list. After completing a couple of rounds, the quiz will show you a list of the shades you get wrong the most and therefore seem to have the most trouble with (at least on the device you're currently using).
 
 As a last feature, I created a small interactive 3d animation that shows the color list mapped to a cube where [R=X, G=Y, B=Z](https://isit.red/#/cube).
 
