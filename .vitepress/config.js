@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig  } from 'vitepress'
 import { getPosts } from './theme/serverUtils'
 
 import { readdirSync, writeFileSync } from 'fs';
@@ -14,6 +14,14 @@ export default defineConfig({
     cacheDir: './node_modules/vitepress_cache',
     description: 'My personal blog about programming, technology, digital freedom and other stuff.',
     ignoreDeadLinks: true,
+    transformHead: ({pageData}) => {
+        
+        if(!/^index\.md$/.test(pageData.relativePath)) return
+
+        const head = [
+            ['link', { rel:"canonical", href: "https://mtillmann.blog" }]
+        ]
+    },
     themeConfig: {
         posts: await getPosts(pageSize),
         website: URL, //copyright link
