@@ -8,19 +8,38 @@ const pageSize = 10
 
 const URL = 'https://mtillmann.blog';
 
+const title = 'Martin\'s Blog';
+const description = 'My personal blog about programming, technology, digital freedom and other stuff.'
+
 export default defineConfig({
-    title: 'Martin\'s Blog',
+    title,
     base: '/',
     cacheDir: './node_modules/vitepress_cache',
-    description: 'My personal blog about programming, technology, digital freedom and other stuff.',
+    description,
     ignoreDeadLinks: true,
     transformHead: ({pageData}) => {
         
-        if(!/^index\.md$/.test(pageData.relativePath)) return
-
         const head = [
-            ['link', { rel:"canonical", href: "https://mtillmann.blog" }]
-        ]
+            ['meta', { name: 'twitter:card', content: 'summary' }],
+            ['meta', { property: 'og:site_name', content: title }],
+            ['meta', { property: 'og:image', content: URL + '/resources/share-icon.png' }],
+        ];
+
+        
+
+
+
+        if(/^index\.md$/.test(pageData.relativePath)){
+            head.push(['link', { rel:"canonical", href: "https://mtillmann.blog" }])
+            head.push(['meta', { property: 'og:title', content: title }])
+            head.push(['meta', { property: 'og:description', content: description }])        
+        }else{
+            head.push(['meta', { property: 'og:title', content: pageData.frontmatter.title }])
+            head.push(['meta', { property: 'og:description', content: pageData.frontmatter.description ?? description}])
+            head.push(['meta', { property: 'og:url', content: URL + '/' + pageData.relativePath.replace(/\.md$/, '.html') }])
+        }
+
+        return head;
     },
     themeConfig: {
         posts: await getPosts(pageSize),
