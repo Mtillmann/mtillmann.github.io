@@ -24,11 +24,8 @@ export default defineConfig({
             ['meta', { property: 'og:site_name', content: title }],
             ['meta', { property: 'og:image', content: URL + '/resources/share-icon.jpg' }],
             ['meta', { property: 'og:type', content: 'website' }],
+            ['meta', { property: 'og:url', content: URL + '/' + pageData.relativePath.replace(/\.md$/, '.html') }]
         ];
-
-        
-
-
 
         if(/^index\.md$/.test(pageData.relativePath)){
             head.push(['link', { rel:"canonical", href: "https://mtillmann.blog" }])
@@ -37,7 +34,7 @@ export default defineConfig({
         }else{
             head.push(['meta', { property: 'og:title', content: pageData.frontmatter.title }])
             head.push(['meta', { property: 'og:description', content: pageData.frontmatter.description ?? description}])
-            head.push(['meta', { property: 'og:url', content: URL + '/' + pageData.relativePath.replace(/\.md$/, '.html') }])
+            
         }
 
         return head;
@@ -84,7 +81,7 @@ export default defineConfig({
                 link: 'https://github.com/Mtillmann/mtillmann.github.io'
             }]
     },
-    srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
+    srcExclude: ['README.md'],
 
     vite: {
         build: { minify: true },
