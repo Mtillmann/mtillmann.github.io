@@ -3,6 +3,7 @@ search: false
 title: Imprint
 #lastUpdated: 4-09-2023
 date: 2020-01-01
+description: Imprint for Martin's Blog - bare minimum required by german law
 ---
 
 <Title/>

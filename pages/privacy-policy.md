@@ -1,6 +1,7 @@
 ---
 search: false
 title: Privacy Policy for Martin's Blog
+description: Privacy Policy for Martin's Blog - generated using chatgpt
 #lastUpdated: 4-09-2023
 date: 2023-09-04
 ---
