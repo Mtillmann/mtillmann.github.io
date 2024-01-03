@@ -2,7 +2,7 @@
 layout: doc
 date: 2022-10-26
 lastUpdated: 2023-09-03
-title: Using Laravel 9 w/ Breeze with DDEV and Vite
+title: Using Laravel 9 with Breeze with DDEV and Vite
 description: Working around the HMR issue when using Laravel 9 with Breeze and Vite in a DDEV environment. Includes a middleware to customize the HMR URL.
 tags:
 - laravel
