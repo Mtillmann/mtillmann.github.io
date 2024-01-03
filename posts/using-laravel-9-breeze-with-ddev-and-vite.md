@@ -3,7 +3,7 @@ layout: doc
 date: 2022-10-26
 lastUpdated: 2023-09-03
 title: Using Laravel 9 w/ Breeze with DDEV and Vite
-description: Working around the HMR issue when using Laravel 9 with Breeze and Vite in a DDEV environment
+description: Working around the HMR issue when using Laravel 9 with Breeze and Vite in a DDEV environment. Includes a middleware to customize the HMR URL.
 tags:
 - laravel
 - php
@@ -62,9 +62,9 @@ server : {
  You’ll notice that the protocol is set to wss. The reason is the way that the actual asset-URL that’s written into your document. It will only use a [https-protocol-part if the protocol is set to `wss`](https://github.com/laravel/vite-plugin/blob/2abd0b510b43061fab0027d5492547ce9a91dcad/src/index.ts#L393) because it is assumed that you use a non-ssl environment on the special `localhost`-hostname.
 
 ## Alternative: Customize Illuminate\Foundation\Vite’s HMR URL
-If you’re not comfortable with setting the protocol to wss or simply want another domain than DDEV_HOSTNAME for whatever reason, I’ve made a small middleware that lets you override the URL that’s passed to the document for asset inclusion.
+If you’re not comfortable with setting the protocol to wss or simply want another domain than DDEV_HOSTNAME for whatever reason, I’ve made a small middleware that lets you override the URL that’s passed to the document for asset inclusion:
 
-[Gist: Custom HMR Hot File Middleware](https://gist.github.com/Mtillmann/ea4d3c0e24f30d1bc9504f1151d2d941)
+<<< @/public/resources/CustomHMRHotFile.php
 
 ## Starting vite the correct way
 

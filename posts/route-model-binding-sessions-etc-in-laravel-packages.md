@@ -2,7 +2,7 @@
 layout: doc
 date: 2019-01-08
 title: Route Model Binding, Sessions etc in Routes provided by Laravel Packages
-description: How to enable route model binding, sessions etc in routes provided by custom Laravel packages
+description: How to enable route model binding, sessions etc in routes provided by Laravel packages and why it appears to not work out of the box.
 tags:
   - laravel
   - php

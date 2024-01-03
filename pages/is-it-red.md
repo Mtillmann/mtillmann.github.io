@@ -1,7 +1,7 @@
 ---
 search: true
 title: Is it red? My assistive app for colorblind people
-description: My small web app that helps colorblind people identify colors
+description: My small web app that helps colorblind people identify colors and shades in the real world using their device's camera
 ---
 <Title/>
 
