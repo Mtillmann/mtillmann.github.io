@@ -85,7 +85,7 @@ Create a root shell
 ```shell
 sudo su
 ``` 
-then
+then inside the root shell:
 ```shell
 add-apt-repository universe
 cd /opt
@@ -93,7 +93,7 @@ git clone https://github.com/WDCommunity/wdnas-hwtools
 cd /opt/wdnas-hwtools
 ./install.sh
 ```
-then hit `crtl+d` to exit root shell
+hit `crtl+d` to exit root shell
 
 Now, within a few seconds the fan should spin down to 30% of its max speed.
 
