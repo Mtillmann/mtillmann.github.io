@@ -1,4 +1,4 @@
-import { defineConfig  } from 'vitepress'
+import { defineConfig } from 'vitepress'
 import { getPosts } from './theme/serverUtils'
 
 import { readdirSync, writeFileSync } from 'fs';
@@ -17,27 +17,33 @@ export default defineConfig({
     cacheDir: './node_modules/vitepress_cache',
     description,
     ignoreDeadLinks: true,
-    transformHead: ({pageData}) => {
-        
+    transformHead: ({ pageData }) => {
+
         const head = [
             ['meta', { name: 'twitter:card', content: 'summary' }],
             ['meta', { property: 'og:site_name', content: title }],
             ['meta', { property: 'og:image', content: URL + '/resources/share-icon.jpg' }],
             ['meta', { property: 'og:type', content: 'website' }],
+            ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
+            ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
+            ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
+            ['link', { rel: "manifest", href: "/site.webmanifest" }],
+            ['link', { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" }],
+            ['meta', { name: "msapplication-TileColor", content: "#da532c" }],
+            ['meta', { name: "theme-color", content: "#ffffff" }]
         ];
 
-        
 
 
 
-        if(/^index\.md$/.test(pageData.relativePath)){
-            head.push(['link', { rel:"canonical", href: "https://mtillmann.blog" }])
+        if (/^index\.md$/.test(pageData.relativePath)) {
+            head.push(['link', { rel: "canonical", href: "https://mtillmann.blog" }])
             head.push(['meta', { property: 'og:title', content: title }])
-            head.push(['meta', { property: 'og:description', content: description }])        
-            head.push(['meta', { property: 'og:url', content: URL  }])
-        }else{
+            head.push(['meta', { property: 'og:description', content: description }])
+            head.push(['meta', { property: 'og:url', content: URL }])
+        } else {
             head.push(['meta', { property: 'og:title', content: pageData.frontmatter.title }])
-            head.push(['meta', { property: 'og:description', content: pageData.frontmatter.description ?? description}])
+            head.push(['meta', { property: 'og:description', content: pageData.frontmatter.description ?? description }])
             head.push(['meta', { property: 'og:url', content: URL + '/' + pageData.relativePath.replace(/\.md$/, '.html') }])
         }
 
@@ -57,17 +63,17 @@ export default defineConfig({
             {
                 text: 'Projects',
                 items: [
-                  { text: 'isit.red', link: '/pages/is-it-red' },
-                  //{ text: 'Item B', link: '/item-2' },
-                  //{ text: 'Item C', link: '/item-3' }
+                    { text: 'isit.red', link: '/pages/is-it-red' },
+                    //{ text: 'Item B', link: '/item-2' },
+                    //{ text: 'Item C', link: '/item-3' }
                 ]
-              }
+            }
             // { text: 'About', link: '/pages/about' },
         ],
         search: {
             provider: 'local',
         },
-        outline:[2,3],
+        outline: [2, 3],
         outlineTitle: 'Outline',
         socialLinks: [
             {
