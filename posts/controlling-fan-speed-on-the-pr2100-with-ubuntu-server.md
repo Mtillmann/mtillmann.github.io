@@ -24,7 +24,7 @@ To set a lower idle fan speed, do the following:
 
 1. ssh into your PR2100
 2. run `sudo nano /usr/local/lib/wdhwd/wdhwlib/fancontroller.py`<C/>
-3. hit `ctrl+w`, enter `FAN_DEFAULT = 30`, hit `enter`
+3. hit `ctrl+w`, enter `FAN_DEFAULT = 30`<C/>, hit `enter`
 4. change the value to something lower, e.g. `FAN_DEFAULT = 20` but don't go lower than `FAN_MIN`
 5. hit `ctrl+o` `enter` `ctrl+x` to save your file and exit the editor
 6. run `sudo systemctl restart wdhwd.service`<C/> to restart the service and avoid having to reboot

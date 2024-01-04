@@ -1,8 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { getPosts } from './theme/serverUtils'
 
-import { readdirSync, writeFileSync } from 'fs';
-import { log } from 'console';
 
 const pageSize = 10
 
@@ -59,7 +57,7 @@ export default defineConfig({
         },
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Archives', link: '/pages/archives' },
+            //{ text: 'Archives', link: '/pages/archives' },
             {
                 text: 'Projects',
                 items: [
