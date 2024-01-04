@@ -15,7 +15,7 @@ tags:
 <Title />
 
 ![The Problem](/resources/Laravel-Breeze-Vite-HMR-Fail.png)
-> The error messages are caused by the fact that the vite-http-server is exposes its assets on the default host and port. DDEV however, uses a different host and port for each project, so the browser can’t connect to the vite-http-server.
+> The error messages are caused by the fact that the vite-http-server exposes its assets on the default host and port. DDEV however, uses a unique host AND SSL for each project, so the browser can’t connect to the vite-http-server.
 
 In a [previous post](./using-laravel-9-breeze-with-ddev-and-vite.md) I described how to get Laravel 9 with Breeze and Vite working on DDEV. With Laravel 10, the setup is basically the same, but I hope to save you some time by providing a working config:
 
@@ -90,6 +90,6 @@ hooks:
 ## Done
 
 ![The Solution](/resources/Laravel-Breeze-Vite-HMR-Success.png)
-> Now the assets are loaded from the correct host and port and the browser can connect to the vite-http-server that is running inside the web container. Observe the `app.css` request URL:
-> it uses `https` AND the correct host and port.
+> Observe the `app.css` request URL: it uses `https` AND the correct host and port.
 
+The vite-http-server is now passed through by the ddev router and uses SSL!
