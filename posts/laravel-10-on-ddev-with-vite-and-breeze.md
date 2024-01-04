@@ -79,7 +79,7 @@ _OR_ update the `dev` command in your `package.json` like this:
 
 ## `.ddev/config.yaml`
 
-Running the command when ddev starts
+Running the command when ddev starts. Note: this will hide the output of the vite-http-server, so you won’t see any errors or warnings.
 
 ```yaml
 hooks:
