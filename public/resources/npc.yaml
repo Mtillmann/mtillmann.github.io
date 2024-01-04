@@ -4,12 +4,12 @@ network:
   ethernets:
     eno1:
       match:
-        macaddress: <mac1>
+        macaddress: $MAC1
       dhcp4: no
       set-name: eno1
     eno2:
       match:
-        macaddress: <mac2>
+        macaddress: $MAC2
       dhcp4: no
       set-name: eno2
   bonds:

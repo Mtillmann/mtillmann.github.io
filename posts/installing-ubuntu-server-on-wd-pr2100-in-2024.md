@@ -43,7 +43,7 @@ follow this guide: https://github.com/aamkye/ubuntu_on_WD_PRx100 only to the net
 If you can get copy and paste to work on your instance:
 
 1. run `sudo nano /etc/netplan/01-network-config.yaml`<C/>
-2. replace the contents of the file with the following:
+2. paste the following:
 
 <<< @/public/resources/npc.yaml
 
@@ -51,12 +51,9 @@ If you can get copy and paste to work on your instance:
 
 I couldn't get copy and paste to work, so I did this:
 
-1. run `wget https://mtillmann.blog/resources/npc.yaml`<C/>
-2. run `nano npc.yaml`<C/>
-3. keep pressing `ctrl+k` to remove lines before and after the netplan config, navigate using arrow keys
-4. insert your mac addresses
-5. hit `ctrl+o` `enter` `ctrl+x` to save your file and exit the editor
-6. run `sudo cp npc.yaml /etc/netplan/01-network-config.yaml`<C/>
+1. run `sudo wget https://mtillmann.blog/resources/npc.yaml -O/etc/netplan/01-network-config.yaml`<C/>
+2. run `sudo nano /etc/netplan/01-network-config.yaml`<C/>
+3. replace the `$MAC1` and `$MAC2` with the mac addresses of your PR2100's ethernet ports
 
 ## First Boot
 
