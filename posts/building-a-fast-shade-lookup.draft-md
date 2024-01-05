@@ -1,0 +1,24 @@
+---
+layout: doc
+date: 2022-05-05
+title: Building a fast shade lookup for isit.red
+description: How I built a fast color lookup algorithm for isit.red that works in realtime on mobile devices.
+tags:
+  - projects
+  - is-it-red
+  - colorblind
+  - assistive technology
+---
+
+<Title/>
+
+For my colorblind app [isit.red](https://isit.red) I needed a fast algorithm to find the shade of a given color.
+
+The first approach was to naively iterate through the list of colors, calculate the &Delta;E distance to the given color and store the found color's shade in a list. Then I would sort all the matched shades and pick the most likely one. This approach worked reasonably well on desktop but was too slow for mobile devices.
+
+To run the AR View, the algorithm needs to be able to process analyze one pixel in less than 4ms. Especially iOS devices had performance issues because the [OffscreenCanvas API](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) was not available on iOS at the time. 
+
+After some fudg
+
+
+<Comment/>
