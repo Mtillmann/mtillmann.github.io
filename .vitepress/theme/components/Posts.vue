@@ -1,5 +1,5 @@
 <template>
-    <div v-if="headline && posts.length > 0" class="tag-header">{{ headline }}</div>
+    <h4 v-if="headline && posts.length > 0" class="tag-header">{{ headline }}</h4>
     <a :href="withBase(article.regularPath)" v-for="(article, index) in posts" :key="index" class="posts">
         <div class="post-container">
             <div class="post-dot"></div>

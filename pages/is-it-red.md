@@ -9,9 +9,9 @@ As a colorblind person, I often find myself wondering what color something is. E
 
 My approach was so first compile a list of color names, grouped by shade and their rgb values. Then I grouped the colors further by brightness to split the shade groups into light and dark variants. Browse can find the [list of 1.265 colors, 14 shades and 38 shade variants](https://isit.red/#/shades) or [search the list](https://isit.red/#/search?q=red).
 
-The first iteration of my app would take a screenshot or image, downsample it to a given number of pixels and find the shade and approximate color name for each pixel. [Try the AR View](https://isit.red/#/image-analyzer?image=https://upload.wikimedia.org/wikipedia/commons/5/54/RGV_color_wheel_1908.png).
+The first iteration of my app would take a screenshot or image, downsample it to a given number of pixels and find the shade and approximate color name for each pixel: [the image analyzer](https://isit.red/#/image-analyzer?image=https://mtillmann.blog/resources/very-red.jpg).
 
-Next I wanted to try my hand at realtime video analysis. I went with two modes: a "color picker" mode that would show the color name and shade of the pixel under the cursor and a "grid view" mode that shows a grid of the shades from the video feed. [Try the video analyzer](https://isit.red/#/live).
+Next I wanted to try my hand at realtime video analysis. I went with two modes: a "color picker" mode that would show the color name and shade of the pixel under the cursor and a "grid view" mode that shows a grid of the shades from the video feed. [Try the AR view](https://isit.red/#/live).
 
 I also wanted to make the app useful for people who are not colorblind, so I added a [color picker](https://isit.red/#/color-picker) that would show the color name and shade of the pixel under the cursor.
 
