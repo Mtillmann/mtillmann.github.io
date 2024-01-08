@@ -56,7 +56,7 @@ export default defineConfig({
             issueTerm: 'pathname'
         },
         nav: [
-            { text: 'Home', link: '/' },
+            //{ text: 'Home', link: '/' },
             //{ text: 'Archives', link: '/pages/archives' },
             {
                 text: 'Projects',
