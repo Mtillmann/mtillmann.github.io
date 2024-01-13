@@ -18,7 +18,7 @@ tags:
 A project that I've been putting off for a long time is finally done. 
 I've created a Chrome extension that helps people with color vision deficiency to identify colors and color shades on websites. 
 
-It's simply called _Color Helper_ and it is available on the [chrome web store](https://chromewebstore.google.com/detail/color-helper/lppofdjcegodcddmccmnicgfmblkdpbj) for Chrome, Brave, Opera, Vivaldi and other chromium-base browsers and will shortly appear on the edge store.
+It's simply called _Color Helper_ and it is available on the [chrome web store](https://chromewebstore.google.com/detail/color-helper/lppofdjcegodcddmccmnicgfmblkdpbj) for Chrome, Brave, Opera, Vivaldi and other chromium-based browsers and will shortly appear on the edge store.
 
 It uses the fast lookup table algorithm that I've developed for [isit.red](/pages/is-it-red.md) to identify color shades on the page and then displays the color name and the color shade.
 
