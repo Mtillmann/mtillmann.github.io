@@ -1,10 +1,6 @@
 <template>
-    <div class="tags">
-        <span @click="toggleTag(key)" v-for="(item, key) in data" class="tag">
-            {{ key }} <strong>{{ data[key].length }}</strong>
-        </span>
-    </div>
-    <div class="tag-header">{{ selectTag }}</div>
+
+<div class="tag-header">{{ selectTag }}</div>
     <a :href="withBase(article.regularPath)" v-for="(article, index) in data[selectTag]" :key="index" class="posts">
         <div class="post-container">
             <div class="post-dot"></div>
@@ -12,6 +8,13 @@
         </div>
         <div class="date">{{ new Date(article.frontMatter.date).toLocaleDateString() }}</div>
     </a>
+
+
+    <div class="tags">
+        <span @click="toggleTag(key)" v-for="(item, key) in data" class="tag">
+            {{ key }} <strong>{{ data[key].length }}</strong>
+        </span>
+    </div>
 </template>
 <script lang="ts" setup>
 import { computed, ref, onMounted } from 'vue'
