@@ -55,9 +55,11 @@ Given the color R=168, G=255, B=82 (a bright green, thanks isit.red), the euclid
 The detected color names and shades are not perfect. There are a couple of reasons for that:
 
 - people perceive colors differently (duh)
-- the display you're using might reduce blue light ("night mode"), making colors appear warmer
+- the expected or perceived color of an object may differ from the actual color. A white sheet of paper under a yellowish light bulb will have a completely different color than the same sheet under the blue sky. Your brain will still tell you that it's white because it knows that it's white.
+- the display you're using might reduce blue light ("night mode", "eye protection"), making colors appear warmer 
+- your laptop may have "true tone" enabled, changing the display's color temperature based on the ambient light
 - the environment you're in might have a color cast (e.g. a red wall, blue sky, green leaves above you)
-- the light source might have a certain hue other than white (e.g. a yellowish light bulb or a blueish LED)
+- the ambient light source might have a certain hue other than white (e.g. a yellowish light bulb or a blueish LED)
 - the device's camera might apply color correction (e.g. to make skin tones appear more natural) or other post-processing
 - your browser may apply color correction
 
