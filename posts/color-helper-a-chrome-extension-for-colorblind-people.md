@@ -1,8 +1,8 @@
 ---
 layout: doc
 date: 2024-01-14
-title: Color Helper - A Chrome Extension for Colorblind People
-description: I've created a Chrome extension that helps colorblind people to identify colors and color shades on websites
+title: Color Helper - A Browser Extension for Colorblind People
+description: I've created a Browser extension that helps colorblind people to identify colors and color shades on websites
 tags:
   - projects
   - is-it-red
@@ -16,7 +16,7 @@ tags:
 ![Color Helper](/resources/color-helper.png)
 
 A project that I've been putting off for a long time is finally done. 
-I've created a Chrome extension that helps people with color vision deficiency to identify colors and color shades on websites. 
+I've created a Browser extension that helps people with color vision deficiency to identify colors and color shades on websites. 
 
 It's simply called _Color Helper_ and it is available on the [chrome web store](https://chromewebstore.google.com/detail/color-helper/lppofdjcegodcddmccmnicgfmblkdpbj) for Chrome, Edge, Brave, Opera, Vivaldi and other chromium-based browsers and on [Firefox Addons](https://addons.mozilla.org/en-US/firefox/addon/color-helper/) for Firefox and its derivates.
 
