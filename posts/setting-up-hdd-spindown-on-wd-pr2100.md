@@ -17,6 +17,9 @@ tags:
 
 <Title/>
 
+Update: If your drive never spins down, use [iosnoop](https://github.com/brendangregg/perf-tools) to see if `ext4lazyinit` is constantly writing to the disk. This may take days or weeks to complete. If it is, follow [this guide](https://fedetft.wordpress.com/2022/01/23/on-ext4-and-forcing-the-completion-of-lazy-initialization/#:~:text=Here%E2%80%99s%20the%20command%20that%20did%20the%20trick%20form%20me%2C%20enjoy%3A) to unmount and remount your drive with the `init_itable=0` option to force the process to complete. After that, your drive should spin down as expected!
+
+
 If you're using your PR2100 as a backup device or data grave, you may want to spin down the HDDs when they're not in use to save energy and reduce noise.
 
 > Spinning down the HDDs (after a reasonable delay) might increase their lifespan but also increases the time it takes to access data on them. If you're using your PR2100 as a NAS, you may not want to do this.
