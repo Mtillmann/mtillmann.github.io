@@ -15,7 +15,7 @@ Getting the field ids of a google form is required to pre set certain fields wit
 
 To overcome this, I wrote a small script that will print the field ids to the console next to the field label headlines, so there's no guessing involved. 
 
-Just paste the script into the developer console, hit enter and you're done.
+Just paste the script into the developer console _in the preview or public view of your form_, hit enter and you're done.
 
 <<< @/public/resources/google-forms-field-ids.js
 
