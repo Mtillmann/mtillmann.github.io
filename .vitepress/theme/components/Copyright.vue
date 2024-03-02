@@ -12,7 +12,7 @@
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0
                 <img width="12" height="12" alt="cc icon" src="/cc-icons/cc.svg?ref=chooser-v1"><img width="12" height="12" alt="by icon"  src="/cc-icons/by.svg?ref=chooser-v1"><img
-                    alt="nc icon"  src="/cc-icons/nc.svg?ref=chooser-v1"><img width="12" height="12" alt="sa icon" src="/cc-icons/sa.svg?ref=chooser-v1"></a>
+                    alt="nc icon" width="12" height="12" src="/cc-icons/nc.svg?ref=chooser-v1"><img width="12" height="12" alt="sa icon" src="/cc-icons/sa.svg?ref=chooser-v1"></a>
         </span>
         
          &mdash; <a :href="withBase('/pages/imprint.html')">Imprint</a>
