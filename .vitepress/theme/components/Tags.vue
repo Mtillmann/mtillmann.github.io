@@ -6,7 +6,7 @@
             <div class="post-dot"></div>
             {{ article.frontMatter.title }}
         </div>
-        <div class="date" :data-to-locale-date-string="article.frontMatter.date">{{ new Date(article.frontMatter.date) }}</div>
+        <div class="date">{{ new Date(article.frontMatter.date).toLocaleDateString() }}</div>
     </a>
 
 
