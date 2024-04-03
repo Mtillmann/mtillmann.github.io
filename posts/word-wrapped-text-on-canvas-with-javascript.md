@@ -47,7 +47,7 @@ The `text` argument contains the markup or text that you want to render. Make su
 
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `scale` | `number` | `window.devicePixelRatio` | The internal scale of the generated image |
+| `scale` | `number` | `1` | The internal scale of the generated image. Use 2 when you have a `<canvas>` in your render chain |
 | `context` | `HTMLElement` | `document.body` | The context node to source styles and dimensions from |
 | `style` | `string` | `null` | CSS styles to apply to the `div` that wraps the text inside the `foreignObject`. See below |
 | `width` | `number` | `null` | When given, this will override the width derived from context |
