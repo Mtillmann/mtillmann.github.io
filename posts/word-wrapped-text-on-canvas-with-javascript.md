@@ -71,6 +71,7 @@ canvas.width = img.naturalWidth
 canvas.height = img.naturalHeight
 canvas.style.width = img.width + 'px'
 canvas.style.height = img.height + 'px'
+canvas.style.imageRendering = 'pixelated'
 canvas.getContext('2d').drawImage(img, 0, 0)
 ```
 

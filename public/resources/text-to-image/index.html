@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="col-6">
-                <h6 class="display-6">Image</h6>
+                <h6 class="display-6">Image (SVG)</h6>
             </div>
         </div>
 
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="col-6">
-                <h6 class="display-6">Image</h6>
+                <h6 class="display-6">Image (SVG)</h6>
             </div>
         </div>
 
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="col-6">
-                <h6 class="display-6">Image</h6>
+                <h6 class="display-6">Image (SVG)</h6>
             </div>
         </div>
 
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="col-6">
-                <h6 class="display-6">Image</h6>
+                <h6 class="display-6">Image (SVG)</h6>
             </div>
         </div>
 
@@ -113,7 +113,7 @@
 </xmp></code>
             </div>
             <div class="col-6">
-                <h6 class="display-6">Image</h6>
+                <h6 class="display-6">Image (SVG)</h6>
             </div>
         </div>
 
@@ -131,9 +131,59 @@
                 
             </div>
             <div class="col-6 non-dom-image">
-                <h6 class="display-6">Image</h6>
+                <h6 class="display-6">Image (SVG)</h6>
             </div>
         </div>
+
+        <div class="row mb-5">
+            <div class="col-6">
+                <h6 class="display-6">DOM Source</h6>
+                <div data-is-source-node data-render-as-canvas="1">
+                    <p>
+                        You can also render the text as a canvas element. 
+                        Note how you can't drag and drop this element or open in a new tab, as opposed to a regular image.
+                    </p>
+                    <p>
+                        Make sure to set <code>canvas.style.imageRendering = 'pixelated';</code> to avoid blurry text on high DPI screens.
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <h6 class="display-6">Image (Canvas)</h6>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-6">
+                <h6 class="display-6">DOM Source</h6>
+                <div data-is-source-node data-render-as-canvas-image="1">
+                    <p>
+                        Another way is to render the canvas back on a regular image element as a data URI.
+                    </p>
+                    <p>
+                        Don't forget to set <code>imgElement.style.imageRendering = 'pixelated';</code> to avoid blurry text on high DPI screens.
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <h6 class="display-6">Image (Canvas / Image / Data URI)</h6>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-6">
+                <h6 class="display-6">DOM Source</h6>
+                <div data-is-source-node data-render-as-canvas-blob="1">
+                    <p>
+                        Going even further - you can create a blob from the canvas and use that as the source for an image.
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <h6 class="display-6">Image (Canvas / Image / Blob URI)</h6>
+            </div>
+        </div>
+
 
     </div>
 
@@ -148,7 +198,20 @@
             canvas.getContext('2d').drawImage(img, 0, 0)
             canvas.style.width = img.width + 'px'
             canvas.style.height = img.height + 'px'
+            canvas.style.imageRendering = 'pixelated';
             return canvas
+        }
+    
+        function toCanvasImage(img){
+            const canvas = toCanvas(img);
+            const dataURI = canvas.toDataURL('image/png');
+            const imgElement = new Image();
+            imgElement.src = dataURI;
+            imgElement.width = img.width;
+            imgElement.height = img.height;
+            imgElement.style.imageRendering = 'pixelated';
+            
+            return imgElement;
         }
 
         window.addEventListener('load', async () => {
@@ -157,7 +220,31 @@
                 const context = !!node.dataset.useParentNode ? node.parentNode : node;
                 const image = await textToImage(node.innerHTML, { context });
 
-                node.closest('.row').querySelector('[class*="col"]:last-child').appendChild(toCanvas(image));
+                if(node.dataset.renderAsCanvas){
+                    node.closest('.row').querySelector('[class*="col"]:last-child').appendChild(toCanvas(image));
+                    continue;
+                }
+
+                if(node.dataset.renderAsCanvasImage){
+                    node.closest('.row').querySelector('[class*="col"]:last-child').appendChild(toCanvasImage(image));
+                    continue;
+                }
+
+                if(node.dataset.renderAsCanvasBlob){
+                    const canvas = toCanvas(image);
+                    canvas.toBlob(blob => {
+                        const url = URL.createObjectURL(blob);
+                        const imgElement = new Image();
+                        imgElement.src = url;
+                        imgElement.width = image.width;
+                        imgElement.height = image.height;
+                        imgElement.style.imageRendering = 'pixelated';
+                        node.closest('.row').querySelector('[class*="col"]:last-child').appendChild(imgElement);
+                    });
+                    continue;
+                }
+
+                node.closest('.row').querySelector('[class*="col"]:last-child').appendChild(image);
             }
 
             const image = await textToImage(`
