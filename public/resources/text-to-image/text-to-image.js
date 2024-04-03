@@ -8,7 +8,7 @@
 
 async function textToImage (text, options = {}) {
   options = {
-    scale: 1,
+    scale: window.devicePixelRatio,
     context: document.body,
     ...options
   }
@@ -18,7 +18,7 @@ async function textToImage (text, options = {}) {
   const computedStyle = Object.values(rawComputedStyle).map((key) => [key, rawComputedStyle.getPropertyValue(key)])
 
   const styles = computedStyle.reduce((acc, [key, value]) => {
-    if (/line|background|color|font|text/.test(key) && !['normal', 'auto', ''].includes(value)) {
+    if (/^line-|background|color|font|text/.test(key) && !['normal', 'auto', ''].includes(value)) {
       key = key.replaceAll(/[A-Z]/g, m => `-${m.toLowerCase()}`)
       acc.push(`${key}:${value}`)
     }
