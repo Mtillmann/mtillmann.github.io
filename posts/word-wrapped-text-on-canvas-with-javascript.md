@@ -22,7 +22,7 @@ Soooo I decided to make a very small (<2k) utility that allows you to render mar
 
 ## Demo
 
-Most importantly, <a href="/resources/text-to-image/#" target="_blank">here's a demo of the utility in action</a>.
+Most importantly, <Link href="/resources/text-to-image/index.html" target="_blank">here's a demo of the utility in action</Link>.
 
 
 ## Usage
@@ -104,6 +104,10 @@ When using html5 DOM sources for images, you must make sure that those tags are 
 
 ## Conclusion
 
-The utility is a small step towards making it easier to render text on images. It's not perfect, but it's a start. I hope you find it useful. There are more powerful libraries out there that can do this and more, but I wanted to keep it simple and lightweight. Maybe I'll add more features in the future, especially to collect and inline styles from the nodes of the markup that is rendered.
+The utility is a small step towards making it easier to render text on images. It's not perfect, but it's a start. I hope you find it useful. 
+
+There are more powerful libraries ([html2canvas](https://html2canvas.hertzen.com/)) or [approaches](https://medium.com/@aditi.6ti/text-wrapping-in-canvas-using-fabricjs-aac03ed77821) out there that can do this and more, but I wanted to keep it simple and lightweight. 
+
+Maybe I'll add more features in the future, especially to collect and inline styles from the nodes of the markup that is rendered.
 
 <Comment/>
