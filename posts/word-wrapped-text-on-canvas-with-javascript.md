@@ -82,6 +82,10 @@ Also consider the accessibility implications of using this method: screen reader
 
 If you use the img method, the text will most likely be indexed by search engines, since the content is part of the svg markup that is rendered as an image.
 
+### Safari and OCR
+
+Safari will automatically OCR images that contain text. This means that text in any image will be selectable by users but not be indexed, unless the search engine crawler also uses OCR on images.
+
 ## Issues
 
 ### Fonts
