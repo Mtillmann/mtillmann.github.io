@@ -141,17 +141,27 @@
 
     <script>
 
+        function toCanvas(img){
+            const canvas = document.createElement('canvas')
+            canvas.width = img.naturalWidth
+            canvas.height = img.naturalHeight
+            canvas.getContext('2d').drawImage(img, 0, 0)
+            canvas.style.width = img.width + 'px'
+            canvas.style.height = img.height + 'px'
+            return canvas
+        }
 
         window.addEventListener('load', async () => {
             const nodes = document.querySelectorAll('[data-is-source-node]');
             for(const node of nodes) {
                 const context = !!node.dataset.useParentNode ? node.parentNode : node;
                 const image = await textToImage(node.innerHTML, { context });
-                node.closest('.row').querySelector('[class*="col"]:last-child').appendChild(image);
+
+                node.closest('.row').querySelector('[class*="col"]:last-child').appendChild(toCanvas(image));
             }
 
             const image = await textToImage(`
-                <style>table{border-collapse: collapse; margin-bottom:24px;}th,td{padding:3px; border:1px solid #000;}</style>
+                <style>table{border-collapse: collapse; margin-bottom:14px;}th,td{padding:3px; border:1px solid #000;}</style>
                 <table>
                     <thead>
                         <tr>
@@ -184,9 +194,8 @@
                     </tbody>
                 </table>
             `, {width: 300});
+
             document.querySelector('.non-dom-image').appendChild(image);
-
-
         });
 
     </script>

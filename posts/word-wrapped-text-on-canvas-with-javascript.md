@@ -69,17 +69,17 @@ const img = await textToImage('Hello, World!')
 const canvas = document.createElement('canvas')
 canvas.width = img.naturalWidth
 canvas.height = img.naturalHeight
+canvas.style.width = img.width + 'px'
+canvas.style.height = img.height + 'px'
 canvas.getContext('2d').drawImage(img, 0, 0)
 ```
 
 ## On SEO and hiding text from crawlers
 
-If you want to superficially hide text from crawlers, use the canvas method. The text will probably not be indexed by search engines. However, consider how you source the text - if it's part of the DOM tree, chances are it will be indexed.
-Also consider the accessibility implications of using this method: screen readers will not be able to read the text because the moment you provide alternative text, the text will be visible to the crawlers as well.
+If you want to superficially hide text from crawlers, use the canvas method. The text will probably not be indexed by search engines. However, consider how you source the text - if it's part of the DOM tree, it probably will be indexed.
+Also consider the accessibility implications of using this method: screen readers will not be able to read the text and the moment you provide alternative text, that alternative text will be visible to the crawlers as well.
 
-Apparently google will also read the text from pixel images, so it's not a foolproof method.
-
-If you use the `img` method, the text will most likely be indexed by search engines, since the content is part of the svg markup that is rendered as an image.
+If you use the img method, the text will most likely be indexed by search engines, since the content is part of the svg markup that is rendered as an image.
 
 ## Issues
 
