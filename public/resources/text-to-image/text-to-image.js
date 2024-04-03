@@ -1,5 +1,5 @@
 /**
- * convert html text to an image or canvas.
+ * convert markup to image.
  * integrate, package and minify this function as needed.
  *
  * @author: Martin Tillmann <mtillmann@gmail.com>
@@ -9,7 +9,6 @@
 async function textToImage (text, options = {}) {
   options = {
     scale: window.devicePixelRatio,
-    styles: '',
     context: document.body,
     ...options
   }
@@ -35,7 +34,7 @@ async function textToImage (text, options = {}) {
         `<svg width="${width}" height="0" xmlns="http://www.w3.org/2000/svg">`,
         '<foreignObject x="0" y="0" width="100%" height="100%">',
         '<style>',
-        `div { 
+        `#foreignObject-root { 
                 ${styles}; 
                 transform: scale(1); 
                 transform-origin:0 0; 
@@ -44,7 +43,7 @@ async function textToImage (text, options = {}) {
                 ${options.styles};
             }`,
         '</style>',
-        '<div xmlns="http://www.w3.org/1999/xhtml">',
+        '<div id="foreignObject-root" xmlns="http://www.w3.org/1999/xhtml">',
         `${text}`,
         '</div>',
         '</foreignObject>',

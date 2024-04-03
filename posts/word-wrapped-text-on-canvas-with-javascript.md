@@ -1,12 +1,12 @@
 ---
 layout: doc
-date: 2024-04-13
-title: Word-wrapped text on canvas/image with JavaScript
-description: Creating a word-wrapped text on a canvas element with JavaScript is not as easy as it should be. Let's make it a bit more straightforward.
+date: 2024-04-3
+title: Word-wrapped text and html on images/canvas
+description: Creating a word-wrapped text on an image or canvas element with js is not as easy as it should be. Let's make it a bit more straightforward.
 tags:
-  - web-development
   - canvas
   - seo
+  - javascript
 ---
 
 <Title/>
@@ -18,29 +18,58 @@ to use SVG's `foreignObject` to render the text and then draw that SVG to an `im
 
 However, the resulting image does not integrate well with the rest of the design as all document styles are lost when the SVG is rendered as an `src` attribute of an `img` element. Only basic user agent styles remain since the SVG is rendered in a detached context.
 
-I decided to make a very small (<2k) utility that allows you to render text on an image while trying to keep the design close to other elements the location of the document where the image is then inserted.
+Soooo I decided to make a very small (<2k) utility that allows you to render markup on an image while trying to keep the design close to other elements the location of the document where the image is then inserted.
+
+## Demo
+
+Most importantly, <a href="/resources/text-to-image/#" target="_blank">here's a demo of the utility in action</a>.
+
 
 ## Usage
 
+> the function is asynchronous and returns a promise that resolves to an `img` element.
 
-- `text` (string): The text to render.
-- `parentNode` (HTMLElement): This node's `computedStyle` will be used to style the text.
-- 
+```js
+const options = {};
+
+//async
+const img = await textToImage('Hello, World!', options);
+
+//promise
+textToImage('Hello, World!', options).then(img => {
+  //do something with the img
+});
+```
+
+The `text` argument contains the markup or text that you want to render. Make sure to read about the xhtml and DOM issues below if you're experiencing blank output.
+
+### Options
+
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| `scale` | `number` | `window.devicePixelRatio` | The internal scale of the generated image |
+| `context` | `HTMLElement` | `document.body` | The context node to source styles and dimensions from |
+| `style` | `string` | `null` | CSS styles to apply to the `div` that wraps the text inside the `foreignObject`. See below |
+| `width` | `number` | `null` | When given, this will override the width derived from context |
+
+Styles are inserted to the `div`-selector that matches the div inside the `foreignObject`. If you want to apply styles to elements inside that div (i.e. your markup), use [CSS Nesting](https://developer.chrome.com/docs/css-ui/css-nesting) to target those elements _OR_ use inline styles.
+
+
+## The `textToImage` function
 
 <<< @/public/resources/text-to-image/text-to-image.js
 
 ## Using with Canvas
 
+Applying the function's output to a canvas element is straightforward:
+
 ```js
+const img = await textToImage('Hello, World!')
+
 const canvas = document.createElement('canvas')
-canvas.width = width * options.scale
-canvas.height = contentHeight * options.scale
+canvas.width = img.naturalWidth
+canvas.height = img.naturalHeight
 canvas.getContext('2d').drawImage(img, 0, 0)
-
-canvas.style.width = `${width}px`
-canvas.style.height = `${contentHeight}px`
-
-return canvas
 ```
 
 ## Issues
@@ -72,5 +101,9 @@ This basically means that you need to use `<br />` instead of `<br>` and `<img s
 When using html5 DOM sources for images, you must make sure that those tags are the correct format as your `innerHTML` will likely be plain html(`<br>`), even if you authored it as xhtml(`<br />`).
 
 > If your content is not valid xhtml, the `foreignObject` will not render the content and you will see no warnings or errors in the console.
+
+## Conclusion
+
+The utility is a small step towards making it easier to render text on images. It's not perfect, but it's a start. I hope you find it useful. There are more powerful libraries out there that can do this and more, but I wanted to keep it simple and lightweight. Maybe I'll add more features in the future, especially to collect and inline styles from the nodes of the markup that is rendered.
 
 <Comment/>
