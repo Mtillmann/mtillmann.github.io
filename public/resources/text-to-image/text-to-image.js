@@ -8,19 +8,14 @@
 
 async function textToImage (text, options = {}) {
   options = {
-    scale: window.devicePixelRatio,
+    scale: 1,
     context: document.body,
     ...options
   }
 
   const width = options.width ?? options.context.getBoundingClientRect().width
   const rawComputedStyle = window.getComputedStyle(options.context)
-  let computedStyle = Object.entries(rawComputedStyle)
-
-  // account for minor firefox wonkiness
-  if (rawComputedStyle.constructor.name === 'CSS2Properties') {
-    computedStyle = Object.values(rawComputedStyle).map((key) => [key, rawComputedStyle.getPropertyValue(key)])
-  }
+  const computedStyle = Object.values(rawComputedStyle).map((key) => [key, rawComputedStyle.getPropertyValue(key)])
 
   const styles = computedStyle.reduce((acc, [key, value]) => {
     if (/line|background|color|font|text/.test(key) && !['normal', 'auto', ''].includes(value)) {
