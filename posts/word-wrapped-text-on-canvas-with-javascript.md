@@ -89,7 +89,7 @@ If you use the img method, the text will most likely be indexed by search engine
 
 Make sure that you specify a web-safe fallback.
 
-As Rik Schennink points out, fonts must be embedded in the SVG as no other method will survive the conversion to an image. [Thomas Yip](https://vecta.io/blog/how-to-use-fonts-in-svg#:~:text=Using%20fonts%20with%20img%20tags) has a solid article that explores the issue in more detail.
+As Rik Schennink points out, fonts must be embedded in the SVG as no other method will survive the conversion to an image. [Thomas Yip has a solid article that explores the issue in more detail](https://vecta.io/blog/how-to-use-fonts-in-svg#:~:text=Using%20fonts%20with%20img%20tags).
   
 ### Line height
 
