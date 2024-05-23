@@ -1,6 +1,6 @@
 ---
 layout: doc
-date: 2024-05-21
+date: 2024-05-23
 title: Lightroom Classic color labels and XMP data in JPEGs
 description: Adding Lightroom Classic color labels and XMP data to JPEGs using javascript can be a bit tricky. Here's how you can do it.
 tags:
