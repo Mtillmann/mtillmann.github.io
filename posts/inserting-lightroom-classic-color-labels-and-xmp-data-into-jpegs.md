@@ -67,6 +67,6 @@ For example, if you call the _red_ color label "to be deleted" in Lightroom Clas
 
 This makes Color Labels very fragile, error-prone and not portable between different Lightroom Classic installations, depending on how the color labels are named.
 
-This also affects different translations of Lightroom Classic, as the color labels are translated: By default the purple color label is called _lila_ in german Lightroom Classic installations.
+This also affects different translations of Lightroom Classic, as the color labels are translated: By default the _Purple_ color label is called _Lila_ in german Lightroom Classic installations.
 
 <Comment/>
