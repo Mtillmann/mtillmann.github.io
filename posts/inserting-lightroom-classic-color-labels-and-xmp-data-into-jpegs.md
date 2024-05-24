@@ -14,7 +14,7 @@ tags:
 
 <Title/>
 
-Recently I needed to add _Lightroom Classic_ color labels to JPEGs using javascript in the browser. After wasting a some time with worthless AI suggestions,
+Recently I needed to add _Lightroom Classic_ color labels to JPEGs using javascript in the browser **and node**. After wasting a some time with worthless AI suggestions,
 I bit the bullet and clicked on the aptly named tool [xmp-jpeg](https://github.com/bbsimonbb/xmp-jpeg) as [suggested here](https://stackoverflow.com/a/32884008/8797350).
 
 ## From `xmp-jpeg` to the `jpeg-xmp-writer` package
