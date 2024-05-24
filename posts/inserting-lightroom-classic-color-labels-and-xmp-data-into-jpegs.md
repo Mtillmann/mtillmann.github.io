@@ -14,12 +14,11 @@ tags:
 
 <Title/>
 
-Recently I needed to add _Lightroom Classic_ color labels to JPEGs using javascript in the browser. After wasting a some time with worthless AI suggestions,
-I bit the bullet and clicked on the aptly named tool [xmp-jpeg](https://github.com/bbsimonbb/xmp-jpeg) as [suggested here](https://stackoverflow.com/a/32884008/8797350).
+Recently I needed to add _Lightroom Classic_ color labels to JPEGs using javascript in the browser. There exist some packages but I wasn't too happy with any of them, so I decided to write my own... of course.
 
 ## From `xmp-jpeg` to the `jpeg-xmp-writer` package
 
-[Simon Boddy](https://github.com/bbsimonbb) did a great job with his tool, and to my knowledge it is only solution online that _generates and writes_ XMP in a format that follows spec and is recognized by Lightroom Classic, [exiftool](https://exiftool.org/) and [random online XMP/EXIF viewers](https://jimpl.com/) (which probably also rely on exiftool).
+[Simon Boddy](https://github.com/bbsimonbb) did a great job providing the most minimal solution that _generates and writes_ XMP in a format that follows spec and is recognized by Lightroom Classic, [exiftool](https://exiftool.org/) and [random online XMP/EXIF viewers](https://jimpl.com/) (which probably also rely on exiftool).
 
 However, the code does no longer work out of the box in the browser, so I updated it to work as a modern ES module, added easy access to the XMP DOM, made it work in node as well and wrote some documentation.
 
