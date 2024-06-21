@@ -1,5 +1,13 @@
 <template>
-    <p style="margin-bottom: 0;">
+    <h1 class="title" style="padding-top:0;">
+        <template v-if="!!slots.default">
+            <slot />
+        </template>
+        <template v-else>
+            {{ page.title }}
+        </template>
+    </h1>
+    <div style="margin-top: 4px; margin-bottom:0px">
         <small>
             <span v-if="date">Posted on
                 <span>{{ date }}</span>
@@ -17,15 +25,8 @@
                 </span> 
             </span>
         </small>
-    </p>
-    <h1 class="title" style="padding-top:0;">
-        <template v-if="!!slots.default">
-            <slot />
-        </template>
-        <template v-else>
-            {{ page.title }}
-        </template>
-    </h1>
+    </div>
+    
 </template>
 <script setup>
 import { useSlots, ref, onBeforeMount } from 'vue';
