@@ -17,7 +17,7 @@ Ever since building the [color helper extension](/posts/color-helper-a-chrome-ex
 
 Building libraries from existing code that is full of ad-hoc solutions and tightly coupled to the rest of the application is one my least favorite tasks. Also I despise fiddling with build tools and their configurations even more than doing my taxes.
 
-I finally bit the bullet and extracted the core of isit.red into a standalone library. It's called [@mtillmann/colors](https://www.npmjs.com/package/@mtillmann/colors) and you can find the [github repository here](https://github.com/Mtillmann/colors). I includes documentation, sources and scripts to build your own data structures if you want to.
+I finally bit the bullet and extracted the core of isit.red into a standalone library. It's called [@mtillmann/colors](https://www.npmjs.com/package/@mtillmann/colors) and you can find the [github repository here](https://github.com/Mtillmann/colors) which includes documentation, sources and scripts to build your own data structures if you want to.
 
 I've already integrated it into the [color helper extension](https://chromewebstore.google.com/detail/color-helper/lppofdjcegodcddmccmnicgfmblkdpbj) ([firefox](https://addons.mozilla.org/en-US/firefox/addon/color-helper/)) and it's working great and feels faster than the old code. 
 
