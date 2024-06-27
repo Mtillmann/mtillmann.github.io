@@ -12,8 +12,6 @@ tags:
 
 <Title/>
 
-## Background
-
 Fresh ext4 partitions have 2 issues: 
 - 5% reserved space for root that is not needed on large drives: 5% of a 20TB is 1TB wasted.
 - days or weeks of waiting for the drive to complete the `ext4lazyinit` process, which is a waste of electricity and time.
