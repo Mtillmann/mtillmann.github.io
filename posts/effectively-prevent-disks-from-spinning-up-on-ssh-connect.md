@@ -39,4 +39,6 @@ with this one
 
 No need to restart anything, the changes should take effect immediately for new SSH connections. The connection will now be faster and quieter because the disks won't spin up!
 
+If your ssh login is still slow, you might want to check if you have any other scripts in `/etc/update-motd.d/` that might be causing the delay.
+
 <Comment/>
