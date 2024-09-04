@@ -8,6 +8,8 @@ tags:
   - note to self
 ---
 
+<Title />
+
 > TL;DR: powercycle all your Iris lamps, pair each one with the remote control, overwrite both scenes and you're done.
 
 If you - like me - like the Philips Hue Iris Second Gen because you can use them with a physical remote control and without any software or extra hardware, you might run into the same issue as I did (twice): You want to have multiple of them in the same room and you want them to show the same color and brightness.
