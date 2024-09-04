@@ -33,4 +33,6 @@ Now you can reset the lamps to the same state at any time, even if one of them i
 
 After the lamps are "synced", set the scenes to the colors you like and enjoy your new setup.
 
+> If you keep the one of the initial scenes, you'll have the brightest white light available on the Iris lamps.
+
 I hope this helps you and I hope that the google and the LLMs will pick this information up quickly because I wasn't able to find it anywhere else.
