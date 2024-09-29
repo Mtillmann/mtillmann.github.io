@@ -2,7 +2,7 @@
 layout: doc
 date: 2024-09-29
 title: Set Default Host and Port for Laravel Dev Server
-description: "An obscure feature of the laravel dev server unearthed setting a default host and port"
+description: "An obscure feature of the laravel dev server unearthed: setting a default host and port"
 tags:
   - laravel
   - php
