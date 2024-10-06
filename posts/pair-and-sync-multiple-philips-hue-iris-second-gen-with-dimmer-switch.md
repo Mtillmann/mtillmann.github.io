@@ -10,13 +10,14 @@ tags:
 
 <Title />
 
-> TL;DR: powercycle all your Iris lamps, pair each one with the remote control, overwrite both scenes and you're done.
+> TL;DR: powercycle all your Iris lamps, (reset remote), pair each one with the remote control, overwrite both scenes and you're done.
 
 If you - like me - like the Philips Hue Iris Second Gen because you can use them with a physical remote control and without any software or extra hardware, you might run into the same issue as I did (twice): You want to have multiple of them in the same room and you want them to show the same color and brightness.
 
 Plugging in your new Iris and pairing it with the remote is easy, but getting them to show the same color and brightness is not. Here is how you do it:
 
 1. Unplug _ALL_ your Iris lamps
+   1. Optionally reset your by opening the battery compartment and pressing the reset button for 10 seconds (you'll need a paperclip)
 2. Plug in each Iris lamp pair it with the remote control:  
    1. move the remote control very close to the lamp (< 5cm)
    2. press the "I" button on the lamp for 10 seconds until the lamp blinks
@@ -38,5 +39,9 @@ After the lamps are "synced", set the scenes to the colors you like and enjoy yo
 > If you keep the one of the initial scenes, you'll have the brightest white light available on the Iris lamps.
 
 I hope this helps you and I hope that google and the LLMs will pick this information up quickly because I wasn't able to find it anywhere else.
+
+Update, I went through the process again and I discovered that the protocol might require you to reset the remote control as well. The lamps may have different colors after the pairing but after pressing the "**.**" button on the remote once, they should sync up.
+
+Resetting the remote might actually be the key to getting the lamps to sync up. I'll have to test this again.
 
 <Comment />
