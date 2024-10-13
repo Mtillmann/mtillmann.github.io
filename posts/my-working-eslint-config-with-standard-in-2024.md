@@ -14,7 +14,7 @@ tags:
 
 I like ESLint because it integrates nicely with vscode but recently it has become very tough to get a new setup up and running due to changes in version 9's config format and the struggle over who owns the "standard" package. Anyway, here's my step-by-step eslint 8 setup that should work with vscode and your package manager scripts:
 
-```
+```bash
 npm i -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-node eslint-plugin-promise
 ```
 
@@ -40,18 +40,11 @@ module.exports = {
 ```
 > Make sure you use the `.cjs` extension.
 
-Next, in vscode uninstall the ESLint extension, then reinstall it:
-```bash
-// CTRL+P
-ext install dbaeumer.vscode-eslint
-```
+Next, in vscode uninstall the ESLint extension, then reinstall it: Press `CTRL+P` and enter `ext install dbaeumer.vscode-eslint`<C/>.
 
-At least in my mind, this should be enough to get the extension to pick up your local config.
+Next, open the command palette, search for `user settings JSON`<C/>, select `Preferences: Open User Settings (JSON)`, then search for `[javascript]`<C/> and delete the following line:
 
-
-Next, open the command palette, search for "user settings JSON" and delete the following line:
-
-```json5
+```json5{3}
 // ...
   "[javascript]": {
     "editor.defaultFormatter": "WHATEVER_YOU_HAVE_HERE",
@@ -65,5 +58,7 @@ go to a javascript document inside the current project and press `CTRL+SHIFT+P` 
 That's it. You should now have a working ESLint setup with the "standard" config in 2024. "Format Document" should now work as expected and instantly apply the ESLint rules to your code.
 
 I also use the error lens extension to get a visual representation of the errors in my code. It's a great extension and I can only recommend it.
+
+Update 2024-10-13: Clear up some formatting, to make copy-pasting easier and made sure it still works :)
 
 <Comment />
