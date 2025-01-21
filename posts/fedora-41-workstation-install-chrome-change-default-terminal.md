@@ -1,7 +1,7 @@
 ---
 layout: doc
 date: 2025-01-20
-title: Things I wish I knew before installing Fedora 41 Workstation
+title: Things I wish I had known before installing Fedora 41 Workstation
 description: Coming from Ubuntu, a few things were crunchier than expected when distro-hopping to Fedora 41 Workstation.
 tags:
   - linux
