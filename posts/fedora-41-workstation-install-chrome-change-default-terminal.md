@@ -16,12 +16,13 @@ tags:
 
 <Title />
 
+I decided to switch from Ubuntu to Fedora 41 in my annual OS upgrade quest. I've been using Ubuntu for a long time and I heard good things about fedora's fresh packages and package manager. I also liked gnome 47 a lot so I began my journey...
 
 ## Installing Chrome
 
 Installing chrome seems to be a big issue. Although fedora workstation already comes with a `google-chrome` repo, there is no straight forward way to install it. 
 
-gnome-software allowes you to enable the third party repositories, but even when you do, you still can only install chrome from a unverified flatpak. Here's how to install it the "normal" way using dnf:
+gnome-software allows you to enable the third party repositories, but even when you do, you still can only install chrome from a unverified flatpak. Here's how to install it the "normal" way using dnf:
 
 ### 0. Install repos (optional)
 This might be necessary if you're using a edition or spin of fedora other than workstation:
@@ -30,9 +31,9 @@ This might be necessary if you're using a edition or spin of fedora other than w
 ### 1. Enable the google-chrome repo
 Run `sudo nano /etc/yum.repos.d/google-chrome.repo`<C/>, set `enabled` to `1` in the last line and save the file.
 
-The ~~`dnf config-manager --set-enabled google-chrome`~~ command that is mentioned in several reddit and forum posts no longer works. 
+> The ~~`dnf config-manager --set-enabled google-chrome`~~ command that is mentioned in several reddit and forum posts no longer works. 
 
-Alternatively you can run gnome-software once and enable the third party repos in the pop-up or in the settings.
+> Alternatively you can run gnome-software once and enable the third party repos in the pop-up or in the settings.
 
 ### 2. Actually install chrome
 
@@ -41,7 +42,7 @@ Done! Now you have a working chrome installation that will receive updates autom
 
 ## Changing the default terminal to kitty
 
-Another Issue I ran into was the fact that kitty [apparently is not on the list of terminals that gnome recognizes](https://old.reddit.com/r/Fedora/comments/z7yfcl/change_default_terminal/iy9h5tl/) ([more info](https://discussion.fedoraproject.org/t/fedora-terminal-and-alternatives/106438)). This means that can't open `.desktop` that use `Terminal=true` with kitty.
+Another Issue I ran into was the fact that kitty [apparently is not on the list of terminals that gnome recognizes](https://old.reddit.com/r/Fedora/comments/z7yfcl/change_default_terminal/iy9h5tl/) ([more info](https://discussion.fedoraproject.org/t/fedora-terminal-and-alternatives/106438)). This means you can't open `.desktop`-files that use `Terminal=true` with kitty.
 
 To fix this and make it like it was on Ubuntu, do this
 
