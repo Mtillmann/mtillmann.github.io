@@ -6,8 +6,8 @@ description: using the latest ESLint has become an absolute pain - here's a work
 tags:
   - javascript
   - coding
-  - ling
-  - note to self
+  - eslint
+  - note-to-self
 ---
 
 <Title />

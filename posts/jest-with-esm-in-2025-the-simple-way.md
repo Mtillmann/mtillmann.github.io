@@ -4,11 +4,10 @@ date: 2025-02-12
 title: Jest with vanilla ESM node in 2025
 description: A simple way to get Jest working with ESM in 2025
 tags:
-- node
-- jest
-- testing 
-- esm
-- note-to-self
+  - javascript
+  - coding
+  - eslint
+  - note-to-self
 ---
 
 <Title />
