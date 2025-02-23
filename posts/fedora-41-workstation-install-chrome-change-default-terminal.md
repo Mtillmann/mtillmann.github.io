@@ -20,6 +20,8 @@ I decided to switch from Ubuntu to Fedora 41 in my annual OS upgrade quest. I've
 
 ## Installing Chrome
 
+> Update 23-02-2025: I installed fedora 41 workstation on another machine and enabled 3rd-party-repos in the welcome popup of fedora. I was able to install `google-chrome-stable` without further setup. YMMV
+
 Installing chrome seems to be a big issue. Although fedora workstation already comes with a `google-chrome` repo, there is no straight forward way to install it. 
 
 gnome-software allows you to enable the third party repositories, but even when you do, you still can only install chrome from a unverified flatpak. Here's how to install it the "normal" way using dnf:
@@ -48,7 +50,7 @@ To fix this and make it like it was on Ubuntu, do this
 
 ### 1. Install kitty
 
-[Install kitty](https://sw.kovidgoyal.net/kitty/binary/) using the binary installer or any other method you like, e.g. `sudo dnf install kitty`<C/>.
+[Install kitty](https://sw.kovidgoyal.net/kitty/binary/) using the binary installer (and follow the instructions there!) or any other method you like, e.g. `sudo dnf install kitty`<C/>.
 
 ### 2. Set kitty as the default terminal
 
