@@ -7,8 +7,6 @@ tags:
 - hardware
 - mechanical keyboard
 - keyboard
-- ergonomics
-- ergomech
 ---
 
 <Title />
