@@ -113,7 +113,7 @@ Für die Quefrency habe ich mir das Magsafe Tenting kit von keebio mitbestellt: 
 
 Es gibt bei Reddit diverse Ansätze zum Thema Mag Safe Tenting, die ich vielleicht noch erforschen werde. 
 
-Bei der MD770 werden 4 kleine Gumminoppen mitgeliefert, die entweder hinten oder an der inneren Kante beider Hälften in kleine Aufnahmen geschraubt werden können. Da das Kunststoff-Case der Tastatur eine relative grobe Textur und ein eingelassenes Typenschild hat, fällt Mag Safe Tenting vermutlich als Möglichkeit aus.
+Bei der MD770 werden 4 kleine Gummifüße mitgeliefert, die entweder hinten oder an der inneren Kante beider Hälften in kleine Aufnahmen geschraubt werden können. Da das Kunststoff-Case der Tastatur eine relative grobe Textur und ein eingelassenes Typenschild hat, fällt Mag Safe Tenting vermutlich als Möglichkeit aus, es gibt jedoch verschiedene druckbare Lösungen.
 
 ## Keycaps / Spacebars
 
@@ -162,7 +162,7 @@ Hinweis: Sinc und Quefrency können optional auch mit Knobs/Rotary Encoders best
 - Pro: Gutes Tenting
 - Neutral: wireless mit 2.4 GHz Dongle
 - Kontra: irritierendes Layout/Design: Tasten unten schmaler als oben
-- Kontra: keine Software
+- Kontra: keine Möglichkeit Keys zu remappen
 - Kontra: AAA Batterien statt Akku
 
 ### R-Go Split
