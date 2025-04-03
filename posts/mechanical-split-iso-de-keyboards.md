@@ -136,7 +136,7 @@ Alle drei Tastaturen haben South-Facing LEDs!
 
 Wem Hot-Swap und Custom Firmware egal ist, kann mit einer Mistel Barocco MD770 nichts falsch machen, sofern man sie mit den richtigen Switches kauft. 
 
-Für einen vergleichbaren Preis ist die Keychron Q11 eine sehr gute Wahl, die ich jedem empfehlen kann, der eine Split-Tastatur mit ISO-DE Layout sucht und die alle Features hat, die Keyboards richtig gut machen! Meiner Meinung nach ist die Q11 der Sweet Spot was Preis-Leistung angeht.
+Für einen vergleichbaren Preis ist die Keychron Q11 ein wesentlich besseres Angebot, die ich jedem empfehlen kann, der eine Split-Tastatur mit ISO-DE Layout sucht, die alle Features hat, die eine Tastatur richtig gut machen! Meiner Meinung nach ist die Q11 der Sweet Spot was Preis-Leistung angeht.
 
 Wem die Q11 zu groß ist, kann die Quefrency wählen, die allerdings vergleichsweise teuer ist sofern man nicht selber löten möchte. 
 
