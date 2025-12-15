@@ -69,7 +69,7 @@ sudo mount -o init_itable=0 /dev/sdXXX /media/YOURMOUNTPOINTNAME
 
 3. Alternative
 If the above command does nothing, this worked for me in another situation ([via](https://www.reddit.com/r/archlinux/comments/11dyl6t/comment/jacd2s0/)):
-```
+```shell
 tune2fs -m 0 /dev/sdXXX
 ```
 
