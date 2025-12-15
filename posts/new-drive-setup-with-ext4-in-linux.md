@@ -12,6 +12,8 @@ tags:
 
 <Title/>
 
+> Only run these commands if you know what you're doing. Working with partitions may lead to total data loss
+
 Fresh ext4 partitions have 2 issues: 
 - 5% reserved space for root that is not needed on large drives: 5% of a 20TB is 1TB wasted.
 - days or weeks of waiting for the drive to complete the `ext4lazyinit` process, which is a waste of electricity and time.
@@ -63,6 +65,12 @@ sudo umount /dev/sdXXX
 2. force the lazy init process to complete
 ```shell
 sudo mount -o init_itable=0 /dev/sdXXX /media/YOURMOUNTPOINTNAME
+```
+
+3. Alternative
+If the above command does nothing, this worked for me in another situation ([via](https://www.reddit.com/r/archlinux/comments/11dyl6t/comment/jacd2s0/)):
+```
+tune2fs -m 0 /dev/sdXXX
 ```
 
 The command might take a couple of minutes to complete, but it will finish the lazy init process immediately. Then your drive will behave as expected. [via](https://askubuntu.com/questions/1379965/how-to-get-a-newly-created-ext4-filesystem-to-finish-writing-the-index-node-imme)
