@@ -1,7 +1,7 @@
 ---
 layout: doc
 date: 2026-01-13
-title: using gnome keyboard shortcut to create new kitty tab
+title: using gnome keyboard shortcut to create new kitty tab and general key disenshittification
 description: open a new kitty instance or a new tab in existing instance with keyboard shortcut
 tags:
   - gnome
@@ -30,3 +30,22 @@ Replace "/home/martin/.local/kitty.app/bin/kitty" in the command with the actual
 
 Done! Of course you can use any other keyboard shortcut.
 
+## Some disenshittification
+
+using `keyd` the copilot button can be made into regular RCTRL/Menu again:
+
+```shell
+# install keyd from copr
+sudo dnf copr enable alternateved/keyd
+sudo dnf install keyd -y
+```
+`sudo mkdir /etc/keyd && sudo nano /etc/keyd/default.conf`<C/>
+```ini
+[ids]
+
+*
+
+[main]
+f23+leftshift+leftmeta = timeout(rightcontrol, 500, S-f10)
+capslock = leftmeta
+```
