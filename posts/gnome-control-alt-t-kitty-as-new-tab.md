@@ -39,7 +39,7 @@ using `keyd` the copilot button can be made into regular RCTRL/Menu again:
 sudo dnf copr enable alternateved/keyd
 sudo dnf install keyd -y
 ```
-`sudo mkdir /etc/keyd && sudo nano /etc/keyd/default.conf`<C/>
+then run `sudo mkdir /etc/keyd && sudo nano /etc/keyd/default.conf`<C/> to create the config directory and the config file. Enter:
 ```ini
 [ids]
 
@@ -49,3 +49,4 @@ sudo dnf install keyd -y
 f23+leftshift+leftmeta = timeout(rightcontrol, 500, S-f10)
 capslock = leftmeta
 ```
+Now run `sudo systemctl restart keyd`<C/> and you're done. With single presses or combos the copilot button will act like the regular controll button. Pressing it longer will open the context menu.
