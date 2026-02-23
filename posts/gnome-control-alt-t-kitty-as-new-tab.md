@@ -13,7 +13,7 @@ tags:
 
 <Title />   
 
-I like to hit `ctrl+alt+t` to open a terminal instance in my gnome. Additionaly I want the keyboard-shortcut to open a new kitty instance OR if the instance already exists, it should create a new tab inside that window.
+I like to hit `ctrl+alt+t` to open a terminal instance in my gnome. Additionaly I want the keyboard-shortcut to open a new kitty instance OR if the instance already exists, it should create a new tab inside that window and bring the kitty window to the front.
 
 To achieve this, first I need to enable remote control in kitty config (`crtl+shift+f2`)
 
@@ -32,7 +32,7 @@ Done! Of course you can use any other keyboard shortcut.
 
 ## Some disenshittification
 
-using `keyd` the copilot button can be made into regular RCTRL/Menu again:
+using `keyd` the copilot key can be made into regular RCTRL/Menu again:
 
 ```shell
 # install keyd from copr
@@ -49,4 +49,4 @@ then run `sudo mkdir /etc/keyd && sudo nano /etc/keyd/default.conf`<C/> to creat
 f23+leftshift+leftmeta = timeout(rightcontrol, 500, S-f10)
 capslock = leftmeta
 ```
-Now run `sudo systemctl restart keyd`<C/> and you're done. With single presses or combos the copilot button will act like the regular controll button. Pressing it longer will open the context menu.
+Now run `sudo systemctl enable keyd --now`<C/> once and the service is permanently enabled and running. With single presses or combos the copilot key will act like the regular control key. Pressing it longer will open the context menu.
