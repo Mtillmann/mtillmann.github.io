@@ -13,9 +13,54 @@ tags:
   - 90s
 ---
 
+<div class="row thumbs" style="margin-bottom:1rem;">
+    <figure class="col-sm-12">
+        <img src="/resources/s5s7-project/s5s7-mounted.JPG?url">
+    </figure>
+</div>
+
+
 <Title/>
 
-Over the past years I collected beautiful socket 5 / socket 7 intel CPUs with ceramic lids until I had 36 CPUs that would make a neat 6x6 grid. 
+<!--
+<Pentiums />
+
+https://en.wikipedia.org/wiki/Pentium_(original)#Models_and_variants
+-->
+
+
+<div class="row thumbs">
+
+<figure class="col-sm-6 col-lg-3">
+    <a target="_blank" href="/resources/s5s7-project/s5s7-detail.JPG"><img src="/resources/s5s7-project/s5s7-detail-tn.JPG?url">
+    </a>
+    <figcaption>
+        Glue residues that have fused into the ceramic
+    </figcaption>
+    
+</figure>
+
+<figure class="col-sm-6 col-lg-3">
+    <img src="/resources/s5s7-project/s5s7-detail-2-tn.JPG?url">
+    <figcaption>
+        obviously wrong ballpoint labelling that will never come off
+    </figcaption>
+</figure>
+
+<figure class="col-sm-6 col-lg-3">
+    <img src="/resources/s5s7-project/s5s7-detail-3-tn.JPG?url">
+</figure>
+
+<figure class="col-sm-6 col-lg-3">
+    <img src="/resources/s5s7-project/s5s7-detail-4-tn.JPG?url">
+</figure>
+
+</div>
+
+
+Over the past years I collected 36 beautiful socket 5 / socket 7 intel CPUs with ceramic lids. This post documents the artwork and answers all questions about the CPUs that I asked myself during and after the build. 
+
+## Design
 
 I decided to place them on a 300x300x0.75mm steel plate using magnets and print a frame and internal grid (and magnet guides) to ensure even spacing. 
 
@@ -89,7 +134,7 @@ Getting the gold is of course not free as the linked post explains in great deta
 
 During my civilian service I threw out a lot of Desktop PCs with (then already obsolete) Socket 5/Socket 7 CPUs. Since I really like the color and texture of the ceramic lids, I started collecting the CPUs and had about 20 when I finished the service. 
 
-Over the years I kept adding to the collection and in 2025 I finally decided what to do with them (see above).
+Over the years I kept adding to the collection and in 2025 I finally decided to start this project.
 
 The biggest issue was buying the last few CPUs on the kleinanzeigen platform because people are delusional ("_i know what i got_") about what a 30+ years old, [(probably) buggy](https://en.wikipedia.org/wiki/Pentium_FDIV_bug#Affected_models) and fully compatible x86-CPU is worth. 
 
@@ -122,6 +167,13 @@ The total weight is 1.877g:
 
 Each CPU is held by 6 Magnets, so in total 216 8x2mm cheap magnets from are amazon used. 
 
+## Final Thoughts
+
+I am very pleased with the project and the result. While I am absolutely not into vintage hardware or (almost) any hardware at all, the 90s Pentium era reminds me of the wild time when you got HUGE performance jumps year after year, ripped game CDs, hardware that went obsolete FAST, swapping parts with friends, 3d accelerators and just so much new games and software basically every month.
+
+The subtle differences in color of the ceramic lids and the wear and tear make it look really interesting to me. I like to imagine that the color differences are from workers dropping cigarette ashes into the mixer that prepares the ceramic slurry while cracking jokes.
+
+Writing this post has probably taken more time than actually planning and building the project but It was also very interesting to learn about how far we've come regarding performance and power-comsumption.
 
 ## Footnotes
 
