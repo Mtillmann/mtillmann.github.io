@@ -22,45 +22,46 @@ tags:
 <Title/>
 
 
-After the [socket 5/socket 7 project](./intel-cpu-collection-the-socket-5-socket-7-project.md) I would've loved to do one with AMD K5 and K6 socket 5/socket 7 CPUs but according to their (assumed) market share of 10-15% during that era, there are now almost no CPUs to buy and it would have taken a lot of effort and more money than I was willing to spend to complete an AMD project.
+After the [socket 5/socket 7 project](./intel-cpu-collection-the-socket-5-socket-7-project.md), I would have liked to do one with AMD K5 and K6 socket 5/socket 7 CPUs, but given their (assumed) market share of 10-15% during that era, there were virtually no socket 7 AMD CPUs available and it would have taken a lot of effort and more money than I was willing to spend to complete an AMD project.
 
 <div class="row thumbs">
     <figure class="col-sm-6 col-md-3">
         <a target="_blank" href="/resources/xx5x-project/xx5x-775.JPG">
-        <img src="/resources/xx5x-project/xx5x-775.JPG?url">
+        <img src="/resources/xx5x-project/xx5x-775-tn.JPG?url">
         </a>
         <figcaption>775: wide lip, no tabs, small notch</figcaption>
     </figure>
 
 <figure class="col-sm-6 col-md-3">
     <a target="_blank" href="/resources/xx5x-project/xx5x-1156.JPG">
-    <img src="/resources/xx5x-project/xx5x-1156.JPG?url">
+    <img src="/resources/xx5x-project/xx5x-1156-tn.JPG?url">
     </a>
     <figcaption>1156: small lip, tabs, large notch</figcaption>
 </figure>
 
 <figure class="col-sm-6 col-md-3">
     <a target="_blank" href="/resources/xx5x-project/xx5x-1155.JPG">
-    <img src="/resources/xx5x-project/xx5x-1155.JPG?url">
+    <img src="/resources/xx5x-project/xx5x-1155-tn.JPG?url">
     </a>
     <figcaption>1155: small lip, tabs, small notch</figcaption>
 </figure>
 
 <figure class="col-sm-6 col-md-3">
     <a target="_blank" href="/resources/xx5x-project/xx5x-1150.JPG">
-    <img src="/resources/xx5x-project/xx5x-1150.JPG?url">
+    <img src="/resources/xx5x-project/xx5x-1150-tn.JPG?url">
     </a>
     <figcaption>1150: small lip, tabs, no notch</figcaption>
 </figure>
 </div>
 
 
-After looking into affordable and feasable alternatives I found out that CPUs for the first four intel LGA-sockets ([LGA 775](https://en.wikipedia.org/wiki/LGA_775)
+While researching affordable and available sockets, I found out that CPUs of the first four Intel LGA-sockets ([LGA 775](https://en.wikipedia.org/wiki/LGA_775)
 , [LGA 1156](https://en.wikipedia.org/wiki/LGA_1156)
 , [LGA 1155](https://en.wikipedia.org/wiki/LGA_1155)
-, [LGA 1150](https://en.wikipedia.org/wiki/LGA_1150)) for consumer desktops had the same dimensions of 37.5x37.5mm.
+, [LGA 1150](https://en.wikipedia.org/wiki/LGA_1150)) for consumer desktops all share the same dimensions of 37.5x37.5mm.
 
-By pure chance 8x37.5mm is exactly 300mm, just like my previous project - Yay! However, I would need 64 CPUs (8x8) instead of the 36 (6x6).
+By pure chance, 8x37.5mm is exactly 300mm, just like my previous project! I needed 64 CPUs (8x8) instead of the previous 36 (6x6). I decided to buy 16 CPUs of each socket, each with a distinct nickel-plated IHS and substrate design.
+
 
 ## Design
 
@@ -69,84 +70,78 @@ By pure chance 8x37.5mm is exactly 300mm, just like my previous project - Yay! H
 <div class="row thumbs">
     <figure class="col-sm-4">
         <a target="_blank" href="/resources/xx5x-project/standing.JPG">
-        <img src="/resources/xx5x-project/standing.JPG?url">
+        <img src="/resources/xx5x-project/standing-tn.JPG?url">
         </a>
         <figcaption>just the nickel-plating looking great</figcaption>
     </figure>
 
 <figure class="col-sm-4">
     <a target="_blank" href="/resources/xx5x-project/top-view.JPG">
-    <img src="/resources/xx5x-project/top-view.JPG?url">
+    <img src="/resources/xx5x-project/top-view-tn.JPG?url">
     </a>
     <figcaption>top view of the finished piece</figcaption>
 </figure>
 
 <figure class="col-sm-4">
     <a target="_blank" href="/resources/xx5x-project/top-view-with-pattern.JPG">
-    <img src="/resources/xx5x-project/top-view-with-pattern.JPG?url">
+    <img src="/resources/xx5x-project/top-view-with-pattern-tn.JPG?url">
     </a>
-    <figcaption>overlaid tetris elements</figcaption>
+    <figcaption>overlaid Tetris elements</figcaption>
 </figure>
 
 
 </div>
 
+Deciding on the placement pattern was challenging. Going for a purely visual arrangement like I did with the other project was not an option because I wanted to do something that would take into account the fact that I had 16 of each type.
 
-I bought 16 CPUs of each type, each with distinct nickel-plated IHS and substrate design:
+Since the heatspreaders are visually not really distinctive and the wear and tear on the nickel-plating varies wildly, geometric patterns using the different types did not give good results (stripes etc) or wouldn't work in any meaningful way with the number of CPUs available (concentric, spirals etc).
 
+I finally decided on a Tetris-pattern where each element is made up of 4 blocks and for each CPU type there are 4 blocks. From a distance it looks rather noisy (just like any other pattern), but the Tetris elements express a nice conceptual layer.
 
-Deciding on the placement pattern was challenging. Going for a purely visual arrangement like with the other project was no option because I wanted to do something that would take into account the fact that there 16 of each type.
-
-Since the heatspreaders are visually not really distinctive and the wear and tear on the nickel-plating is varying wildly, geometric patterns using the different types did not give good results (stripes etc) or wouldn't work in any meaningful way with the amounts of cpus (concentric, spirals etc).
-
-I finally decided on a tetris-pattern where each element is made up of 4 blocks and for each CPU type there are 4 blocks. From a distance it looks rather noisy (just like any other pattern), but the tetris elements express a nice layer of concept if you look closer.
-
-### Mounting
+## Mounting
 
 <div class="row thumbs">
     <figure class="col-sm-6 col-md-3">
         <a target="_blank" href="/resources/xx5x-project/cpu-mount-bottom.JPG">
-        <img src="/resources/xx5x-project/cpu-mount-bottom.JPG?url">
+        <img src="/resources/xx5x-project/cpu-mount-bottom-tn.JPG?url">
         </a>
         <figcaption>center-part with magnets printed inside</figcaption>
     </figure>
 
 <figure class="col-sm-6 col-md-3">
     <a target="_blank" href="/resources/xx5x-project/mount-braces.JPG">
-    <img src="/resources/xx5x-project/mount-braces.JPG?url">
+    <img src="/resources/xx5x-project/mount-braces-tn.JPG?url">
     </a>
     <figcaption>braces: notches show the height of the clips</figcaption>
 </figure>
 
 <figure class="col-sm-6 col-md-3">
     <a target="_blank" href="/resources/xx5x-project/bottom-smd.JPG">
-    <img src="/resources/xx5x-project/bottom-smd.JPG?url">
+    <img src="/resources/xx5x-project/bottom-smd-tn.JPG?url">
     </a>
     <figcaption>SMDs on the bottom of the substrate</figcaption>
 </figure>
 
 <figure class="col-sm-6 col-md-3">
     <a target="_blank" href="/resources/xx5x-project/mounting-detail.JPG">
-    <img src="/resources/xx5x-project/mounting-detail.JPG?url">
+    <img src="/resources/xx5x-project/mounting-detail-tn.JPG?url">
     </a>
     <figcaption>detail of the interlocking braces</figcaption>
 </figure>
 
 </div>
 
-Since the LGA-CPUs have no pins but _lands_ and those lands are not magnetic at all, I had to design a mounting system that adds as little extra footprint as possible to the CPUs but also is strong enough to let me pick up and rearrange the CPUs.
+Since the LGA-CPUs have no pins but _lands_ and those lands are not magnetic at all, I had to design a mounting system that adds as little extra footprint as possible to the CPUs but is also strong enough to let me pick up and rearrange the CPUs.
 
 I decided on a three-part PLA construction with magnets inside the center-part and two braces that run below the center-part, across each other and fix the substrate to the center-part.
 
-The braces use a tongue and groove design so they fit into each other, helping with alignment while also halving the gap betweek the CPUs.
+The braces use a tongue and groove design so they fit into each other, helping with alignment while also halving the gap between the CPUs.
 
-The center-part has round hole in the center to make room for the SMDs on the bottom of the substrate and the cross-shaped cutout is deep enough to fit the braces and provide clearance for the alignment-grid that sits on the steel plate.
+The center-part has a round hole in the center to make room for the SMDs on the bottom of the substrate, and the cross-shaped cutout is deep enough to fit the braces and provide clearance for the alignment-grid that sits on the steel plate.
 
-Even though I made the gaps as small as possible the overall footprint had increased from 300x300mm to ~308x308mm, so the printed frame would need notches to accomodate the extra space and the braces.
+Even though I made the gaps as small as possible, the overall footprint had increased from 300x300mm to ~308x308mm, so the printed frame would need notches to accommodate the extra space and the braces.
 
-The initial frame and alignment grid prototypes were printed in thermochromic PLA which you can see in the detail photos above. Sicne the braces completely cover the grid, I decided to keep the prototypes and printed a frame that sits on top of the actual frame using the same matte grey PLA as the mounts.
-
-I tried to attach the center-parts to the notches in the substrate but that proved to be too flimsy especially when handling the CPUs.
+The initial frame and alignment grid prototypes were printed in thermochromic PLA, which you can see in the detail photos above. Since the braces completely cover the grid, I decided to keep the prototypes and printed a frame that sits on top of the actual frame using the same matte grey PLA as the mounts.
 
 ## Used CPUs, Prices and Performance Stats
 
@@ -155,6 +150,7 @@ I tried to attach the center-parts to the notches in the substrate but that prov
         <a target="_blank" href="/resources/xx5x-project/perf-chart.html">
         <img src="/resources/xx5x-project/perf-chart.png?url">
         </a>
+        <figcaption>Illustrating TDP vs perf over time. click for interactive version</figcaption>
     </figure>
 </div>
 
@@ -165,7 +161,7 @@ I tried to attach the center-parts to the notches in the substrate but that prov
 | 1 | 775 | Core 2 Duo E6600 | July 2006 | 15.8 | 32% | 65W | $316 | $316 | $520 |
 | 3 | 775 | Pentium DC E2160 | Jun 2007 | ~13.5 | 27% | 65W | $84 | $252 | $405 |
 | 6 | 775 | Pentium DC E2180 | Aug 2007 | ~14.2 | 28% | 65W | $84 | $504 | $812 |
-| 2 | 775 | Core 2 Duo E8400 | Jan 2008 | 24.2 | 49%| 65W | $316 | $632 | $1003 |
+| 2 | 775 | Core 2 Duo E8400 | Jan 2008 | 24.2 | 49% | 65W | $316 | $632 | $1003 |
 | 1 | 775 | Celeron E3300 | Aug 2009 | ~16.5 | 33% | 65W | $43 | $43 | $67 |
 | 2 | 775 | Pentium E5500 | April 2010 | ~18.5 | 37% | 65W | $75 | $150 | $230 |
 | 1 | 1156 | Core i5-750 | Sep 2009 | ~32.6 | 65% | 95W | $196 | $196 | $304 |
@@ -174,10 +170,10 @@ I tried to attach the center-parts to the notches in the substrate but that prov
 | 2 | 1156 | Core i5-650 | Jan 2010 | 30.7 | 62% | 73W | $176 | $352 | $555 |
 | 1 | 1156 | Core i3-550 | May 2010 | 29.6 | 59% | 73W | $138 | $138 | $211 |
 | 6 | 1155 | Core i3-2120 | Feb 2011 | 36.9 | 74% | 65W | $138 | $828 | $1254 |
-| 4 | 1155 |Pentium G620 | May 2011 | 30.5 | 61% | 65W | $74 | $296 | $439 |
-| 1 | 1155 |Core i5-3470s | Jun 2012 | 45.7 | 92% | 65W | $184 | $184 | $269 |
-| 1 | 1155 |Core i5-3330 | Sep 2012 | 42 | 84% | 77W | $182 | $182 | $264 |
-| 1 | 1155 |Core i3-3245 | Jun 2013 | 41.2 | 83% | 55W | $134 | $134 | $192 |
+| 4 | 1155 | Pentium G620 | May 2011 | 30.5 | 61% | 65W | $74 | $296 | $439 |
+| 1 | 1155 | Core i5-3470s | Jun 2012 | 45.7 | 92% | 65W | $184 | $184 | $269 |
+| 1 | 1155 | Core i5-3330 | Sep 2012 | 42 | 84% | 77W | $182 | $182 | $264 |
+| 1 | 1155 | Core i3-3245 | Jun 2013 | 41.2 | 83% | 55W | $134 | $134 | $192 |
 | 3 | 1155 | Pentium G2030 | Jun 2013 | 37 | 74% | 55W | $50 | $150 | $214 |
 | 1 | 1150 | Pentium G3220 | Sep 2013 | 40 | 80% | 53W | $71 | $71 | $101 |
 | 3 | 1150 | Core i3-4130 | Sep 2013 | 48.7 | 98% | 54W | $122 | $366 | $524 |
@@ -185,45 +181,45 @@ I tried to attach the center-parts to the notches in the substrate but that prov
 | 1 | 1150 | Pentium G3250 | Jul 2014 | *42.6 | 85% | 53W | $71 | $71 | $100 | 
 | 1 | 1150 | Core i3-4170 | Mar 2015 | *49.9 | **100%** | 54W | $117 | $117 | $166 |
 
-The total price of all 64 CPUs at launch was $7,163.00, which is $10,971.00 when adjusted for inflation. Quite the difference compared to the ~$30k launch price of the 36 CPUs of the other project. However almost all of the above CPUs are low-end or mid-range at best, when the 90s Pentiums were all considered to be high-end.
+The total price of all 64 CPUs at launch was $7,163.00, which is $10,971.00 when adjusted for inflation. Quite the difference compared to the ~$30k launch price of the 36 CPUs of the other project. However, almost all of the above CPUs are low-end or mid-range at best, while the 90s Pentiums were all considered to be high-end.
 
-The SPECint2006 baseline-values give a good scale of how performance has progressed across the collection from the weak but power-hungry P4 HT 540J to the much better i3-4170.
+The SPECint2006 baseline-values give a good sense of how performance has progressed across the collection from the weak but power-hungry P4 HT 540J to the much better i3-4170.
 
-For reference, the i3-4170's most powerful contemporary, the i7-4790k, has baseline value of 65.2, which is ~30% higher. Real world performance difference was likely higher than 30%, especially on multi-core workloads.
+For reference, the i3-4170's most powerful contemporary, the i7-4790K, has a baseline value of 65.2, which is ~30% higher. Real-world performance difference was likely higher than 30%, especially on multi-core workloads.
 
-When comparing the i3-4170 to the modern i9-14900KS on single thread MOps/s, the improvement is 137%: [2,027 for the i3-4170](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-4170+%40+3.70GHz&id=2522#:~:text=Million%20Matrices/Sec-,Single%20Thread,-2%2C027%20MOps/Sec) vs [4,813 for the i9-14900ks](https://www.cpubenchmark.net/cpu.php?id=5957&cpu=Intel+Core+i9-14900KS#:~:text=Million%20Matrices/Sec-,Single%20Thread,-4%2C813%20MOps/Sec).
+When comparing the i3-4170's performance to the modern i9-14900KS on single thread MOps/s, the i9 is ~2.4× faster: [2,027 for the i3-4170](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-4170+%40+3.70GHz&id=2522#:~:text=Million%20Matrices/Sec-,Single%20Thread,-2%2C027%20MOps/Sec) vs [4,813 for the i9-14900KS](https://www.cpubenchmark.net/cpu.php?id=5957&cpu=Intel+Core+i9-14900KS#:~:text=Million%20Matrices/Sec-,Single%20Thread,-4%2C813%20MOps/Sec).
 
 
 
 
 ## Acquiring the CPUs
 
-<div class="row thumbs">
-    <figure class="col-sm-12">
+<div class="row thumbs centered">
+    <figure class="col-sm-12 col-md-6">
         <a target="_blank" href="/resources/xx5x-project/cursed-775.JPG">
-        <img src="/resources/xx5x-project/cursed-775.JPG?url">
+        <img src="/resources/xx5x-project/cursed-775-tn.JPG?url">
         </a>
         <figcaption>
-            unidentifiable 775: you can even see the copper of the IHS
+            unidentifiable 775 CPU: The copper shines through the sliced nickel
         </figcaption>
     </figure>
 
 </div>
 
-I started on kleinanzeigen were I got some socket 775 and socket 1156 CPUs (and socket 1366 Xeons) for free or somewhat reasonably priced. Still I was looking at ~5€/CPU incl. shipping, ~320€ in total only for the CPUs. 
+I started on Kleinanzeigen, where I got some socket 775 and socket 1156 CPUs (and socket 1366 Xeons) for free or at reasonable prices. Still, I was looking at ~5€/CPU incl. shipping, ~320€ in total only for the CPUs. 
 
-Luckily I found out that you can buy older used CPUs in bulk on ebay. I ended up spending ~1.80€ incl shipping on the final ~50 CPUs.
+Luckily, I found out that you can buy older used CPUs in bulk on eBay. I ended up spending ~1.80€/CPU incl. shipping on the final ~50 CPUs.
 
-The total spend was ~30€ for those I got from kleinanzeigen and ~90€ for those I ordered from ebay.
+The total spend was ~30€ for those I got from Kleinanzeigen and ~90€ for those I ordered from eBay.
 
-Fun fact: all my ebay orders contained 1-2 CPUs more than what I ordered and some different models. Thankfully they were all for the sockets I needed and it enabled me to not use CPUs like the cursed and punished 775 pictured above.
+Fun fact: all my eBay orders contained 1-2 CPUs more than what I ordered and some different models. Thankfully, they were all for the sockets I needed and it enabled me to not use CPUs like the cursed and punished 775 pictured above.
 
 
 ## Final Thoughts
 
-I am very pleased how this turned out! The nickel plating looks great and building it was a fun challenge. 
+I am very pleased with how this turned out! The nickel plating looks great and building it was a fun challenge. 
 
-The project made me aware of intel's decision to change socket design every few years and robbing users of an upgrade path. Except for a 4670k (1150) build in 2014 I've only had AMD builds since the late 1990s, so I never really bothered to look into intel's socket policy before.
+The project made me aware of Intel's decision to change socket design every few years and rob users of an upgrade path. Except for a 1150-build (i5-4670K) in 2014, I've only had AMD builds since the late 1990s, so I never really bothered to look into Intel's socket policy before.
 
 I will not be building another of those, since 1151-CPUs basically look the same and newer CPUs are not square and would be pretty expensive.
 
