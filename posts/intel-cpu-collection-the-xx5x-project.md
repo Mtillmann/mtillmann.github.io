@@ -135,7 +135,7 @@ Luckily, I found out that you can buy older used CPUs in bulk on eBay. I ended u
 
 The total spend was ~30€ for those I got from Kleinanzeigen and ~90€ for those I ordered from eBay.
 
-Fun fact: all my eBay orders contained 1-2 CPUs more than what I ordered and some different models. Thankfully, they were all for the sockets I needed and it enabled me to not use CPUs like the cursed and punished 775 pictured above.
+Fun fact: all my eBay orders contained 1-2 CPUs more than what I ordered and some different models. Thankfully, they were all for the sockets I needed and it enabled me to not use CPUs like the cursed and punished 775 pictured below.
 
 
 ## Final Thoughts
