@@ -1,6 +1,6 @@
 ---
 layout: doc
-date: 2026-06-07
+date: 2026-07-04
 title: The socket 5 / socket 7 CPU Artwork project
 description: Documenting my socket 5 / socket 7 CPU Artwork project
 tags:

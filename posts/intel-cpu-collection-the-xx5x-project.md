@@ -1,6 +1,6 @@
 ---
 layout: doc
-date: 2026-06-09
+date: 2026-07-05
 title: The XX5X CPU Artwork Project
 description: Documenting my 775, 1156, 1155, 1150 CPU Artwork project
 tags:

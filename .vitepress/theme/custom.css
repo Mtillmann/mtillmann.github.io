@@ -291,3 +291,9 @@ h3 {
 h2 ~ .row {
     margin-top: 1rem;
 }
+
+@media (max-width: 768px) {
+    figure {
+        margin-bottom: 1.5rem;
+    }
+}
