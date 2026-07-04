@@ -13,9 +13,7 @@ tags:
 ---
 
 <div class="row thumbs" style="margin-bottom:1rem;">
-    <figure class="col-sm-12">
-        <img src="/resources/xx5x-project/xx5x-mounted-1.JPG?url">
-    </figure>
+    <c8y link class="col-12" public-id="xx5x/xx5x-mounted-1_tqybyz" thumbnail="t_large2"/>
 </div>
 
 
@@ -25,33 +23,10 @@ tags:
 After the [socket 5/socket 7 project](./intel-cpu-collection-the-socket-5-socket-7-project.md), I would have liked to do one with AMD K5 and K6 socket 5/socket 7 CPUs, but given their (assumed) market share of 10-15% during that era, there were virtually no socket 7 AMD CPUs available and it would have taken a lot of effort and more money than I was willing to spend to complete an AMD project.
 
 <div class="row thumbs">
-    <figure class="col-sm-6 col-md-3">
-        <a target="_blank" href="/resources/xx5x-project/xx5x-775.JPG">
-        <img src="/resources/xx5x-project/xx5x-775-tn.JPG?url">
-        </a>
-        <figcaption>775: wide lip, no tabs, small notch</figcaption>
-    </figure>
-
-<figure class="col-sm-6 col-md-3">
-    <a target="_blank" href="/resources/xx5x-project/xx5x-1156.JPG">
-    <img src="/resources/xx5x-project/xx5x-1156-tn.JPG?url">
-    </a>
-    <figcaption>1156: small lip, tabs, large notch</figcaption>
-</figure>
-
-<figure class="col-sm-6 col-md-3">
-    <a target="_blank" href="/resources/xx5x-project/xx5x-1155.JPG">
-    <img src="/resources/xx5x-project/xx5x-1155-tn.JPG?url">
-    </a>
-    <figcaption>1155: small lip, tabs, small notch</figcaption>
-</figure>
-
-<figure class="col-sm-6 col-md-3">
-    <a target="_blank" href="/resources/xx5x-project/xx5x-1150.JPG">
-    <img src="/resources/xx5x-project/xx5x-1150-tn.JPG?url">
-    </a>
-    <figcaption>1150: small lip, tabs, no notch</figcaption>
-</figure>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/775_osiv06">775: wide lip, no tabs, small notch</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/1156_yjppvj">1156: small lip, tabs, large notch</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/1155_opg1p2">1155: small lip, tabs, small notch</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/1150_voeoyf">1150: small lip, tabs, no notch</c8y>
 </div>
 
 
@@ -68,28 +43,9 @@ By pure chance, 8x37.5mm is exactly 300mm, just like my previous project! I need
 
 
 <div class="row thumbs">
-    <figure class="col-sm-4">
-        <a target="_blank" href="/resources/xx5x-project/standing.JPG">
-        <img src="/resources/xx5x-project/standing-tn.JPG?url">
-        </a>
-        <figcaption>just the nickel-plating looking great</figcaption>
-    </figure>
-
-<figure class="col-sm-4">
-    <a target="_blank" href="/resources/xx5x-project/top-view.JPG">
-    <img src="/resources/xx5x-project/top-view-tn.JPG?url">
-    </a>
-    <figcaption>top view of the finished piece</figcaption>
-</figure>
-
-<figure class="col-sm-4">
-    <a target="_blank" href="/resources/xx5x-project/top-view-with-pattern.JPG">
-    <img src="/resources/xx5x-project/top-view-with-pattern-tn.JPG?url">
-    </a>
-    <figcaption>overlaid Tetris elements</figcaption>
-</figure>
-
-
+    <c8y link class="col-sm-4" public-id="xx5x/standing_u28jkv">just the nickel-plating looking great</c8y>
+    <c8y link class="col-sm-4" public-id="xx5x/top-view_w3hndg">top view of the finished piece</c8y>
+    <c8y link class="col-sm-4" public-id="xx5x/top-view-with-pattern_fbqghf">overlaid Tetris elements</c8y>
 </div>
 
 Deciding on the placement pattern was challenging. Going for a purely visual arrangement like I did with the other project was not an option because I wanted to do something that would take into account the fact that I had 16 of each type.
@@ -101,33 +57,10 @@ I finally decided on a Tetris-pattern where each element is made up of 4 blocks 
 ## Mounting
 
 <div class="row thumbs">
-    <figure class="col-sm-6 col-md-3">
-        <a target="_blank" href="/resources/xx5x-project/cpu-mount-bottom.JPG">
-        <img src="/resources/xx5x-project/cpu-mount-bottom-tn.JPG?url">
-        </a>
-        <figcaption>center-part with magnets printed inside</figcaption>
-    </figure>
-
-<figure class="col-sm-6 col-md-3">
-    <a target="_blank" href="/resources/xx5x-project/mount-braces.JPG">
-    <img src="/resources/xx5x-project/mount-braces-tn.JPG?url">
-    </a>
-    <figcaption>braces: notches show the height of the clips</figcaption>
-</figure>
-
-<figure class="col-sm-6 col-md-3">
-    <a target="_blank" href="/resources/xx5x-project/bottom-smd.JPG">
-    <img src="/resources/xx5x-project/bottom-smd-tn.JPG?url">
-    </a>
-    <figcaption>SMDs on the bottom of the substrate</figcaption>
-</figure>
-
-<figure class="col-sm-6 col-md-3">
-    <a target="_blank" href="/resources/xx5x-project/mounting-detail.JPG">
-    <img src="/resources/xx5x-project/mounting-detail-tn.JPG?url">
-    </a>
-    <figcaption>detail of the interlocking braces</figcaption>
-</figure>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/mounting-parts_ckythj">mounting parts</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/mounting-bottom_kgqa2g">assembled mount: bottom view</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/mounting-detail_m2njm2">interlocking mounting braces</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/bottom-smd_gubmqf">bottom view of the center SMDs</c8y>
 
 </div>
 
@@ -147,8 +80,8 @@ The initial frame and alignment grid prototypes were printed in thermochromic PL
 
 <div class="row thumbs">
     <figure class="col-sm-12">
-        <a target="_blank" href="/resources/xx5x-project/perf-chart.html">
-        <img src="/resources/xx5x-project/perf-chart.png?url">
+        <a target="_blank" href="/resources/xx5x-perf-chart.html">
+        <img src="/resources/xx5x-perf-chart.png?url">
         </a>
         <figcaption>Illustrating TDP vs perf over time. click for interactive version</figcaption>
     </figure>
@@ -194,17 +127,7 @@ When comparing the i3-4170's performance to the modern i9-14900KS on single thre
 
 ## Acquiring the CPUs
 
-<div class="row thumbs centered">
-    <figure class="col-sm-12 col-md-6">
-        <a target="_blank" href="/resources/xx5x-project/cursed-775.JPG">
-        <img src="/resources/xx5x-project/cursed-775-tn.JPG?url">
-        </a>
-        <figcaption>
-            unidentifiable 775 CPU: The copper shines through the sliced nickel
-        </figcaption>
-    </figure>
 
-</div>
 
 I started on Kleinanzeigen, where I got some socket 775 and socket 1156 CPUs (and socket 1366 Xeons) for free or at reasonable prices. Still, I was looking at ~5€/CPU incl. shipping, ~320€ in total only for the CPUs. 
 
@@ -216,6 +139,12 @@ Fun fact: all my eBay orders contained 1-2 CPUs more than what I ordered and som
 
 
 ## Final Thoughts
+
+<div class="row thumbs">
+    <c8y link class="col-sm-6" public-id="xx5x/cursed-775_wtvh2a">unidentifiable 775 CPU: The copper shines through the sliced nickel</c8y>
+    <c8y link class="col-sm-6" public-id="xx5x/1366vs775_vugtmo">Socket 1366 Xeon next to small 775</c8y>
+</div>
+
 
 I am very pleased with how this turned out! The nickel plating looks great and building it was a fun challenge. 
 

@@ -14,40 +14,21 @@ tags:
 ---
 
 <div class="row thumbs" style="margin-bottom:1rem;">
-    <figure class="col-sm-12">
-        <img src="/resources/s5s7-project/s5s7-mounted.JPG?url">
-    </figure>
+    <c8y link class="col-12" public-id="s5s7/s5s7-header_or43fi" thumbnail="t_large2"/>
+
 </div>
 
 
 <Title/>
 
-<!--
-<Pentiums />
-
-https://en.wikipedia.org/wiki/Pentium_(original)#Models_and_variants
--->
-
 
 <div class="row thumbs">
-
-<figure class="col-sm-6">
-    <img src="/resources/s5s7-project/standing-up.JPG?url">
-    <figcaption>
+    <c8y link class="col-sm-6" public-id="s5s7/standing-up_qbvx2r">
         standing up
-    </figcaption>
-</figure>
-
-
-<figure class="col-sm-6">
-    <a target="_blank" href="/resources/s5s7-project/top-view.JPG"><img src="/resources/s5s7-project/top-view.JPG?url">
-    </a>
-    <figcaption>
-        the top view
-    </figcaption>
-    
-</figure>
-
+    </c8y>
+    <c8y link class="col-sm-6" public-id="s5s7/top-view_xm9wrk">
+        top view
+    </c8y>
 </div>
 
 
@@ -57,37 +38,22 @@ Over the past years, I collected 36 socket 5 / socket 7 Intel CPUs with beautifu
 
 The CPUs are sorted by hue and lightness to create a diagonal gradient from top left to bottom right on the steel plate. I tried other patterns but I felt this one was the most appealing. Arranging by age, core frequency, plant etc did not give good results. The interactive chart above lets you explore how the CPUs are placed in the current design.
 
+<a href="/resources/s5s7-pentiums.html" target="_blank">Interactive design visualization here!</a>
+
+
 ## Mounting
 
 
 <div class="row thumbs">
-
-<figure class="col-sm-6 col-md-4">
-    <img src="/resources/s5s7-project/standing-up.JPG?url">
-    <figcaption>
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/mounting-detail_os8lgj">
         alignment grid and magnet guide
-    </figcaption>
-</figure>
-
-
-<figure class="col-sm-6 col-md-4">
-    <a target="_blank" href="/resources/s5s7-project/top-view.JPG"><img src="/resources/s5s7-project/top-view.JPG?url">
-    </a>
-    <figcaption>
+    </c8y>
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/uncovered_vuuoth">
         grid uncovered
-    </figcaption>
-    
-</figure>
-
-<figure class="col-sm-6 col-md-4">
-    <a target="_blank" href="/resources/s5s7-project/top-view.JPG"><img src="/resources/s5s7-project/top-view.JPG?url">
-    </a>
-    <figcaption>
+    </c8y>
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/magnet-view_tl0mhu">
         magnets shining through the alumina
-    </figcaption>
-    
-</figure>
-
+    </c8y>
 </div>
 
 
@@ -116,6 +82,18 @@ If the prices are correct, the MSRP of all CPUs would be **$31,163** at launch, 
 The prices I used are for orders of at least 1,000 units, so the street prices may have been even higher at the time of release.
 
 ## Performance Compared to Modern CPUs
+
+<div class="row thumbs">
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/scratches_cjqags">
+        scratched alumina
+    </c8y>
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/perfect_nhcvbd">
+        almost perfect condition
+    </c8y>
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/gunk_xskyw1">
+        thermal glue gunk
+    </c8y>
+</div>
 
 | CPU | QTY | MIPS / UNIT | MIPS SUM | TDP | TDP SUM | Process | Transistors |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -152,15 +130,12 @@ The i7-3930K is 37 times as efficient per MIPS under full load, while the i9-149
 ## What about the ✨_GOLD_✨
 
 <div class="row thumbs centered">
-    <figure class="col-sm-12">
-        <a target="_blank" href="/resources/s5s7-project/straight-pins.JPG">
-            <img src="/resources/s5s7-project/straight-pins.JPG?url">
-        </a>
-        <figcaption>
-            gold-plated kovar pins in good condition
-        </figcaption>
-    </figure>
-
+    <c8y link class="col-sm-6" public-id="s5s7/straight-pins_ejgqwb">
+        gold-plated kovar pins in good condition
+    </c8y>
+    <c8y link class="col-sm-6" public-id="s5s7/chipped-alumina_hpkhvi">
+        chipped corner shows the alumina layers
+    </c8y>
 </div>
 
 According to [this post](https://electronics.alibaba.com/buyingguides/gold-in-cpus-how-much-is-really-there#:~:text=1.5%20kg%20of%20mixed%20vintage%20ceramic%20CPUs), 1.5kg of _vintage ceramic CPUs_ contain 2.1-2.9g of gold, so my ~1kg of CPUs should contain **1.4–1.93g** of pure _GOLD_.
@@ -181,11 +156,12 @@ The biggest issue was buying the last few CPUs on the Kleinanzeigen platform bec
 
 In the end, this is what I spent on the project:
 
-- 20 vintage Pentiums at ~10€ a piece: 200€
+- ~18 vintage Pentiums at ~11€ a piece: ~200€
 - steel plate: 10€
 - magnets: 10€
 
 **~220€** in total. Some Pentiums were too dirty or broken, so I needed to buy more than I initially expected.
+
 
 ## Do They Deserve Better?
 
@@ -195,36 +171,21 @@ As written above, the CPUs were considered trash ~25 years ago, so there was ple
 
 Enthusiast retro-builds seem to prefer high-end components from the era like P200, P233, or AMD K6 CPUs, if they bother with basic socket 7 at all. 
 
-<div class="row thumbs">
-
-<figure class="col-sm-6 col-md-4">
-    <img src="/resources/s5s7-project/chipped-alumina.JPG?url">
-    <figcaption>
-        chipped corner shows the alumina layers
-    </figcaption>
-</figure>
-
-
-<figure class="col-sm-6 col-md-4">
-    <a target="_blank" href="/resources/s5s7-project/top-view.JPG"><img src="/resources/s5s7-project/top-view.JPG?url">
-    </a>
-    <figcaption>
-        grid uncovered
-    </figcaption>
-    
-</figure>
-
-<figure class="col-sm-6 col-md-4">
-    <a target="_blank" href="/resources/s5s7-project/top-view.JPG"><img src="/resources/s5s7-project/top-view.JPG?url">
-    </a>
-    <figcaption>
-        magnets shining through the alumina
-    </figcaption>
-    
-</figure>
-</div>
 
 ## Final Thoughts
+
+<div class="row thumbs">
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/leftovers_me6gik">
+        the leftover pile
+    </c8y>
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/permanently-marked_o6mrwp">
+        permanently marked
+    </c8y>
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/glue-damage_bkcjbl">
+        ugly glue residue
+    </c8y>
+</div>
+
 
 I am very pleased with the project and the result. While I am absolutely not into vintage hardware or (almost) any hardware at all, the 90s Pentium era reminds me of the wild time when you got HUGE performance jumps year after year, ripped game CDs, hardware that went obsolete FAST, swapping parts with friends, 3D accelerators, and just so many new games and software basically every month.
 

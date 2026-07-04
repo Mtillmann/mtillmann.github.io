@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Socket 5 / Socket 7 Pentiums</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #171614;
+    --color-surface: #1c1b19;
+    --color-border: #393836;
+    --color-text: #cdccca;
+    --color-text-muted: #797876;
+    --color-primary: #4f98a3;
+    --color-highlight: rgba(79, 152, 163, 0.15);
+    --font-body: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), sans-serif;
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  p.sub {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 202px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .cpu-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 32px);
+    gap: 2px;
+  }
+  .cpu-cell {
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+  .cpu-cell.highlighted {
+    background: var(--color-highlight);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+  .table-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 50vh;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .table-wrap.expanded {
+    max-height: none;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.8rem;
+  }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 0.3rem 0.5rem;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    z-index: 1;
+  }
+  thead th:hover { color: var(--color-text); }
+  thead th.active { color: var(--color-primary); }
+  tbody td {
+    border: 1px solid var(--color-border);
+    padding: 0.25rem 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  tbody tr:hover td { background: var(--color-surface); }
+  tbody td.highlighted {
+    background: var(--color-highlight);
+    color: var(--color-primary);
+  }
+  .btn {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .btn:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+  }
+</style>
+</head>
+<body>
+<h1>Socket 5 / Socket 7 Pentiums</h1>
+<p class="sub">Click column headers to sort &nbsp;·&nbsp; grid shows physical placement order</p>
+<div class="layout">
+  <div class="cpu-grid" id="grid"></div>
+  <div class="table-col">
+    <div class="table-wrap" id="tableWrap">
+      <table>
+        <thead id="thead"></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <button class="btn" id="expandBtn" onclick="toggleExpand()">Expand table</button>
+  </div>
+</div>
+
+<script>
+const cols = ['id', 'part number', 'S-Spec', 'frequency', 'plant', 'price'];
+
+const cpus = [
+  [1,  'A80502', 'SX968',  90,  'malaysia',     849],
+  [2,  'A80503', 'SL27K',  166, 'philippines',  749],
+  [3,  'A80502', 'SX969',  75,  'malaysia',     800],
+  [4,  'A80502', 'SX969',  75,  'malaysia',     800],
+  [5,  'A80502', 'SY007',  100, 'malaysia',     995],
+  [6,  'A80502', 'SX969',  75,  'malaysia',     800],
+  [7,  'A80502', 'SY022',  133, 'philippines',  935],
+  [8,  'A80502', 'SX969',  75,  'malaysia',     800],
+  [9,  'A80502', 'SY022',  133, 'philippines',  935],
+  [10, 'A80502', 'SY022',  133, 'philippines',  935],
+  [11, 'A80502', 'SX969',  75,  'malaysia',     800],
+  [12, 'A80502', 'SX969',  75,  'malaysia',     800],
+  [13, 'A80502', 'SY022',  133, 'philippines',  935],
+  [14, 'A80502', 'SY022',  133, 'philippines',  935],
+  [15, 'A80502', 'SX969',  75,  'malaysia',     800],
+  [16, 'A80502', 'SX969',  75,  'malaysia',     800],
+  [17, 'A80502', 'SY028',  133, 'philippines',  935],
+  [18, 'A80502', 'SY022',  133, 'malaysia',     935],
+  [19, 'A80502', 'SX963',  100, 'malaysia',     995],
+  [20, 'A80503', 'SL27K',  166, 'philippines',  749],
+  [21, 'A80502', 'SX970',  100, 'malaysia',     995],
+  [22, 'A80502', 'SK106J', 133, 'malaysia',     935],
+  [23, 'A80503', 'SL27K',  166, 'philippines',  749],
+  [24, 'A80503', 'SL27K',  166, 'philippines',  749],
+  [25, 'A80502', 'SY007',  100, 'malaysia',     995],
+  [26, 'A80503', 'SY016',  166, 'philippines',  749],
+  [27, 'A80502', 'SY007',  100, 'philippines',  995],
+  [28, 'A80502', 'SX963',  100, 'malaysia',     995],
+  [29, 'A80502', 'SX969',  75,  'malaysia',     800],
+  [30, 'A80502', 'SX969',  75,  'malaysia',     800],
+  [31, 'A80502', 'SY022',  133, 'philippines',  935],
+  [32, 'A80502', 'SK106J', 133, 'malaysia',     935],
+  [33, 'A80502', 'SX969',  75,  'philippines',  800],
+  [34, 'A80502', 'SX969',  75,  'malaysia',     800],
+  [35, 'A80502', 'SX969',  75,  'philippines',  800],
+  [36, 'A80502', 'SX968',  90,  'malaysia',     849],
+];
+
+let sortCol = 0, sortDir = 1;
+let hoveredColIndex = null, hoveredValue = null, hoveredCpuId = null;
+let expanded = false;
+
+// Build grid
+const grid = document.getElementById('grid');
+cpus.forEach(cpu => {
+  const cell = document.createElement('div');
+  cell.className = 'cpu-cell';
+  cell.textContent = '#' + cpu[0];
+  cell.dataset.id = cpu[0];
+  grid.appendChild(cell);
+});
+
+// Build header
+const thead = document.getElementById('thead');
+const headerRow = document.createElement('tr');
+cols.forEach((col, i) => {
+  const th = document.createElement('th');
+  th.dataset.col = i;
+  th.addEventListener('click', () => sortBy(i));
+  headerRow.appendChild(th);
+});
+thead.appendChild(headerRow);
+
+function sortBy(colIndex) {
+  sortCol === colIndex ? (sortDir *= -1) : (sortCol = colIndex, sortDir = 1);
+  renderTable();
+  updateHeaders();
+}
+
+function updateHeaders() {
+  thead.querySelectorAll('th').forEach(th => {
+    const i = parseInt(th.dataset.col);
+    const active = i === sortCol;
+    th.classList.toggle('active', active);
+    th.textContent = cols[i] + (active ? (sortDir === 1 ? ' ↑' : ' ↓') : '');
+  });
+}
+
+function renderTable() {
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+  const sorted = [...cpus].sort((a, b) => {
+    const av = a[sortCol], bv = b[sortCol];
+    if (av < bv) return -1 * sortDir;
+    if (av > bv) return 1 * sortDir;
+    return 0;
+  });
+  sorted.forEach(cpu => {
+    const tr = document.createElement('tr');
+    cols.forEach((_, i) => {
+      const td = document.createElement('td');
+      td.textContent = cpu[i];
+      td.dataset.colIndex = i;
+      td.dataset.value = cpu[i];
+      td.addEventListener('mouseenter', () => { hoveredColIndex = i; hoveredValue = cpu[i]; hoveredCpuId = cpu[0]; highlight(); });
+      td.addEventListener('mouseleave', () => { hoveredColIndex = null; hoveredValue = null; hoveredCpuId = null; highlight(); });
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+  highlight();
+}
+
+function highlight() {
+  document.querySelectorAll('#tbody td').forEach(td => {
+    td.classList.toggle('highlighted',
+      hoveredColIndex !== null &&
+      parseInt(td.dataset.colIndex) === hoveredColIndex &&
+      td.dataset.value == hoveredValue
+    );
+  });
+  document.querySelectorAll('.cpu-cell').forEach(cell => {
+    const cpu = cpus.find(c => c[0] == cell.dataset.id);
+    cell.classList.toggle('highlighted',
+      hoveredColIndex !== null && cpu && cpu[hoveredColIndex] == hoveredValue
+    );
+  });
+}
+
+function toggleExpand() {
+  expanded = !expanded;
+  document.getElementById('tableWrap').classList.toggle('expanded', expanded);
+  document.getElementById('expandBtn').textContent = expanded ? 'Collapse table' : 'Expand table';
+}
+
+renderTable();
+updateHeaders();
+</script>
+</body>
+</html>

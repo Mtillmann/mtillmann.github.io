@@ -8,6 +8,7 @@ import Comment from './components/Comment.vue'
 import Title from './components/Title.vue'
 import Posts from './components/Posts.vue'
 import Link from './components/Link.vue'
+import C8Y from './components/C8Y.vue'
 
 import {default as CopyButton, defaultSettings} from 'vitepress-copy-helper'
 
@@ -19,6 +20,7 @@ export default {
     ...DefaultTheme,
     Layout: NewLayout,
     enhanceApp({ app }) {
+        app.component('c8y', C8Y)
         app.component('Tags', Tags)
         app.component('Archives', Archives)
         app.component('Page', Page)
