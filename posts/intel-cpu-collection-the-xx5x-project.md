@@ -22,18 +22,17 @@ tags:
 
 After the [socket 5/socket 7 project](./intel-cpu-collection-the-socket-5-socket-7-project.md), I would have liked to do one with AMD K5 and K6 socket 5/socket 7 CPUs, but given their (assumed) market share of 10-15% during that era, there were virtually no socket 7 AMD CPUs available and it would have taken a lot of effort and more money than I was willing to spend to complete an AMD project.
 
-<div class="row thumbs">
-    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/775_osiv06">775: wide lip, no tabs, small notch</c8y>
-    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/1156_yjppvj">1156: small lip, tabs, large notch</c8y>
-    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/1155_opg1p2">1155: small lip, tabs, small notch</c8y>
-    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/1150_voeoyf">1150: small lip, tabs, no notch</c8y>
-</div>
-
-
 While researching affordable and available sockets, I found out that CPUs of the first four Intel LGA-sockets ([LGA 775](https://en.wikipedia.org/wiki/LGA_775)
 , [LGA 1156](https://en.wikipedia.org/wiki/LGA_1156)
 , [LGA 1155](https://en.wikipedia.org/wiki/LGA_1155)
 , [LGA 1150](https://en.wikipedia.org/wiki/LGA_1150)) for consumer desktops all share the same dimensions of 37.5x37.5mm.
+
+<div class="row thumbs">
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1028_guhqxm">775: wide lip, no tabs, small notch</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1021_zbk4m6   ">1156: small lip, tabs, large notch</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1019_jtfxeb">1155: small lip, tabs, small notch</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1023_vhvt9h">1150: small lip, tabs, no notch</c8y>
+</div>
 
 By pure chance, 8x37.5mm is exactly 300mm, just like my previous project! I needed 64 CPUs (8x8) instead of the previous 36 (6x6). I decided to buy 16 CPUs of each socket, each with a distinct nickel-plated IHS and substrate design.
 
@@ -43,7 +42,7 @@ By pure chance, 8x37.5mm is exactly 300mm, just like my previous project! I need
 
 
 <div class="row thumbs">
-    <c8y link class="col-sm-4" public-id="xx5x/standing_u28jkv">just the nickel-plating looking great</c8y>
+    <c8y link class="col-sm-4" public-id="xx5x-2/IMG_0995_dwlbjb">just the nickel-plating looking great</c8y>
     <c8y link class="col-sm-4" public-id="xx5x/top-view_w3hndg">top view of the finished piece</c8y>
     <c8y link class="col-sm-4" public-id="xx5x/top-view-with-pattern_fbqghf">overlaid Tetris elements</c8y>
 </div>
@@ -57,8 +56,8 @@ I finally decided on a Tetris-pattern where each element is made up of 4 blocks 
 ## Mounting
 
 <div class="row thumbs">
-    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/mounting-parts_ckythj">mounting parts</c8y>
-    <c8y link class="col-sm-6 col-md-3" public-id="xx5x/mounting-bottom_kgqa2g">assembled mount: bottom view</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1050_lkbnvl">mounting parts</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1057_ms3xj4">assembled mount: bottom view</c8y>
     <c8y link class="col-sm-6 col-md-3" public-id="xx5x/mounting-detail_m2njm2">interlocking mounting braces</c8y>
     <c8y link class="col-sm-6 col-md-3" public-id="xx5x/bottom-smd_gubmqf">bottom view of the center SMDs</c8y>
 

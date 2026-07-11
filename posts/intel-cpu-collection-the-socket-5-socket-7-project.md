@@ -23,7 +23,7 @@ tags:
 
 
 <div class="row thumbs">
-    <c8y link class="col-sm-6" public-id="s5s7/standing-up_qbvx2r">
+    <c8y link class="col-sm-6" public-id="s5s7-2/IMG_0999_lkkia2">
         standing up
     </c8y>
     <c8y link class="col-sm-6" public-id="s5s7/top-view_xm9wrk">
@@ -45,10 +45,10 @@ The CPUs are sorted by hue and lightness to create a diagonal gradient from top 
 
 
 <div class="row thumbs">
-    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/mounting-detail_os8lgj">
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7-2/IMG_1037_aaipkp">
         alignment grid and magnet guide
     </c8y>
-    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/uncovered_vuuoth">
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7-2/IMG_1039_gixlou">
         grid uncovered
     </c8y>
     <c8y link class="col-sm-6 col-md-4" public-id="s5s7/magnet-view_tl0mhu">
@@ -84,16 +84,14 @@ The prices I used are for orders of at least 1,000 units, so the street prices m
 ## Performance Compared to Modern CPUs
 
 <div class="row thumbs">
-    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/scratches_cjqags">
-        scratched alumina
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7-2/IMG_1041_cz5mzg">
     </c8y>
-    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/perfect_nhcvbd">
-        almost perfect condition
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7-2/IMG_1030_rnrdf3">
     </c8y>
-    <c8y link class="col-sm-6 col-md-4" public-id="s5s7/gunk_xskyw1">
-        thermal glue gunk
+    <c8y link class="col-sm-6 col-md-4" public-id="s5s7-2/IMG_1010_uaastr">
     </c8y>
 </div>
+
 
 | CPU | QTY | MIPS / UNIT | MIPS SUM | TDP | TDP SUM | Process | Transistors |
 | --- | --- | --- | --- | --- | --- | --- | --- |
