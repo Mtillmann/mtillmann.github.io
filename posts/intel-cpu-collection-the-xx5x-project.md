@@ -29,7 +29,7 @@ While researching affordable and available sockets, I found out that CPUs of the
 
 <div class="row thumbs">
     <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1028_guhqxm">775: wide lip, no tabs, small notch</c8y>
-    <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1021_zbk4m6   ">1156: small lip, tabs, large notch</c8y>
+    <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1021_zbk4m6">1156: small lip, tabs, large notch</c8y>
     <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1019_jtfxeb">1155: small lip, tabs, small notch</c8y>
     <c8y link class="col-sm-6 col-md-3" public-id="xx5x-2/IMG_1023_vhvt9h">1150: small lip, tabs, no notch</c8y>
 </div>
@@ -44,7 +44,13 @@ By pure chance, 8x37.5mm is exactly 300mm, just like my previous project! I need
 <div class="row thumbs">
     <c8y link class="col-sm-4" public-id="xx5x-2/IMG_0995_dwlbjb">just the nickel-plating looking great</c8y>
     <c8y link class="col-sm-4" public-id="xx5x/top-view_w3hndg">top view of the finished piece</c8y>
-    <c8y link class="col-sm-4" public-id="xx5x/top-view-with-pattern_fbqghf">overlaid Tetris elements</c8y>
+    <c8y link class="col-sm-4" public-id="xx5x/top-view-with-pattern_fbqghf">Color overlay:<strong style="letter-spacing:-2px;font-weight:900;">
+        <span style="color:#0f0">1155</span>,
+        <span style="color:#00f">775</span>,
+        <span style="color:#f00">1150</span>,
+        <span style="color:#888">1156</span>
+    </strong> 
+    </c8y>
 </div>
 
 Deciding on the placement pattern was challenging. Going for a purely visual arrangement like I did with the other project was not an option because I wanted to do something that would take into account the fact that I had 16 of each type.
