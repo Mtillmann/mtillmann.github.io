@@ -13,7 +13,7 @@ tags:
 
 I like fedora but each _critical system update_ feels like playing russian roulette. Last time my bios had to be recovered from usb, this time my file system has partially disintegrated. These errors happening during/after updates may be coincidence or my fault for _holding it wrong_ but they piss me off either way.
 
-Here's how to fix the issue on my cursed asus zenbook (intel ultra 9 285h):
+Here's how I fixed the issue on my cursed asus zenbook (intel ultra 9 285h):
 
 ## The issue
 
@@ -81,3 +81,13 @@ sudo btrfs check --repair /dev/mapper/rescue
 ```
 
 I had to run this twice, first run crashed, second went through without errors. After that, my fedora booted again!
+
+## Reflection on using LLM to solve this issue
+
+To fix this I basically took photos of my laptops screen and directly uploaded them to `GPT 6.1 Sol`, then typed the commands from the responses into my live boot terminal. 
+
+I understand that due to reflections and blurry photos it may have been hard for the LLM to actually OCR the text off the images but it worked pretty well. 
+
+However, the LLM went in extremely pessimistic and tried to coerce me into reinstalling my OS multiple times. Then when i was almost finished it kept hallucinating "errors" in my photos when the output clearly said "no errors" and again tried to persuade me into throwing away my current OS installation. 
+
+I pushed back, the LLM "apologized" and then confirmed that everything looks good. Hopefully, next iterations will have less of that stupid and dangerous noise.
