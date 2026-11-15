@@ -89,7 +89,7 @@ export default defineConfig({
                 link: 'https://github.com/Mtillmann/mtillmann.github.io'
             }]
     },
-    srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
+    srcExclude: ['README.md', '_site/**'], // exclude the README.md and the _site build output, needn't to compiler
 
     vite: {
         build: { minify: true },

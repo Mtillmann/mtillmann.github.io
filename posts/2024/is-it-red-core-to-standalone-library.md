@@ -13,7 +13,7 @@ tags:
 
 <Title/>
 
-Ever since building the [color helper extension](/posts/color-helper-a-chrome-extension-for-colorblind-people.md), I was dissatisfied that I hadn't made the core color and color shade detection components an abstracted library. 
+Ever since building the [color helper extension](/posts/2024/color-helper-a-chrome-extension-for-colorblind-people.md), I was dissatisfied that I hadn't made the core color and color shade detection components an abstracted library. 
 
 Building libraries from existing code that is full of ad-hoc solutions and tightly coupled to the rest of the application is one my least favorite tasks. Also I despise fiddling with build tools and their configurations even more than doing my taxes.
 

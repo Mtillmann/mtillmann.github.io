@@ -17,3 +17,40 @@ Header set Cache-Control "public, max-age=604800, must-revalidate"
 </IfModule> 
 
 Header set Access-Control-Allow-Origin "https://isit.red"
+# Redirects for posts moved into year folders (2022, 2023, 2024, 2025, 2026, 2019)
+Redirect 301 /posts/building-a-fast-shade-lookup.html /posts/2022/building-a-fast-shade-lookup.html
+Redirect 301 /posts/cannot-open-access-to-console-the-root-account-is-locked.html /posts/2026/cannot-open-access-to-console-the-root-account-is-locked.html
+Redirect 301 /posts/color-helper-a-chrome-extension-for-colorblind-people.html /posts/2024/color-helper-a-chrome-extension-for-colorblind-people.html
+Redirect 301 /posts/controlling-fan-speed-on-the-pr2100-with-ubuntu-server.html /posts/2023/controlling-fan-speed-on-the-pr2100-with-ubuntu-server.html
+Redirect 301 /posts/effectively-prevent-disks-from-spinning-up-on-ssh-connect.html /posts/2024/effectively-prevent-disks-from-spinning-up-on-ssh-connect.html
+Redirect 301 /posts/eslint-9-with-neostandard-for-vscode-and-zed.html /posts/2025/eslint-9-with-neostandard-for-vscode-and-zed.html
+Redirect 301 /posts/fedora-41-workstation-install-chrome-change-default-terminal.html /posts/2025/fedora-41-workstation-install-chrome-change-default-terminal.html
+Redirect 301 /posts/gnome-control-alt-t-kitty-as-new-tab.html /posts/2026/gnome-control-alt-t-kitty-as-new-tab.html
+Redirect 301 /posts/howdy-on-fedora-43.html /posts/2026/howdy-on-fedora-43.html
+Redirect 301 /posts/indicating-drive-power-state-on-the-pr2100.html /posts/2023/indicating-drive-power-state-on-the-pr2100.html
+Redirect 301 /posts/inserting-lightroom-classic-color-labels-and-xmp-data-into-jpegs.html /posts/2024/inserting-lightroom-classic-color-labels-and-xmp-data-into-jpegs.html
+Redirect 301 /posts/installing-ubuntu-server-on-wd-pr2100-in-2024.html /posts/2023/installing-ubuntu-server-on-wd-pr2100-in-2024.html
+Redirect 301 /posts/installing-wifi-stick-on-the-pr2100-with-ubuntu-server.html /posts/2023/installing-wifi-stick-on-the-pr2100-with-ubuntu-server.html
+Redirect 301 /posts/intel-cpu-collection-the-socket-5-socket-7-project.html /posts/2026/intel-cpu-collection-the-socket-5-socket-7-project.html
+Redirect 301 /posts/intel-cpu-collection-the-xx5x-project.html /posts/2026/intel-cpu-collection-the-xx5x-project.html
+Redirect 301 /posts/is-it-red-core-to-standalone-library.html /posts/2024/is-it-red-core-to-standalone-library.html
+Redirect 301 /posts/jest-with-esm-in-2025-the-simple-way.html /posts/2025/jest-with-esm-in-2025-the-simple-way.html
+Redirect 301 /posts/laravel-10-on-ddev-with-vite-and-breeze.html /posts/2024/laravel-10-on-ddev-with-vite-and-breeze.html
+Redirect 301 /posts/mechanical-split-iso-de-keyboards.html /posts/2025/mechanical-split-iso-de-keyboards.html
+Redirect 301 /posts/mounting-iso-files-and-running-exe-files-on-the-steamdeck.html /posts/2023/mounting-iso-files-and-running-exe-files-on-the-steamdeck.html
+Redirect 301 /posts/my-working-eslint-config-with-standard-in-2024.html /posts/2024/my-working-eslint-config-with-standard-in-2024.html
+Redirect 301 /posts/new-drive-setup-with-ext4-in-linux.html /posts/2024/new-drive-setup-with-ext4-in-linux.html
+Redirect 301 /posts/nts-working-pihole-setup-2026.html /posts/2026/nts-working-pihole-setup-2026.html
+Redirect 301 /posts/pair-and-sync-multiple-philips-hue-iris-second-gen-with-dimmer-switch.html /posts/2024/pair-and-sync-multiple-philips-hue-iris-second-gen-with-dimmer-switch.html
+Redirect 301 /posts/route-model-binding-sessions-etc-in-laravel-packages.html /posts/2019/route-model-binding-sessions-etc-in-laravel-packages.html
+Redirect 301 /posts/set-default-host-and-port-for-laravel-dev-server.html /posts/2024/set-default-host-and-port-for-laravel-dev-server.html
+Redirect 301 /posts/setting-up-hdd-spindown-on-wd-pr2100.html /posts/2023/setting-up-hdd-spindown-on-wd-pr2100.html
+Redirect 301 /posts/shaky-embedded-controller-states-on-linux.html /posts/2026/shaky-embedded-controller-states-on-linux.html
+Redirect 301 /posts/simple-copy-button-helper-for-vitepress.html /posts/2023/simple-copy-button-helper-for-vitepress.html
+Redirect 301 /posts/the-easy-way-preset-google-forms-field-ids.html /posts/2024/the-easy-way-preset-google-forms-field-ids.html
+Redirect 301 /posts/update-xbox-one-controller-without-account.html /posts/2023/update-xbox-one-controller-without-account.html
+Redirect 301 /posts/using-itty-router-to-extract-route-info.html /posts/2025/using-itty-router-to-extract-route-info.html
+Redirect 301 /posts/using-laravel-9-breeze-with-ddev-and-vite.html /posts/2022/using-laravel-9-breeze-with-ddev-and-vite.html
+Redirect 301 /posts/using-vitepress-for-your-username.github.io-page.html /posts/2023/using-vitepress-for-your-username.github.io-page.html
+Redirect 301 /posts/word-wrapped-text-on-canvas-with-javascript.html /posts/2024/word-wrapped-text-on-canvas-with-javascript.html
+Redirect 301 /posts/your-device-requires-a-thread-border-router.html /posts/2026/your-device-requires-a-thread-border-router.html
