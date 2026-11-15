@@ -55,19 +55,16 @@ export default defineConfig({
             themes: 'github-light',
             issueTerm: 'pathname'
         },
-        nav: [
-            //{ text: 'Home', link: '/' },
-            //{ text: 'Archives', link: '/pages/archives' },
-            {
-                text: 'Projects',
-                items: [
-                    { text: 'isit.red', link: '/pages/is-it-red' },
-                    //{ text: 'Item B', link: '/item-2' },
-                    //{ text: 'Item C', link: '/item-3' }
-                ]
-            }
-            // { text: 'About', link: '/pages/about' },
-        ],
+        // nav: [
+        //     //{ text: 'Home', link: '/' },
+        //     //{ text: 'Archives', link: '/pages/archives' },
+        //     // { text: 'Projects', items: [
+        //     //     { text: 'isit.red', link: '/pages/is-it-red' },
+        //     //     //{ text: 'Item B', link: '/item-2' },
+        //     //     //{ text: 'Item C', link: '/item-3' }
+        //     // ] }
+        //     // { text: 'About', link: '/pages/about' },
+        // ],
         search: {
             provider: 'local',
         },

@@ -17,6 +17,7 @@ Header set Cache-Control "public, max-age=604800, must-revalidate"
 </IfModule> 
 
 Header set Access-Control-Allow-Origin "https://isit.red"
+Redirect 301 /pages/is-it-red.html /posts/2023/is-it-red.html
 # Redirects for posts moved into year folders (2022, 2023, 2024, 2025, 2026, 2019)
 Redirect 301 /posts/building-a-fast-shade-lookup.html /posts/2022/building-a-fast-shade-lookup.html
 Redirect 301 /posts/cannot-open-access-to-console-the-root-account-is-locked.html /posts/2026/cannot-open-access-to-console-the-root-account-is-locked.html

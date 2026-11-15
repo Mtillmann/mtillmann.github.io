@@ -20,7 +20,7 @@ I've created a Browser extension that helps people with color vision deficiency 
 
 It's simply called _Color Helper_ and it is available on the [chrome web store](https://chromewebstore.google.com/detail/color-helper/lppofdjcegodcddmccmnicgfmblkdpbj) for Chrome, Edge, Brave, Opera, Vivaldi and other chromium-based browsers and on [Firefox Addons](https://addons.mozilla.org/en-US/firefox/addon/color-helper/) for Firefox and its derivates.
 
-It uses the fast lookup table algorithm that I've developed for [isit.red](/pages/is-it-red.md) to identify color shades on the page and then displays the color name and the color shade.
+It uses the fast lookup table algorithm that I've developed for [isit.red](/posts/2023/is-it-red.md) to identify color shades on the page and then displays the color name and the color shade.
 
 [Here's a video](https://www.youtube.com/watch?v=44-L_XipVJg) and the [source code](https://github.com/Mtillmann/color-helper-extension) is on GitHub!
 

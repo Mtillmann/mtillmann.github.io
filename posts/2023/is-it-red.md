@@ -1,7 +1,14 @@
 ---
+layout: doc
 search: true
+date: 2023-12-19
 title: Is it red? My assistive app for colorblind people
 description: My small web app that helps colorblind people identify colors and shades in the real world using their device's camera
+tags:
+  - projects
+  - is-it-red
+  - colorblind
+  - assistive technology
 ---
 <Title/>
 
