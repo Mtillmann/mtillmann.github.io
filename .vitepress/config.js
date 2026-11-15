@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { getPosts } from './theme/serverUtils'
-
+import llmstxt from 'vitepress-plugin-llms'
 
 const pageSize = 10
 
@@ -93,7 +93,8 @@ export default defineConfig({
 
     vite: {
         build: { minify: true },
-        server: { port: 5000 }
+        server: { port: 5000 },
+        plugins : [llmstxt()]
     },
     sitemap: {
         hostname: URL

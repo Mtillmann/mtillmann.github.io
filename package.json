@@ -22,13 +22,14 @@
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.5.5",
         "eslint-plugin-vue": "^10.8.0",
-        "vue-eslint-parser": "^10.4.0",
         "fs-extra": "^11.3.3",
         "globby": "^16.1.1",
         "gray-matter": "^4.0.3",
         "prettier": "^3.8.1",
         "typescript": "^5.9.3",
         "vitepress": "1.6.4",
-        "vitepress-copy-helper": "^0.0.3"
+        "vitepress-copy-helper": "^0.0.3",
+        "vitepress-plugin-llms": "^1.15.0",
+        "vue-eslint-parser": "^10.4.0"
     }
 }
