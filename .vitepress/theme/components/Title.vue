@@ -39,10 +39,10 @@ const updated = ref(null);
 
 onBeforeMount(() => {
     if (page.value.frontmatter.date) {
-        date.value = new Date(page.value.frontmatter.date).toLocaleDateString();
+        date.value = new Date(page.value.frontmatter.date).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' });
     }
     if (page.value.frontmatter.lastUpdated) {
-        updated.value = new Date(page.value.frontmatter.lastUpdated).toLocaleDateString();
+        updated.value = new Date(page.value.frontmatter.lastUpdated).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' });
     }
 });
 

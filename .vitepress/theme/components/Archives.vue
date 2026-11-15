@@ -8,7 +8,7 @@
                 <div class="post-dot"></div>
                 {{ article.frontMatter.title }}
             </div>
-            <div class="date">{{ new Date(article.frontMatter.date).toLocaleDateString() }}</div>
+            <div class="date">{{ new Date(article.frontMatter.date).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }) }}</div>
         </a>
     </div>
 </template>

@@ -5,7 +5,7 @@
 
                 <a :href="withBase(article.regularPath)">
 
-                    <small>{{ new Date(article.frontMatter.date).toLocaleDateString() }}</small><br>
+                    <small>{{ new Date(article.frontMatter.date).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }) }}</small><br>
                     {{ article.frontMatter.title }}</a>
             </div>
         </div>
