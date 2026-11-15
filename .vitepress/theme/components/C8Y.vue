@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useSlots, computed } from 'vue'
+import { useData } from 'vitepress'
 
 const CLOUD_NAME = 'dwdy72yg0'
 const BASE_URL = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload`
@@ -19,7 +20,14 @@ const srcUrl = `${BASE_URL}/${props.thumbnail}/${AUTO}/${props.publicId}`
 const hrefUrl = `${BASE_URL}/${FULL_SIZE}/${AUTO}/${props.publicId}`
 
 const slots = useSlots()
-const alt = computed(() => slots.default?.().map(n => n.children).join('').trim() ?? '')
+const { page } = useData()
+
+const caption = computed(() => slots.default?.().map(n => n.children).join('').trim() ?? '')
+// Prepend the parent document's full post title, e.g. "The XX5X CPU Artwork Project — 775: wide lip, no tabs, small notch"
+const alt = computed(() => {
+  const title = page.value.frontmatter?.title ?? page.value.title ?? ''
+  return [title, caption.value].filter(Boolean).join(' — ')
+})
 
 
 
