@@ -97,7 +97,7 @@ const props = defineProps({
     -webkit-line-clamp: 3;
     overflow: hidden;
     color: var(--vp-c-text-2);
-    margin: 10px 0;
+    margin: 0px 0;
     line-height: 1.5rem;
 }
 
