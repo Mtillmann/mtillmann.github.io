@@ -103,6 +103,8 @@ onMounted(() => {
         document.head.appendChild(s);
 
     }
+
+    renderPrivacyBadge();
 });
 
 
@@ -115,6 +117,42 @@ const accept = function (what) {
     isOpen.value = false;
     location.reload();
 
+}
+
+/**
+ * Renders a small overlay badge on the privacy shield showing how many
+ * privacy items are enabled (fonts + analytics). Shows a checkmark and
+ * the count only when at least one item is enabled; nothing otherwise.
+ */
+const renderPrivacyBadge = function () {
+    const shield = document.querySelector('.VPSocialLink[aria-label="Privacy Options"]');
+    if (!shield) return;
+
+    // read the latest state from localStorage (fallback to current state value)
+    let current = state.value;
+    try {
+        current = { ...state.value, ...(JSON.parse(localStorage.getItem(key)) ?? {}) };
+    } catch (e) { /* ignore */ }
+
+    const enabled = (current.fonts ? 1 : 0) + (current.analytics ? 1 : 0);
+
+    // remove any existing badge first
+    const existing = shield.querySelector('.privacy-badge');
+    if (existing) existing.remove();
+
+    // nothing enabled -> show nothing
+    if (enabled === 0) return;
+
+    const badge = document.createElement('span');
+    badge.className = 'privacy-badge';
+    badge.title = 'Enabled privacy settings';
+    badge.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+            <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.5.5 0 0 1 .039-.046z"/>
+        </svg>
+        <span class="privacy-badge-count">${enabled}</span>
+    `;
+    shield.appendChild(badge);
 }
 
 
@@ -195,5 +233,32 @@ const accept = function (what) {
             }
         }
     }
+}
+
+/* Overlay badge on the privacy shield (DOM-injected, so global) */
+:global(.VPSocialLink[aria-label="Privacy Options"]) {
+    position: relative;
+}
+
+:global(.privacy-badge) {
+    position: absolute;
+    bottom: 4px;
+    right: -2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 1px 4px;
+    border-radius: 999px;
+    font-size: 10px;
+    line-height: 1;
+    background-color: var(--vp-c-bg-soft);
+    color: var(--vp-c-text-1);
+    box-shadow: 0 0 0 1px var(--vp-c-divider);
+    pointer-events: none;
+}
+
+:global(.privacy-badge .bi-check-lg) {
+    width: 8px;
+    height: 8px;
 }
 </style>
